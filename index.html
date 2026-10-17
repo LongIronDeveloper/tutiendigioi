@@ -9,7 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 </head>
-<body class="apocalyptic-theme">
+window.onerror = function(message, source, lineno, colno, error) {
+    reportBugToGitHub({
+        type: "Runtime Error",
+        message: message,
+        location: `${source}:${lineno}:${colno}`,
+        stack: error ? error.stack : "N/A",
+        playerState: window.player ? {
+            rank: window.player.rankIdx,
+            stamina: window.player.stamina,
+            currentLocation: window.player.currentLocation,
+            guCount: window.player.guInventory ? window.player.guInventory.length : 0
+        } : null
+    });
+};
+
+function reportBugToGitHub(payload) {
+    // Có thể gửi qua Backend trung gian hoặc gọi GitHub REST API tạo Issue với label 'bug-auto'
+    console.warn("⚠️ Đã ghi nhận bug:", payload);
+}
+    <body class="apocalyptic-theme">
     <!-- Particle Canvas Hiệu Ứng Bụi Linh Khí -->
     <div id="particle-canvas-container">
         <canvas id="qi-canvas"></canvas>
