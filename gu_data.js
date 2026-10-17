@@ -5,7 +5,7 @@ window.GU_DATABASE = [
     "name": "Tửu trùng",
     "rank": 1,
     "path": "Khí Đạo",
-    "type": "Di Động",
+    "type": "Hỗ Trợ",
     "desc": "Lấy rượu làm thức ăn, có thể lăng không phi hành. Nó có thể cô đọng chiết xuất chân nguyên đề cao nửa giai, nhưng chỉ hữu hiệu với cổ sư nhất chuyển.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
     "mpCost": 20,
