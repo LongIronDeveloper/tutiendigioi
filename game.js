@@ -42,17 +42,17 @@ const APTITUDES = {
 };
 
 const SPECIAL_PHYSIQUES = [
-    { id: "none", name: "Phàm Thể", rateBoost: 0, desc: "Thân thể bình thường không có dị tượng." },
-    { id: "thai_nhat", name: "Thái Nhật Dương Mãng Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Viêm Đạo & Lực Đạo, khí huyết như mặt trời chói chang." },
-    { id: "co_nguyet", name: "Cổ Nguyệt Âm Hoang Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Quang Đạo & Nguyệt Đạo, chân nguyên u lam tinh thuần vô song." },
-    { id: "bac_minh", name: "Bắc Minh Băng Phách Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Hàn Đạo & Băng Đạo, đông kết vạn vật sinh linh." },
-    { id: "sam_hai", name: "Sâm Hải Luân Hồi Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Mộc Đạo & Sinh Mệnh, tự hồi máu và gia tăng thọ nguyên." },
-    { id: "viem_hoang", name: "Viêm Hoàng Lôi Trạch Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Lôi Đạo & Viêm Đạo, sấm sét lôi đình bộc phát hủy diệt." },
-    { id: "van_kim", name: "Vạn Kim Diệu Hoa Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Kim Đạo & Quang Đạo, thân thể bất hoại như thần kim." },
-    { id: "dai_luc", name: "Đại Lực Chân Vũ Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Lực Đạo thuần túy, cử đỉnh bạt sơn, cận chiến vô địch." },
-    { id: "tieu_dieu", name: "Tiêu Diêu Trí Tâm Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Trí Đạo, ngộ tính nghịch thiên, học công pháp tức thì." },
-    { id: "hon_quy", name: "Hồn Quy Thiến U Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Hồn Đạo, thần thức vô lượng, nhiếp hồn đoạt phách." },
-    { id: "khong_tuyet", name: "Không Tuyệt Không Thể", rateBoost: 1.0, desc: "+100% Tốc độ tu luyện. Cực hạn Vũ Đạo / Không Gian, độn không vô ảnh, dịch chuyển tức thời." }
+    { id: "none", name: "Phàm Thể", rateBoost: 0, desc: "Thân thể bình thường không có dị tượng.", specialTrait: "Đạo cơ vững chắc, không lo phản phệ nứt khiếu, tâm cảnh thanh tịnh." },
+    { id: "thai_nhat", name: "Thái Nhật Dương Mãng Thể", rateBoost: 1.0, powerBonus: 30, hpBonus: 50, desc: "+100% Tốc độ tu luyện. Cực hạn Viêm Đạo & Lực Đạo, khí huyết như mặt trời chói chang.", specialTrait: "+30 Uy Lực, +50 Khí Huyết. Uy lực Viêm Đạo & Lực Đạo tăng 50%, giảm 30% Thể Lực tiêu hao khi chiến đấu." },
+    { id: "co_nguyet", name: "Cổ Nguyệt Âm Hoang Thể", rateBoost: 1.0, mpBonus: 50, desc: "+100% Tốc độ tu luyện. Cực hạn Quang Đạo & Nguyệt Đạo, chân nguyên u lam tinh thuần vô song.", specialTrait: "+50 Chân Nguyên tối đa. Chân nguyên u lam tinh thuần, tốc độ hồi phục chân nguyên ban đêm tăng gấp 2." },
+    { id: "bac_minh", name: "Bắc Minh Băng Phách Thể", rateBoost: 1.0, defBonus: 30, canCotBonus: 20, desc: "+100% Tốc độ tu luyện. Cực hạn Hàn Đạo & Băng Đạo, đông kết vạn vật sinh linh.", specialTrait: "+30 Phòng Ngự, +20 Căn Cốt. Hàn khí thấu cốt, sát thương Hàn Đạo tăng 60%, miễn nhiễm hàn độc." },
+    { id: "sam_hai", name: "Sâm Hải Luân Hồi Thể", rateBoost: 1.0, maxAgeBonus: 50, hpRegenDaily: 10, desc: "+100% Tốc độ tu luyện. Cực hạn Mộc Đạo & Sinh Mệnh, tự hồi máu và gia tăng thọ nguyên.", specialTrait: "+50 Năm Thọ Nguyên, tự hồi phục 10 Khí Huyết mỗi ngày, tương thích tuyệt đối với Mộc Đạo." },
+    { id: "viem_hoang", name: "Viêm Hoàng Lôi Trạch Thể", rateBoost: 1.0, powerBonus: 25, desc: "+100% Tốc độ tu luyện. Cực hạn Lôi Đạo & Viêm Đạo, sấm sét lôi đình bộc phát hủy diệt.", specialTrait: "+25 Uy Lực. 30% tỷ lệ kích hoạt Cuồng Bạo Lôi Đình gây gấp đôi sát thương khi thi triển chiêu thức." },
+    { id: "van_kim", name: "Vạn Kim Diệu Hoa Thể", rateBoost: 1.0, hpBonus: 50, canCotBonus: 30, desc: "+100% Tốc độ tu luyện. Cực hạn Kim Đạo & Quang Đạo, thân thể bất hoại như thần kim.", specialTrait: "+50 Khí Huyết, +30 Căn Cốt. Kim thân bất hoại, giảm 30% mọi sát thương vật lý và chấn động gánh chịu." },
+    { id: "dai_luc", name: "Đại Lực Chân Vũ Thể", rateBoost: 1.0, powerBonus: 40, staminaBonus: 30, desc: "+100% Tốc độ tu luyện. Cực hạn Lực Đạo thuần túy, cử đỉnh bạt sơn, cận chiến vô địch.", specialTrait: "+40 Uy Lực, +30 Thể Lực tối đa. Cử đỉnh bạt sơn, đòn đánh tay không hoặc Lực Đạo tăng 70% uy lực." },
+    { id: "tieu_dieu", name: "Tiêu Diêu Trí Tâm Thể", rateBoost: 1.0, compBonus: 15, intelBonus: 10, desc: "+100% Tốc độ tu luyện. Cực hạn Trí Đạo, ngộ tính nghịch thiên, học công pháp tức thì.", specialTrait: "+15 Ngộ Tính, +10 Trí Mưu. Thất khiếu linh lung, tốc độ lĩnh ngộ công pháp và cổ phương tăng gấp đôi." },
+    { id: "hon_quy", name: "Hồn Quy Thiến U Thể", rateBoost: 1.0, senseBonus: 20, spiritBonus: 20, desc: "+100% Tốc độ tu luyện. Cực hạn Hồn Đạo, thần thức vô lượng, nhiếp hồn đoạt phách.", specialTrait: "+20 Thần Thức, +20 Tinh Thần Lực. Hồn phách ngưng thực, tăng 20% tỷ lệ hợp luyện cổ trùng thành công." },
+    { id: "khong_tuyet", name: "Không Tuyệt Không Thể", rateBoost: 1.0, speedBonus: 25, desc: "+100% Tốc độ tu luyện. Cực hạn Vũ Đạo / Không Gian, độn không vô ảnh, dịch chuyển tức thời.", specialTrait: "+25 Thân Pháp / Tốc Độ. Độn không vô ảnh, di chuyển tức thời không tốn thời gian, tránh né 40% đòn đánh." }
 ];
 
 const DAO_LIST = [
@@ -545,6 +545,9 @@ function loadGame() {
             }
             if (!player.specialPhysique) {
                 player.specialPhysique = SPECIAL_PHYSIQUES[0];
+            } else {
+                const foundPhys = SPECIAL_PHYSIQUES.find(p => p.id === player.specialPhysique.id);
+                if (foundPhys) player.specialPhysique = Object.assign({}, foundPhys, player.specialPhysique);
             }
             if (!Array.isArray(player.guInventory)) {
                 player.guInventory = [];
@@ -628,9 +631,12 @@ function advanceTime(hours, days = 0) {
 // ============================================================
 
 function updateSidebarUI() {
-    // 1. Thời gian & Thứ & Ngày
+    // 1. Thời gian & Thứ & Ngày (Định dạng chuẩn 24h HH:MM không bị tràn số thập phân)
     const weekdayName = WEEKDAYS[player.timeDay % 7];
-    const hourStr = player.timeHour.toString().padStart(2, "0") + ":00";
+    const totalMinutes = Math.round((player.timeHour || 8) * 60);
+    const displayHours = Math.floor(totalMinutes / 60) % 24;
+    const displayMinutes = totalMinutes % 60;
+    const hourStr = `${displayHours.toString().padStart(2, "0")}:${displayMinutes.toString().padStart(2, "0")}`;
     
     const elWeekday = document.getElementById("time-weekday");
     if (elWeekday) elWeekday.textContent = weekdayName;
@@ -713,6 +719,32 @@ function updateSidebarUI() {
         }
     }
 
+    // Cập nhật Tư Chất trên Sidebar
+    const elAptitude = document.getElementById("sb-aptitude-text");
+    if (elAptitude && player.aptitude) {
+        elAptitude.textContent = `${player.aptitude.name} (${Math.round((player.aptitude.seaPct || 0.45) * 100)}%)`;
+        elAptitude.style.color = player.aptitude.color || "#fbbf24";
+    }
+
+    // Cập nhật Linh Căn trên Sidebar
+    const elLinhCan = document.getElementById("sb-linhcan-text");
+    if (elLinhCan) {
+        if (player.linhCan) {
+            elLinhCan.textContent = `${player.linhCan.name} (${player.linhCan.tier})`;
+            elLinhCan.style.color = player.linhCan.color || "#10b981";
+        } else {
+            elLinhCan.textContent = "Chưa Trắc Định";
+            elLinhCan.style.color = "#94a3b8";
+        }
+    }
+
+    // Cập nhật Thể Chất trên Sidebar
+    const elPhysique = document.getElementById("sb-physique-text");
+    if (elPhysique && player.specialPhysique) {
+        elPhysique.textContent = player.specialPhysique.name;
+        elPhysique.style.color = player.specialPhysique.id === "none" ? "#94a3b8" : "#a855f7";
+    }
+
     // 3. Tiền Tệ
     const elHigh = document.getElementById("curr-sb-high");
     const elMid = document.getElementById("curr-sb-mid");
@@ -775,6 +807,10 @@ function updateSidebarUI() {
 
 function calculateTotalPower() {
     let base = RANKS[player.rankIdx].power;
+    // Cộng thêm từ Thể Chất Đạo Thể
+    if (player.specialPhysique && player.specialPhysique.powerBonus) {
+        base += player.specialPhysique.powerBonus;
+    }
     // Cộng thêm từ các công pháp đã học
     if (window.TECHNIQUES_DATABASE && player.techniquesLearned) {
         player.techniquesLearned.forEach(tl => {
@@ -784,10 +820,12 @@ function calculateTotalPower() {
             }
         });
     }
-    // Cộng thêm từ cổ trùng trong không khiếu
+    // Cộng thêm từ Cổ Trùng TẤN CÔNG trong không khiếu (Loại Hỗ Trợ/Tàng Trữ/Trị Liệu không có sức tấn công)
     if (player.guInventory) {
         player.guInventory.forEach(g => {
-            base += (g.power || 20);
+            if (g.type === "Tấn Công" || (g.power > 0 && g.type !== "Hỗ Trợ" && g.type !== "Tàng Trữ")) {
+                base += (g.power || 0);
+            }
         });
     }
     // Cộng thêm từ Đạo Cảnh
@@ -1100,17 +1138,25 @@ function executeAction(actionKey, actConfig = null) {
 
         case "act_explore_cave": {
             const roll = Math.random();
-            if (roll > 0.6) {
+            if (roll > 0.5) {
                 const stones = Math.floor(Math.random() * 40) + 20;
                 player.stoneLow += stones;
-                player.systemPoints += 15;
+                const rareItems = [
+                    { id: "huyen_thiet_tinh", name: "Huyền Thiết Tinh" },
+                    { id: "huyet_tinh_thach", name: "Huyết Tinh Thạch" },
+                    { id: "bang_tinh_khoang", name: "Băng Tinh Khoáng" },
+                    { id: "loi_kich_moc", name: "Lôi Kích Mộc" }
+                ];
+                const pickedItem = rareItems[Math.floor(Math.random() * rareItems.length)];
+                addItemToInventory(pickedItem.id, 1, pickedItem.name, "material");
+
                 title = `✨ Khám Phá Thạch Động Cổ`;
-                desc = `Trong góc hang động tiền bối, ngươi phát hiện một hòm ngọc mục nát chứa linh thạch thượng cổ!`;
+                desc = `Trong góc hang động tiền bối viễn cổ, ngươi phát hiện một hòm ngọc mục nát chứa linh thạch và khoáng vật thượng cổ!`;
                 lootHtml = `
                     <div class="loot-tag text-gold">+${stones} Linh Thạch Hạ</div>
-                    <div class="loot-tag text-purple">+15 Điểm Hệ Thống</div>
+                    <div class="loot-tag text-jade">+1 ${pickedItem.name} (Vật Phẩm Cổ Giới)</div>
                 `;
-                addLog(`Thám hiểm thạch động nhặt được ${stones} Linh Thạch Hạ và 15 Điểm Hệ Thống!`, "success");
+                addLog(`Thám hiểm thạch động nhặt được ${stones} Linh Thạch Hạ và 1 ${pickedItem.name}!`, "success");
             } else {
                 title = `🕸️ Hang Động Trống Không`;
                 desc = `Ngươi cẩn thận lục soát khắp hang đá nhưng chỉ thấy tro tàn và dấu vết dời đi từ ngàn năm trước.`;
@@ -1496,19 +1542,57 @@ function renderAperturePane() {
                     <div><strong>📜 Công Pháp Chính:</strong> <span class="text-gold">${mainTechName}</span></div>
                     <div><strong>⭐ Lưu Phái Chính:</strong> <span class="text-cyan">${player.mainDao || 'Mộc Đạo'}</span> <small style="color:#94a3b8;">(Theo công pháp)</small></div>
                     <div><strong>🐛 Bản Mệnh Cổ:</strong> <span style="color:#34d399;">${starterGuName}</span></div>
-                    <div><strong>⚔️ Chiến Lực Tổng Hợp:</strong> <strong class="text-gold">${player.power || 30} Điểm</strong></div>
+                    <div><strong>⚔️ Chiến Lực Tổng Hợp:</strong> <strong class="text-gold">${calculateTotalPower()} Điểm</strong></div>
+                </div>
+            </div>
+
+            <!-- BẢNG THUỘC TÍNH CƠ BẢN -->
+            <div class="aperture-stat-card" style="grid-column: 1 / -1; background: rgba(15, 23, 42, 0.7); border: 1px solid #38bdf8; padding: 12px 16px; border-radius: 8px;">
+                <h4 style="color:#38bdf8; margin-bottom: 8px;">📊 Thuộc Tính Cơ Bản & Khí Huyết</h4>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; font-size: 13px;">
+                    <div>❤️ <strong>Khí Huyết:</strong> <span class="text-red">${Math.round(player.hp)} / ${player.maxHp}</span></div>
+                    <div>🌀 <strong>Chân Nguyên:</strong> <span class="text-jade">${Math.round(player.mp)} / ${player.maxMp}</span></div>
+                    <div>⚡ <strong>Thể Lực:</strong> <span class="text-gold">${Math.round(player.stamina)} / ${player.maxStamina}</span></div>
+                    <div>🦴 <strong>Căn Cốt:</strong> <span class="text-gold">${player.canCot}%</span></div>
+                </div>
+            </div>
+
+            <!-- BẢNG THUỘC TÍNH ĐẶC BIỆT -->
+            <div class="aperture-stat-card" style="grid-column: 1 / -1; background: rgba(15, 23, 42, 0.7); border: 1px solid #a855f7; padding: 12px 16px; border-radius: 8px;">
+                <h4 style="color:#c084fc; margin-bottom: 8px;">🔮 Thuộc Tính Đặc Biệt (Thiên Phú & Tinh Thần)</h4>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; font-size: 13px;">
+                    <div>🧠 <strong>Ngộ Tính:</strong> <span class="text-cyan">${player.comprehension}</span></div>
+                    <div>👁️ <strong>Thần Thức:</strong> <span class="text-cyan">${player.mentalSense}</span></div>
+                    <div>🔮 <strong>Tinh Thần:</strong> <span style="color:#c084fc;">${player.spiritPower}</span></div>
+                    <div>💡 <strong>Trí Mưu:</strong> <span class="text-gold">${player.intelligence}</span></div>
+                    <div>🍀 <strong>Khí Vận:</strong> <span style="color:#fbbf24;">${player.luck}</span></div>
+                    <div>⚔️ <strong>Uy Lực Công Kích:</strong> <span class="text-red">${calculateTotalPower()}</span></div>
+                </div>
+            </div>
+
+            <!-- ĐẠO CƠ TAM TRỤ: TƯ CHẤT / LINH CĂN / THỂ CHẤT -->
+            <div class="aperture-stat-card">
+                <h4>🔮 Tư Chất Cổ Sư</h4>
+                <p style="color:${player.aptitude.color}; font-weight:700;">${player.aptitude.name}</p>
+                <small>Dung lượng hải: ${Math.round((player.aptitude.seaPct || 0.45) * 100)}% • Tốc độ tu vi: x${player.aptitude.rate}</small>
+            </div>
+            <div class="aperture-stat-card">
+                <h4>🌱 Linh Căn Tiên Đạo</h4>
+                ${linhCanInfo}
+            </div>
+            <div class="aperture-stat-card" style="grid-column: span 2;">
+                <h4>✨ Thể Chất Đạo Thể</h4>
+                <p class="text-gold" style="font-weight:700;">${player.specialPhysique.name}</p>
+                <p style="font-size:12px; color:#cbd5e1; margin:4px 0;">${player.specialPhysique.desc}</p>
+                <div style="background:rgba(234,179,8,0.1); border:1px solid rgba(234,179,8,0.3); border-radius:6px; padding:6px 10px; margin-top:6px; font-size:12px; color:#fde047;">
+                    ⚡ <strong>Đặc Tính Bản Nguyên:</strong> ${player.specialPhysique.specialTrait || "Đạo cơ vững vàng, tâm cảnh thanh tịnh."}
                 </div>
             </div>
 
             <div class="aperture-stat-card">
                 <h4>Vách Không Khiếu</h4>
                 <p>${curRank.wallName}</p>
-                <small>Bền bỉ, ngưng tụ tự nhiên theo cảnh giới</small>
-            </div>
-            <div class="aperture-stat-card">
-                <h4>Tư Chất Không Khiếu</h4>
-                <p style="color:${player.aptitude.color}; font-weight:700;">${player.aptitude.name}</p>
-                <small>Dung lượng: ${Math.round((player.aptitude.seaPct || 0.45) * 100)}% • Tốc độ tu vi: x${player.aptitude.rate}</small>
+                <small>Ngưng tụ tự nhiên theo cảnh giới Cổ Sư</small>
             </div>
             <div class="aperture-stat-card">
                 <h4>Biển Chân Nguyên (${curRank.seaName})</h4>
@@ -1516,22 +1600,17 @@ function renderAperturePane() {
                 <small>Dung lượng hiện tại: ${Math.round((player.mp/player.maxMp)*100)}%</small>
             </div>
             <div class="aperture-stat-card">
-                <h4>Thể Chất Đạo Thể</h4>
-                <p class="text-gold">${player.specialPhysique.name}</p>
-                <small>${player.specialPhysique.desc}</small>
-            </div>
-            <div class="aperture-stat-card">
-                <h4>Linh Căn Tiên Đạo</h4>
-                ${linhCanInfo}
-            </div>
-            <div class="aperture-stat-card">
                 <h4>Định Hướng Tu Luyện</h4>
                 <p class="text-cyan">${modeText}</p>
                 <small>Quyết định phương thức phối hợp sức mạnh chiến đấu</small>
             </div>
+
             <div class="aperture-stat-card" style="grid-column: 1 / -1;">
-                <h4>Cổ Trùng Đang Ôn Dưỡng (${player.guInventory.length} Con)</h4>
-                <p class="text-cyan">${player.guInventory.map(g => `${g.name} (${g.rank} Chuyển • ${g.type || 'Hỗ Trợ'})`).join(", ") || "Chưa có cổ trùng nào trong không khiếu"}</p>
+                <h4>🐛 Cổ Trùng Đang Ôn Dưỡng Trong Không Khiếu (${player.guInventory.length} Con)</h4>
+                <p class="text-cyan">${player.guInventory.map(g => {
+                    const powerStr = (g.type === "Tấn Công" || g.power > 0) ? `+${g.power} Công` : (g.supportEffect || g.type || 'Hỗ Trợ');
+                    return `${g.name} (${g.rank} Chuyển • ${powerStr})`;
+                }).join(", ") || "Chưa có cổ trùng nào trong không khiếu"}</p>
             </div>
         `;
     }
@@ -1655,14 +1734,15 @@ function refineGu(gu) {
             path: gu.path,
             type: gu.type || "Hỗ Trợ",
             food: gu.food || "Các loại danh tửu, rượu ngon thế gian",
-            power: gu.power || 30,
-            mpCost: gu.mpCost || 20
+            power: (gu.type === "Tấn Công" ? (gu.power || 30) : 0),
+            mpCost: gu.mpCost || 20,
+            supportEffect: gu.supportEffect || ""
         };
-        player.guInventory.push(newGu);
+        addItemToInventory(`gu_${gu.id}`, 1, `Cổ Trùng: ${gu.name} (${gu.rank} Chuyển)`, "gu_item", { guData: newGu });
         player.systemPoints += 15;
         safePlaySound("playSuccess");
-        addLog(`🎉 Hợp luyện thành công! Ngươi tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch, luyện xuất: ${gu.name} (${gu.rank} Chuyển)!`, "special");
-        alert(`🎉 Hợp luyện thành công!\n\nĐã tiêu hao 1 ${matchedItem.name} & ${reqStone} Linh Thạch.\nNhận được Cổ Trùng: ${gu.name} (${gu.rank} Chuyển • ${gu.path}) vào Không Khiếu!`);
+        addLog(`🎉 Hợp luyện thành công! Ngươi tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch, luyện xuất: ${gu.name} (${gu.rank} Chuyển). Đã cất vào Túi Trữ Vật!`, "special");
+        alert(`🎉 Hợp luyện thành công!\n\nĐã tiêu hao 1 ${matchedItem.name} & ${reqStone} Linh Thạch.\nNhận được Cổ Trùng: ${gu.name} (${gu.rank} Chuyển • ${gu.path}) cất vào TÚI TRỮ VẬT!\n\n💡 Hãy mở Túi Trữ Vật để tiến hành Luyện Hóa đưa vào Không Khiếu.`);
     } else {
         // Thất bại
         safePlaySound("playError");
@@ -1977,17 +2057,19 @@ function renderShopPane() {
             } else if (it.type === "gu" && it.guId) {
                 const guData = window.GU_DATABASE ? window.GU_DATABASE.find(g => g.id === it.guId) : null;
                 if (guData) {
-                    player.guInventory.push({
+                    const stagedGu = {
                         id: guData.id,
                         name: guData.name,
                         rank: guData.rank,
                         path: guData.path,
                         type: guData.type || "Hỗ Trợ",
-                        power: guData.power || 50,
+                        power: (guData.type === "Tấn Công" ? (guData.power || 30) : 0),
                         food: guData.food || "Các loại danh tửu, rượu ngon thế gian",
-                        mpCost: guData.mpCost || 25
-                    });
-                    alert(`🎉 Đã thu nhận cổ trùng thượng cổ: ${guData.name} (${guData.rank} Chuyển • ${guData.path}) vào Không Khiếu!`);
+                        mpCost: guData.mpCost || 25,
+                        supportEffect: guData.supportEffect || ""
+                    };
+                    addItemToInventory(`gu_${guData.id}`, 1, `Cổ Trùng: ${guData.name} (${guData.rank} Chuyển)`, "gu_item", { guData: stagedGu });
+                    alert(`🎉 Đã mua Cổ Trùng: ${guData.name} (${guData.rank} Chuyển • ${guData.path}) và chuyển vào TÚI TRỮ VẬT!\n\n💡 Hãy mở Túi Trữ Vật để tiến hành Luyện Hóa đưa vào Không Khiếu.`);
                 }
             }
 
@@ -2275,16 +2357,19 @@ function rewardRandomGu(rank = 1) {
     const pool = window.GU_DATABASE.filter(g => g.rank === rank);
     if (pool.length > 0) {
         const picked = pool[Math.floor(Math.random() * pool.length)];
-        player.guInventory.push({
+        const stagedGu = {
             id: picked.id,
             name: picked.name,
             rank: picked.rank,
             path: picked.path,
             type: picked.type || "Hỗ Trợ",
-            power: picked.power || 30,
-            food: picked.food || "Linh tuyền"
-        });
-        addLog(`Thu được cổ trùng mới: ${picked.name} (${picked.rank} Chuyển)!`, "special");
+            power: (picked.type === "Tấn Công" ? (picked.power || 30) : 0),
+            food: picked.food || "Linh tuyền",
+            mpCost: picked.mpCost || 20,
+            supportEffect: picked.supportEffect || ""
+        };
+        addItemToInventory(`gu_${picked.id}`, 1, `Cổ Trùng: ${picked.name} (${picked.rank} Chuyển)`, "gu_item", { guData: stagedGu });
+        addLog(`Thu hoạch được Cổ Trùng hoang dã: ${picked.name} (${picked.rank} Chuyển) cất vào Túi Trữ Vật!`, "special");
     }
 }
 
@@ -2317,6 +2402,7 @@ function renderInventoryModal() {
         card.className = "inventory-item-card";
 
         let useBtnHtml = "";
+        const isGuItem = item.type === "gu_item" || (item.extra && item.extra.guData);
         const isStaminaPill = item.type === "pill_stamina" || item.id === "boi_nguyen_dan" || item.id === "bo_the_kim_dan";
         const isExpPill = item.type === "pill_exp" || item.id === "bo_khi_dan" || item.id === "ngung_khi_dan";
         const isCanCotPill = item.type === "pill_cancot" || item.id === "tay_tuy_dan";
@@ -2325,7 +2411,12 @@ function renderInventoryModal() {
         const isScroll = item.type === "scroll" || item.id.startsWith("scroll_");
         const isRecipe = item.type === "recipe" || item.id.startsWith("recipe_");
 
-        if (isStaminaPill) {
+        if (isGuItem) {
+            const gData = item.extra ? item.extra.guData : null;
+            const reqRank = gData ? gData.rank : 1;
+            const reqMp = gData ? gData.mpCost : 20;
+            useBtnHtml = `<button class="btn-subtle btn-use-inv btn-refine-inv-gu" data-idx="${idx}" style="background:rgba(52,211,153,0.15); border:1px solid #10b981; color:#6ee7b7;">🐛 Luyện Hóa Cổ (Cần Rank ${reqRank}, ${reqMp} MP)</button>`;
+        } else if (isStaminaPill) {
             const addVal = item.restore || (item.id === "bo_the_kim_dan" ? 50 : 40);
             useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">💊 Uống (Hồi +${addVal} Thể Lực)</button>`;
         } else if (isExpPill) {
@@ -2353,26 +2444,51 @@ function renderInventoryModal() {
         if (btnUse) {
             btnUse.addEventListener("click", () => {
                 if (item.count <= 0) return;
-                item.count -= 1;
 
-                if (isStaminaPill) {
+                if (isGuItem) {
+                    const gData = item.extra ? item.extra.guData : null;
+                    const reqRank = gData ? gData.rank : 1;
+                    const reqMp = gData ? gData.mpCost : 20;
+
+                    if ((player.rankIdx + 1) < reqRank) {
+                        alert(`⚠️ TU VI CHƯA ĐỦ ĐỂ ÁP CHẾ!\n\nĐể luyện hóa Cổ Trùng ${reqRank} Chuyển, đạo hữu cần đạt cảnh giới tối thiểu ${reqRank} Chuyển (hiện tại mới là ${player.rankIdx + 1} Chuyển).\n\nNếu cưỡng ép luyện hóa sẽ bị nứt Không Khiếu phản phệ nguy kịch!`);
+                        return;
+                    }
+                    if (player.mp < reqMp) {
+                        alert(`⚠️ CHÂN NGUYÊN KHÔNG ĐỦ!\n\nCần ít nhất ${reqMp} điểm Chân Nguyên để áp chế ý chí hoang dã của cổ trùng.`);
+                        return;
+                    }
+
+                    // Tiến hành luyện hóa thành công
+                    player.mp -= reqMp;
+                    item.count -= 1;
+                    player.guInventory.push(gData);
+                    safePlaySound("playSuccess");
+                    addLog(`✨ Đã luyện hóa thành công [${gData.name}] (${gData.rank} Chuyển) đưa vào Không Khiếu ôn dưỡng!`, "special");
+                    alert(`✨ Luyện hóa thành công ${gData.name} (${gData.rank} Chuyển)!\n\nCổ trùng đã chính thức ngụ cư trong Không Khiếu.`);
+                } else if (isStaminaPill) {
+                    item.count -= 1;
                     const addVal = item.restore || (item.id === "bo_the_kim_dan" ? 50 : 40);
                     player.stamina = Math.min(player.maxStamina, player.stamina + addVal);
                     addLog(`Đã dùng 1 viên ${item.name}, hồi phục ${addVal} Thể Lực!`, "success");
                 } else if (isExpPill) {
+                    item.count -= 1;
                     const addExp = item.exp || item.expGain || (item.id === "ngung_khi_dan" ? 100 : 40);
                     player.exp += addExp;
                     checkExpThreshold();
                     addLog(`Đã dùng 1 viên ${item.name}, gia tăng +${addExp} Tu Vi!`, "success");
                 } else if (isCanCotPill) {
+                    item.count -= 1;
                     player.canCot = 100;
                     addLog(`Đã dùng 1 viên ${item.name}, Căn Cốt hồi phục 100% hoàn mỹ!`, "special");
                     alert("🎉 Đã dùng Tẩy Tủy Thần Đan, Căn Cốt của ngươi đã hồi phục 100% hoàn mỹ!");
                 } else if (isAgePill) {
+                    item.count -= 1;
                     player.maxAge += 50;
                     addLog(`Đã dùng 1 viên ${item.name}, kéo dài thêm +50 năm thọ nguyên (${player.maxAge} tuổi)!`, "special");
                     alert(`🌟 Đã dùng Định Nhan Thần Đan! Thọ nguyên tối đa tăng lên: ${player.maxAge} tuổi.`);
                 } else if (isRerollPill) {
+                    item.count -= 1;
                     player.linhCan = null;
                     linhCanRollsLeft = 10;
                     addLog("Đã tẩy rửa sạch sẽ toàn bộ tạp chất linh căn!", "special");
@@ -2381,14 +2497,33 @@ function renderInventoryModal() {
                     openModal("modal-system");
                     switchToSystemTab("systab-aperture");
                 } else if (isScroll) {
-                    const tid = item.techId || item.id.replace("scroll_", "");
+                    const tid = (item.extra && item.extra.techId) || item.techId || item.id.replace("scroll_", "");
                     const techObj = window.TECHNIQUES_DATABASE ? window.TECHNIQUES_DATABASE.find(t => t.id === tid) : null;
                     if (techObj) {
+                        if (player.techniquesLearned.some(t => t.id === techObj.id)) {
+                            alert(`Đạo hữu đã lĩnh ngộ công pháp [${techObj.name}] trước đó rồi!`);
+                            return;
+                        }
+                        if (!player.linhCan) {
+                            alert("⚠️ CẦN CÓ LINH CĂN!\n\nTu tiên công pháp yêu cầu người tu phải có Linh Căn để hấp thụ thiên địa linh khí. Hãy dùng Tẩy Linh Đan hoặc Đo Linh Bàn để trắc định.");
+                            return;
+                        }
+                        if (player.comprehension < techObj.reqComprehension) {
+                            alert(`⚠️ THIẾU NGỘ TÍNH!\n\nCông pháp này yêu cầu Ngộ Tính tối thiểu ${techObj.reqComprehension} (Hiện có: ${player.comprehension}).`);
+                            return;
+                        }
+                        if ((player.rankIdx + 1) < techObj.reqRank) {
+                            alert(`⚠️ TU VI CHƯA ĐỦ!\n\nCần đạt cảnh giới ${techObj.reqRealm} mới đủ chân khí để vận hành chu thiên công pháp này.`);
+                            return;
+                        }
+                        item.count -= 1;
                         learnTechnique(techObj);
                     } else {
+                        item.count -= 1;
                         alert("Đã mở quyển trục và lĩnh ngộ bí kíp thành công!");
                     }
                 } else if (isRecipe) {
+                    item.count -= 1;
                     alert("Đã khắc sâu cổ phương vào thức hải! Đạo hữu có thể vào tab Cổ Phương & Hợp Luyện để luyện chế.");
                     closeModal("modal-inventory");
                     openModal("modal-system");
@@ -2666,16 +2801,18 @@ function renderLibraryShop() {
                 return;
             }
             player.stoneLow -= cg.price;
-            player.guInventory.push({
+            const stagedGu = {
                 id: cg.id,
                 name: cg.name,
                 rank: cg.rank,
                 path: cg.path,
-                type: cg.type,
-                power: 35,
-                food: "Linh tuyền"
-            });
-            alert(`Đã thu nạp thành công ${cg.name} vào không khiếu!`);
+                type: cg.type || "Hỗ Trợ",
+                power: (cg.type.includes("Công") ? 35 : 0),
+                food: "Linh tuyền",
+                mpCost: 20
+            };
+            addItemToInventory(`gu_${cg.id}`, 1, `Cổ Trùng: ${cg.name} (${cg.rank} Chuyển)`, "gu_item", { guData: stagedGu });
+            alert(`Đã đổi thành công ${cg.name} (${cg.rank} Chuyển) và cất vào Túi Trữ Vật!\n\n💡 Mở Túi Trữ Vật để Luyện Hóa đưa vào Không Khiếu.`);
             if (window.soundEngine) window.soundEngine.playCoins();
             updateSidebarUI();
         });
@@ -3097,6 +3234,19 @@ function finishAwakeningMiniGame() {
     switchIntroStep(3);
 }
 
+function applyPhysiqueBonuses(physique) {
+    if (!physique || physique.id === "none") return;
+    if (physique.hpBonus) { player.maxHp += physique.hpBonus; player.hp += physique.hpBonus; }
+    if (physique.mpBonus) { player.maxMp += physique.mpBonus; player.mp += physique.mpBonus; }
+    if (physique.staminaBonus) { player.maxStamina += physique.staminaBonus; player.stamina += physique.staminaBonus; }
+    if (physique.powerBonus) { player.power = (player.power || 30) + physique.powerBonus; }
+    if (physique.compBonus) { player.comprehension = (player.comprehension || 15) + physique.compBonus; }
+    if (physique.senseBonus) { player.mentalSense = (player.mentalSense || 14) + physique.senseBonus; }
+    if (physique.spiritBonus) { player.spiritPower = (player.spiritPower || 15) + physique.spiritBonus; }
+    if (physique.intelBonus) { player.intelligence = (player.intelligence || 17) + physique.intelBonus; }
+    if (physique.maxAgeBonus) { player.maxAge = (player.maxAge || 100) + physique.maxAgeBonus; }
+}
+
 function applyAwakeningResult(apt, isTuyetTheForce = false) {
     player.aptitude = apt;
     player.mp = Math.round(player.maxMp * (apt.seaPct || 0.45));
@@ -3110,9 +3260,16 @@ function applyAwakeningResult(apt, isTuyetTheForce = false) {
     if (shouldAwakenPhysique) {
         const specialIdx = Math.floor(Math.random() * (SPECIAL_PHYSIQUES.length - 1)) + 1;
         player.specialPhysique = SPECIAL_PHYSIQUES[specialIdx];
+        applyPhysiqueBonuses(player.specialPhysique);
+
         if (physiqueBox) physiqueBox.classList.remove("hidden");
         if (physiqueNameEl) physiqueNameEl.textContent = player.specialPhysique.name;
-        if (physiqueDescEl) physiqueDescEl.textContent = player.specialPhysique.desc;
+        if (physiqueDescEl) {
+            physiqueDescEl.innerHTML = `
+                <div>${player.specialPhysique.desc}</div>
+                <div style="margin-top:6px; color:#fbbf24; font-weight:600;">✨ Đặc Tính Bản Nguyên: ${player.specialPhysique.specialTrait}</div>
+            `;
+        }
         addLog(`⚡ DỊ TƯỢNG TRỜI GIÁNG: Ngươi thức tỉnh THẬP ĐẠI TUYỆT THỂ: ${player.specialPhysique.name}! Chân nguyên 10 thành trọn vẹn!`, "special");
     } else {
         player.specialPhysique = SPECIAL_PHYSIQUES[0]; // Phàm thể
