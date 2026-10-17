@@ -17,21 +17,24 @@
 // ============================================================
 
 const SUB_STAGES = [
-    { id: 0, name: "Sơ Giai", multiplier: 1.0 },
-    { id: 1, name: "Trung Giai", multiplier: 1.7 },
-    { id: 2, name: "Cao Giai", multiplier: 2.9 },
-    { id: 3, name: "Đỉnh Phong", multiplier: 4.7 },
-    { id: 4, name: "Viên Mãn", multiplier: 7.3 },
-    { id: 5, name: "Đại Viên Mãn", multiplier: 10.9 }
+    { id: 0, name: "Sơ Giai (Sơ Kỳ)", multiplier: 1.0 },
+    { id: 1, name: "Trung Giai (Trung Kỳ)", multiplier: 1.8 },
+    { id: 2, name: "Cao Giai (Hậu Kỳ)", multiplier: 3.2 },
+    { id: 3, name: "Đỉnh Phong", multiplier: 5.2 },
+    { id: 4, name: "Viên Mãn", multiplier: 8.0 },
+    { id: 5, name: "Đại Viên Mãn (Cực Hạn)", multiplier: 12.8 }
 ];
 
 const RANKS = [
-    { rank: 1, name: "Nhất Chuyển", baseExp: 350, maxHp: 200, maxMp: 160, maxAge: 100, expStepMult: 1.1, power: 30, staminaBonus: 0, wallName: "Màng Quang Thô Sơ", seaName: "Thanh Đồng Hải" },
-    { rank: 2, name: "Nhị Chuyển", baseExp: 1200, maxHp: 550, maxMp: 450, maxAge: 160, expStepMult: 1.2, power: 90, staminaBonus: 20, wallName: "Màng Ngọc Kiên Cố", seaName: "Xích Thiết Hải" },
-    { rank: 3, name: "Tam Chuyển", baseExp: 3500, maxHp: 1500, maxMp: 1200, maxAge: 240, expStepMult: 1.4, power: 280, staminaBonus: 40, wallName: "Màng Bạc Lấp Lánh", seaName: "Bạch Ngân Hải" },
-    { rank: 4, name: "Tứ Chuyển", baseExp: 10000, maxHp: 4000, maxMp: 3200, maxAge: 360, expStepMult: 1.7, power: 950, staminaBonus: 60, wallName: "Màng Tinh Thạch Vàng", seaName: "Hoàng Kim Hải" },
-    { rank: 5, name: "Ngũ Chuyển", baseExp: 30000, maxHp: 11000, maxMp: 9000, maxAge: 500, expStepMult: 2.0, power: 3200, staminaBonus: 100, wallName: "Màng Tinh Thạch Tím", seaName: "Tử Tinh Hải" },
-    { rank: 6, name: "Lục Chuyển (Cổ Tiên)", baseExp: 100000, maxHp: 35000, maxMp: 30000, maxAge: 1200, expStepMult: 2.5, power: 13000, staminaBonus: 999999, wallName: "Tiên Khiếu Phúc Địa", seaName: "Bạch Ngọc Tiên Nguyên" }
+    { rank: 1, name: "Nhất Chuyển • Luyện Khí Kỳ", guRankName: "Nhất Chuyển", daoRealmName: "Luyện Khí Kỳ", baseExp: 450, maxHp: 220, maxMp: 160, maxAge: 120, expStepMult: 1.15, power: 30, staminaBonus: 0, wallName: "Màng Quang Thô Sơ", seaName: "Thanh Đồng Hải" },
+    { rank: 2, name: "Nhị Chuyển • Trúc Cơ Kỳ", guRankName: "Nhị Chuyển", daoRealmName: "Trúc Cơ Kỳ", baseExp: 1600, maxHp: 650, maxMp: 500, maxAge: 200, expStepMult: 1.25, power: 90, staminaBonus: 20, wallName: "Màng Ngọc Kiên Cố", seaName: "Xích Thiết Hải" },
+    { rank: 3, name: "Tam Chuyển • Kết Đan Kỳ", guRankName: "Tam Chuyển", daoRealmName: "Kết Đan Kỳ", baseExp: 5000, maxHp: 1800, maxMp: 1400, maxAge: 500, expStepMult: 1.45, power: 280, staminaBonus: 40, wallName: "Màng Bạc Lấp Lánh", seaName: "Bạch Ngân Hải" },
+    { rank: 4, name: "Tứ Chuyển • Nguyên Anh Kỳ", guRankName: "Tứ Chuyển", daoRealmName: "Nguyên Anh Kỳ", baseExp: 15000, maxHp: 4800, maxMp: 3800, maxAge: 1200, expStepMult: 1.75, power: 950, staminaBonus: 60, wallName: "Màng Tinh Thạch Vàng", seaName: "Hoàng Kim Hải" },
+    { rank: 5, name: "Ngũ Chuyển • Hóa Thần Kỳ", guRankName: "Ngũ Chuyển", daoRealmName: "Hóa Thần Kỳ", baseExp: 45000, maxHp: 13000, maxMp: 10500, maxAge: 2500, expStepMult: 2.1, power: 3200, staminaBonus: 100, wallName: "Màng Tinh Thạch Tím", seaName: "Tử Tinh Hải" },
+    { rank: 6, name: "Lục Chuyển • Luyện Hư Kỳ (Hạ Vị Cổ Tiên)", guRankName: "Lục Chuyển", daoRealmName: "Luyện Hư Kỳ", baseExp: 150000, maxHp: 40000, maxMp: 35000, maxAge: 5000, expStepMult: 2.5, power: 13000, staminaBonus: 999999, wallName: "Tiên Khiếu Phúc Địa", seaName: "Thanh Đề Tiên Nguyên" },
+    { rank: 7, name: "Thất Chuyển • Hợp Thể Kỳ (Trung Vị Cổ Tiên)", guRankName: "Thất Chuyển", daoRealmName: "Hợp Thể Kỳ", baseExp: 500000, maxHp: 120000, maxMp: 110000, maxAge: 10000, expStepMult: 3.0, power: 45000, staminaBonus: 999999, wallName: "Pháp Thể Kim Thân", seaName: "Hồng Táo Tiên Nguyên" },
+    { rank: 8, name: "Bát Chuyển • Đại Thừa Kỳ (Thượng Vị Cổ Tiên)", guRankName: "Bát Chuyển", daoRealmName: "Đại Thừa Kỳ (Độ Kiếp)", baseExp: 1800000, maxHp: 380000, maxMp: 350000, maxAge: 30000, expStepMult: 3.6, power: 150000, staminaBonus: 999999, wallName: "Độ Kiếp Động Thiên", seaName: "Bạch Lệ Tiên Nguyên" },
+    { rank: 9, name: "Cửu Chuyển • Chân Tiên Cảnh (Cổ Tôn Vô Thượng)", guRankName: "Cửu Chuyển", daoRealmName: "Chân Tiên Cảnh (Đạo Tổ)", baseExp: 6500000, maxHp: 1200000, maxMp: 1100000, maxAge: 100000, expStepMult: 4.5, power: 500000, staminaBonus: 999999, wallName: "Chí Tôn Tiên Thai Khiếu", seaName: "Hoàng Hạnh Tiên Nguyên" }
 ];
 
 const APTITUDES = {
@@ -787,7 +790,7 @@ function updateSidebarUI() {
         if (player.subStageIdx >= 4) {
             btnBreakthrough.disabled = false;
             btnBreakthrough.classList.add("btn-breakthrough-pulse");
-            const rate = player.isDaiVienMan ? 90 : Math.round(65 * (player.canCot / 100));
+            const rate = player.isDaiVienMan ? Math.round(95 * (player.canCot / 100)) : Math.round(65 * (player.canCot / 100));
             txtBreakthrough.textContent = player.isDaiVienMan ? `Đại Viên Mãn (Tỉ lệ ${rate}%)` : `Viên Mãn (Tỉ lệ ${rate}%)`;
         } else {
             btnBreakthrough.disabled = true;
@@ -1189,21 +1192,46 @@ function executeAction(actionKey, actConfig = null) {
         }
 
         case "act_study_library": {
-            // Tăng ngộ tính và điểm Đạo Cảnh
-            const currentDao = player.mainDao || "quang";
-            if (!player.daoLevels[currentDao]) {
-                player.daoLevels[currentDao] = { exp: 0, level: 0 };
-            }
-            player.daoLevels[currentDao].exp += 25;
-            checkDaoLevelUp(currentDao);
+            if (typeof player.libraryCompGained !== "number") player.libraryCompGained = 0;
+            if (typeof player.libraryIntelGained !== "number") player.libraryIntelGained = 0;
+            if (typeof player.libraryStudyCount !== "number") player.libraryStudyCount = 0;
+
+            player.libraryStudyCount += 1;
+            const maxCap = 10;
+            const canGainComp = player.libraryCompGained < maxCap;
+            const canGainIntel = player.libraryIntelGained < maxCap;
 
             title = `📚 Nghiên Cứu Điển Tịch Thượng Cổ`;
-            desc = `Ngươi nghiền ngẫm những cuốn da dê cổ, cảm ngộ quy luật thiên địa, tích lũy kiến thức sâu sắc cho con đường tu chân.`;
-            lootHtml = `
-                <div class="loot-tag text-purple">+25 Điểm Đạo Cảnh (${currentDao.toUpperCase()})</div>
-                <div class="loot-tag text-jade">Tâm Trí Thông Suốt</div>
-            `;
-            addLog(`Nghiên cứu điển tịch gia tăng 25 điểm Đạo Cảnh.`, "info");
+
+            if (!canGainComp && !canGainIntel) {
+                desc = `Ngươi nghiền ngẫm những cuốn da dê và trúc giản cổ, nhưng tâm trí đã đạt tới giới hạn lĩnh hội tàng thư phàm trần (Đã nhận tối đa +10 Ngộ Tính, +10 Trí Mưu). Cần tìm sách cổ cao cấp hơn hoặc đột phá cảnh giới để nâng cao thêm!`;
+                lootHtml = `
+                    <div class="loot-tag text-slate">Đã Đạt Giới Hạn Tàng Thư (10/10)</div>
+                    <div class="loot-tag text-jade">Tâm Trí Tĩnh Lặng</div>
+                `;
+                addLog(`Nghiên cứu điển tịch nhưng đã đạt tới giới hạn tri thức phàm trần (+10 Ngộ Tính, +10 Trí Mưu).`, "info");
+            } else {
+                let gainDesc = "";
+                // Xác suất: nếu cả 2 còn slot, random 50/50; nếu chỉ còn 1 bên thì tăng bên đó
+                if (canGainComp && (!canGainIntel || Math.random() < 0.5)) {
+                    player.comprehension += 1;
+                    player.libraryCompGained += 1;
+                    gainDesc = `+1 Ngộ Tính (${player.libraryCompGained}/${maxCap})`;
+                } else {
+                    player.intelligence += 1;
+                    player.libraryIntelGained += 1;
+                    gainDesc = `+1 Trí Mưu (${player.libraryIntelGained}/${maxCap})`;
+                }
+
+                desc = `Ngươi cẩn thận lật giở từng trang thư tịch cổ, ánh mắt sáng ngời khi đốn ngộ được một tầng đạo lý huyền ảo, giúp mở rộng thức hải.`;
+                lootHtml = `
+                    <div class="loot-tag text-gold">${gainDesc}</div>
+                    <div class="loot-tag text-jade">Thức Hải Khai Thông</div>
+                    <div class="loot-tag text-orange">-${staminaCost} Thể Lực (${hoursCost} Giờ)</div>
+                `;
+                addLog(`Nghiên cứu điển tịch đốn ngộ nhận ${gainDesc}.`, "special");
+                if (window.soundEngine) window.soundEngine.playSuccess();
+            }
             break;
         }
 
@@ -1280,12 +1308,17 @@ function checkExpThreshold() {
             if (window.soundEngine) window.soundEngine.playSuccess();
         } else if (player.subStageIdx === 4 && !player.isDaiVienMan) {
             // Đã đạt Viên Mãn, cho phép tiếp tục tích lũy exp để lên Đại Viên Mãn
-            if (player.exp >= player.maxExp * 1.5) {
-                player.exp = player.maxExp * 1.5;
+            const targetExpDaiVienMan = Math.round(player.maxExp * 1.6);
+            if (player.exp >= targetExpDaiVienMan) {
+                player.exp = targetExpDaiVienMan;
                 player.isDaiVienMan = true;
-                addLog(`✨ Linh quang ngút trời! Ngươi đã tu luyện tới cảnh giới ĐẠI VIÊN MÃN! Tỉ lệ đột phá tăng vọt lên 90%!`, "special");
+                player.subStageIdx = 5; // Đại Viên Mãn
+                addLog(`✨ LINH QUANG NGÚT TRỜI! Ngươi đã dày công nén tu vi tới cảnh giới ĐẠI VIÊN MÃN! Tỉ lệ đột phá đại cảnh giới tăng vọt lên 95%!`, "special");
                 if (window.soundEngine) window.soundEngine.playSuccess();
             }
+        } else if (player.isDaiVienMan) {
+            const targetExpDaiVienMan = Math.round(player.maxExp * 1.6);
+            player.exp = Math.min(player.exp, targetExpDaiVienMan);
         }
     }
 }
@@ -1293,7 +1326,7 @@ function checkExpThreshold() {
 function recalcMaxExp() {
     const curRank = RANKS[player.rankIdx] || RANKS[0];
     const curSub = SUB_STAGES[player.subStageIdx] || SUB_STAGES[0];
-    // Thời gian tu luyện tăng dần: x1.1 cho Chuyển 1, x1.2 cho Chuyển 2, x1.4 cho Chuyển 3, x1.7 cho Chuyển 4, x2.0 cho Chuyển 5
+    // Thời gian tu luyện tăng dần lũy tiến theo từng Chuyển
     player.maxExp = Math.round(curRank.baseExp * curSub.multiplier * curRank.expStepMult);
 }
 
@@ -1303,10 +1336,10 @@ function attemptBreakthrough() {
         return;
     }
 
-    // Tỉ lệ thành công
-    let baseRate = player.isDaiVienMan ? 90 : 65;
+    // Tỉ lệ thành công theo thiết lập v5: 65% ở Viên Mãn, 95% ở Đại Viên Mãn
+    let baseRate = player.isDaiVienMan ? 95 : 65;
     // Căn cốt ảnh hưởng trực tiếp đến tỉ lệ đột phá
-    let finalRate = Math.round(baseRate * (player.canCot / 100));
+    let finalRate = Math.min(99, Math.round(baseRate * (player.canCot / 100)));
 
     const roll = Math.random() * 100;
     if (roll <= finalRate) {
@@ -1328,10 +1361,10 @@ function attemptBreakthrough() {
             recalcMaxExp();
             
             if (window.soundEngine) window.soundEngine.playBreakthrough();
-            addLog(`🎉 ĐỘT PHÁ THÀNH CÔNG! Ngươi đã phá vỡ xiềng xích, bước vào cảnh giới ${nextRank.name}! Chân nguyên biến hóa thành ${nextRank.seaName}!`, "special");
-            alert(`🎉 Chúc mừng! Ngươi đã đột phá thành công lên ${nextRank.name}!`);
+            addLog(`🎉 ĐỘT PHÁ THÀNH CÔNG! Ngươi đã phá vỡ gông cùm, bước vào cảnh giới ${nextRank.name}! Chân nguyên biến hóa thành ${nextRank.seaName}!`, "special");
+            alert(`🎉 Chúc mừng! Ngươi đã đột phá thành công lên ${nextRank.name}!\n\n${nextRank.guRankName} (Cổ Sư) ⟷ ${nextRank.daoRealmName} (Tiên Đạo)`);
         } else {
-            alert("Ngươi đã đạt cảnh giới tối cao trong phiên bản hiện tại!");
+            alert("Ngươi đã đạt cảnh giới tối cao trong thiên địa (Cửu Chuyển • Chân Tiên Cảnh)!");
         }
     } else {
         // ĐỘT PHÁ THẤT BẠI - TỔN THƯƠNG CĂN CỐT!
@@ -1341,7 +1374,7 @@ function attemptBreakthrough() {
         
         if (window.soundEngine) window.soundEngine.playError();
         addLog(`💥 Đột phá thất bại! Nghịch chuyển kinh mạch, Căn Cốt bị tổn thương giảm -${canCotLost}%! (Căn cốt hiện tại: ${player.canCot}%). Tốc độ tu luyện và tỉ lệ đột phá sau này bị suy giảm!`, "danger");
-        alert(`💥 Đột phá thất bại! Căn Cốt tổn thương -${canCotLost}%. Hãy dùng Tẩy Tủy Đan hoặc công pháp Tẩy Tủy Quyết để chữa lành!`);
+        alert(`💥 Đột phá thất bại! Căn Cốt tổn thương -${canCotLost}%. Hãy dùng Tẩy Tủy Đan hoặc công pháp Tẩy Tủy Quyết để chữa lành!\n\n💡 Lời khuyên: Tu luyện lên [Đại Viên Mãn] trước khi đột phá để đạt 95% tỷ lệ thành công!`);
     }
 
     updateSidebarUI();
