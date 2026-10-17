@@ -1,0 +1,35 @@
+name: Multi-Agent Auto Bug Fixer
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  auto-fix:
+    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'bug-auto')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Cài Đặt Python / Node Môi Trường
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 🤖 Kích Hoạt Pipeline Đa Tác Tử (Orchestrator)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python scripts/multi_agent_orchestrator.py
