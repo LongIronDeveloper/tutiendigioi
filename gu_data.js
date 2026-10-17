@@ -1,4 +1,3 @@
-// KHO CỔ TRÙNG ĐÍCH THỰC 194 CON - NGUYÊN TÁC CỔ CHÂN NHÂN
 window.GU_DATABASE = [
   {
     "id": "t_u_tr_ng",
@@ -9,7 +8,7 @@ window.GU_DATABASE = [
     "desc": "Lấy rượu làm thức ăn, có thể lăng không phi hành. Nó có thể cô đọng chiết xuất chân nguyên đề cao nửa giai, nhưng chỉ hữu hiệu với cổ sư nhất chuyển.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Khí Đạo",
@@ -26,7 +25,8 @@ window.GU_DATABASE = [
         }
       ],
       "successRate": 85
-    }
+    },
+    "supportEffect": "Cô đọng chân nguyên đề cao nửa giai, nâng phẩm chất chân nguyên"
   },
   {
     "id": "nguy_t_quang_c",
@@ -65,7 +65,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng thiên nhiên loại thảo mộc, chỉ có quán chú chân nguyên, có thể sinh trưởng. Sau khi lớn lên, trong tâm hoa sẽ bài tiết ra mật hoa.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
@@ -93,7 +93,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng thiên nhiên loại thảo mộc, chỉ có quán chú chân nguyên, liền có thể sinh trưởng. Sau khi lớn lên, cỏ trong túi sẽ sinh trưởng xuất ra hạt gạo thơm ngào ngạt.",
     "food": "Linh dịch dưỡng thực vật, sương mai thảo mộc",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
@@ -121,7 +121,7 @@ window.GU_DATABASE = [
     "desc": "Là cổ trùng tiêu chí của Hùng gia, giống như Nguyệt Quang cổ của Cổ Nguyệt nhất tộc hay là Khê Lưu cổ của Bạch gia. Đồ ăn là mật ong.",
     "food": "Cánh hoa nguyệt lan tươi",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Lực Đạo",
@@ -149,7 +149,7 @@ window.GU_DATABASE = [
     "desc": "Là cổ trùng tiêu chí của Bạch gia.",
     "food": "Nước suối nguyên tuyền",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thủy Đạo",
@@ -177,7 +177,7 @@ window.GU_DATABASE = [
     "desc": "( Thảo Khôi cổ ): Có được năng lực tự lành của thảo mộc hệ.",
     "food": "Linh dịch dưỡng thực vật, sương mai thảo mộc",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
@@ -233,7 +233,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể tăng sức mạnh cho cổ sư trong một khoảng thời gian, danh xưng nhất ngưu chi lực, duy trì năm cái hô hấp.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Lực Đạo",
@@ -261,7 +261,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, gia tăng lực lượng cho cổ sư.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Ám Đạo",
@@ -317,7 +317,7 @@ window.GU_DATABASE = [
     "desc": "Có thể tẩy luyện cổ sư khiếu bích, đem không khiếu nguyên trong biển dị chủng khí tức đều hóa đi.",
     "food": "Nước ngọt linh tuyền, thủy tinh thạch",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thủy Đạo",
@@ -345,7 +345,7 @@ window.GU_DATABASE = [
     "desc": "Muốn nhớ gì thì đút cho thư trùng ăn, từ nay về sau chỉ cần thư trùng không mất, thì cổ sư có thể vĩnh viễn nhớ kỹ.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -373,7 +373,7 @@ window.GU_DATABASE = [
     "desc": "Trong khoảnh khắc khiến da màu vàng chuyển màu xám trắng. Đồng thời bành trướng, trùm lên một tầng da đá dày đặc mười phần.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thổ Đạo",
@@ -401,7 +401,7 @@ window.GU_DATABASE = [
     "desc": "Cùng loại Đồng Bì cổ.",
     "food": "Quặng sắt tinh chế, huyền thiết thô",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Kim Đạo",
@@ -457,7 +457,7 @@ window.GU_DATABASE = [
     "desc": "Cùng Đồng Bì cổ… thuộc về một cái hệ liệt. Nhưng mà giá trị lại phân biệt rất lớn, Thú Bì cổ bình thường nhất, giá thị trường so Thạch Bì cổ còn thấp một chút, nhưng mà lộ tuyến tấn thăng rất nhiều, có thể cùng rất nhiều cổ trùng khác hợp luyện.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -485,7 +485,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể ban cho cổ sư sức chịu đựng, làm giảm mạnh mức độ tiêu hao thể lực của cổ sư, có thể duy trì một khắc đồng hồ.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -513,7 +513,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể tăng lực lượng cho cổ sư trong thời gian nhất định, danh xưng một thỉ chi lực. Tiêu hao chân nguyên lượng cùng Man Lực Thiên Ngưu cổ đồng dạng nhiều, nhưng là nó có thể duy trì mười cái hô hấp.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
@@ -541,7 +541,7 @@ window.GU_DATABASE = [
     "desc": "Dùng cho tăng mập.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -569,7 +569,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, gia tăng lực lượng cho cổ sư.",
     "food": "Nước suối nguyên tuyền",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -625,7 +625,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, gia tăng năng lực né tránh.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -681,7 +681,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng cho lấp lóe quang mang.",
     "food": "Ánh sáng ban mai, ngọc quang thạch",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Quang Đạo",
@@ -737,7 +737,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể trực tiếp tăng lên một cái tiểu cảnh giới cho nhất chuyển cổ sư.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Kim Đạo",
@@ -765,7 +765,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại nô thú, giống như ngọc thạch, kích cỡ khoảng chừng bằng đầu ngón tay cái, cực giống đầu chó, có thể dùng để ngự sử loài chó, đồng thời cũng là thứ tiến vào bên trong truyền thừa Tam Vương, chìa khóa Khuyển Vương Truyền Thừa.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
@@ -793,7 +793,7 @@ window.GU_DATABASE = [
     "desc": "Năng lực là ẩn thân, nhưng chỉ có thể biến mất thân thể, quần áo… không thể biến mất, cho nên tạm thời chưa có giá trị thực dụng.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 20,
-    "power": 35,
+    "power": 0,
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thổ Đạo",
@@ -882,7 +882,7 @@ window.GU_DATABASE = [
     "desc": "Đem cổ trùng khác bao nuôi ở trong tâm hoa, ngâm trong dịch hoa màu hoàng kim. Loại dịch hoa hoàng kim có thể ở một mức độ nào đó, mô phỏng trạng thái phong ấn, để ngâm ở trong đó cổ trùng lâm vào ngủ say.",
     "food": "Bạch kim, hoàng kim tinh khoáng",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Mộc Đạo",
@@ -948,7 +948,7 @@ window.GU_DATABASE = [
     "desc": "Khiến cho thân thể biến thành một đoàn hắc ám nồng đậm.",
     "food": "Bóng tối thâm uyên, hắc ám tinh thạch",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Thủy Đạo",
@@ -981,7 +981,7 @@ window.GU_DATABASE = [
     "desc": "Có thể cảm ứng nhiệt lượng. Bất quá có ba cái thiếu hụt rõ ràng, một là phạm vi cảm giác nhỏ, hai là dễ dàng bị quấy rầy, ba là không thể kiểm trắc sinh vật máu lạnh.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
@@ -1113,7 +1113,7 @@ window.GU_DATABASE = [
     "desc": "Không có năng lực nào đáng kể.",
     "food": "Nước suối nguyên tuyền",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
@@ -1146,7 +1146,7 @@ window.GU_DATABASE = [
     "desc": "Từ hai con Tửu Trùng thêm bốn loại rựu ngon là “ngọt bùi cay đắng” hợp luyện mà thành, có thể cô đọng chiết xuất chân nguyên giúp đề cao nửa giai, chỉ hữu hiệu với nhị chuyển cổ sư.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Khí Đạo",
@@ -1278,7 +1278,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, trong nháy mắt tăng lên một cái tiểu cảnh giới, chỉ hữu hiệu nhị chuyển cổ sư.",
     "food": "Quặng sắt tinh chế, huyền thiết thô",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Kim Đạo",
@@ -1311,7 +1311,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, mỗi lần thôi động, đều tiêu hao không ít chân nguyên. Nhằm vào cổ trùng càng cường đại, quá trình liền càng gian nan, chân nguyên tiêu hao thì càng nhiều. Nếu như thất bại, cổ sư sẽ bị phản phệ.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Độc Đạo",
@@ -1377,7 +1377,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể gia tăng lực lượng cho cổ sư trong một khoảng thời gian, danh xưng nhất hùng chi lực.",
     "food": "Mật ong rừng hoang dã",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Lực Đạo",
@@ -1410,7 +1410,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng xong có thể gia tăng tuổi thọ mười năm đến chín mươi năm.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
@@ -1476,7 +1476,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại hậu cần, chuyên môn dùng để truyền tin, đồng thời cũng là thứ tiến vào bên trong truyền thừa tam Vương, chìa khóa truyền thừa Tín Vương.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
@@ -1509,7 +1509,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại cương thi, một trong những hệ liệt cổ trùng kinh điển nhất. Khiến cổ sư triệt để hóa thân cương thi, chỉ cần đúng giờ hút máu, liền có thể sống động tự do, cẩu thả trường tồn.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Kim Đạo",
@@ -1542,7 +1542,7 @@ window.GU_DATABASE = [
     "desc": "Từ Ẩn Thạch cổ cùng Ngư Lân cổ hợp luyện thành, năng lực là ẩn thân, có thể khiến quần áo trên người cùng bản thân đều có thể ẩn thân.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
@@ -1641,7 +1641,7 @@ window.GU_DATABASE = [
     "desc": "Ký thác vào gốc lưỡi của cổ sư, sau khi thôi động có thể hóa thành đoàn ngọn lửa màu xanh lam, cùng nhất chuyển Cốt Trúc cổ phối hợp mà tu bổ Chiến Cốt Xa Luân, tại thương đội mua thu hoạch được.",
     "food": "Hỏa diễm nham thạch, than củi linh mộc",
     "mpCost": 35,
-    "power": 95,
+    "power": 0,
     "recipe": {
       "reqRank": 2,
       "reqDao": "Viêm Đạo",
@@ -1707,7 +1707,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dựa vào hút quang mang cùng thanh âm mà sống. Chỉ có thể ghi chép một lần.",
     "food": "Ánh sáng ban mai, ngọc quang thạch",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -1806,7 +1806,7 @@ window.GU_DATABASE = [
     "desc": "Tứ Vị Tửu Trùng tấn thăng mà thành, nó có thể cô đọng chân nguyên, đem chân nguyên cổ sư tăng lên một tiểu cảnh giới, nhưng chỉ giới hạn trong tam chuyển.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Khí Đạo",
@@ -1905,7 +1905,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại phụ trợ, để phát cổ sư tự do thôi phát thú lực hư ảnh.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lực Đạo",
@@ -2169,7 +2169,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại phụ trợ, dùng cho truyền tin, tại tiên hạc môn chỗ thu hoạch được.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lôi Đạo",
@@ -2367,7 +2367,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng cho cưỡng ép đột phá tam chuyển.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -2400,7 +2400,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, từ Xú Thí cổ cùng Phạn Đại Thảo cùng mùi hôi chiểu bùn hợp luyện thành a phân cổ sau, cùng đại lực cổ hợp luyện thành đại lực a phân cổ, lại cùng sư hống cổ, lam nhạt, xanh đậm, phấn hồng nhan sắc ba con hạc giấy cổ hợp luyện mà thành, chỉ tồn tại mười cái hô hấp, có thể",
     "food": "Linh dịch dưỡng thực vật, sương mai thảo mộc",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -2433,7 +2433,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng có thể gia tăng trăm năm tuổi thọ.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -2466,7 +2466,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng về sau có thể đem toàn thân xương cốt biến thành thiết cốt.",
     "food": "Quặng sắt tinh chế, huyền thiết thô",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
@@ -2499,7 +2499,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng về sau có thể đem toàn thân xương cốt biến thành ngọc cốt.",
     "food": "Ngọc thạch tự nhiên, phỉ thúy chi tinh",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -2532,7 +2532,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng sức nhưng mãi mãi gia tăng một ngạc chi lực.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lực Đạo",
@@ -2565,7 +2565,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể trực tiếp tăng lên tam chuyển cổ sư một cái tiểu cảnh giới.",
     "food": "Nước suối nguyên tuyền",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
@@ -2598,7 +2598,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại cương thi, kinh điển nhất một hệ liệt cổ trùng một trong.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
@@ -2664,7 +2664,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại hậu cần, chuyên môn dùng để cũng chỉ có thể dùng đến tồn trữ Nguyên thạch cổ, có thể tích trữ trăm vạn không giới hạn Nguyên thạch.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -2697,7 +2697,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại cỏ, cùng Đâu Lung Thảo nổi danh, có thể đầy bụng vật cùng Nguyên thạch.",
     "food": "Linh dịch dưỡng thực vật, sương mai thảo mộc",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Mộc Đạo",
@@ -2730,7 +2730,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại cỏ, nhưng che giấu cổ sư khí tức, khiến cho như người thường, rất khó phát giác.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
@@ -2763,7 +2763,7 @@ window.GU_DATABASE = [
     "desc": "Có thể dòm ẩn phá hình.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lôi Đạo",
@@ -2796,7 +2796,7 @@ window.GU_DATABASE = [
     "desc": "Hình thành băng trùy phun ra.",
     "food": "Hàn băng ngàn năm, hàn ngọc",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Hàn Đạo",
@@ -2862,7 +2862,7 @@ window.GU_DATABASE = [
     "desc": "Có thể hóa thân thành Thụ Tinh, tiến hành chiến đấu, khuyết điểm là cổ sư mỗi một lần sử dụng thời gian không thể quá lâu.",
     "food": "Tinh huyết sinh linh tươi sống",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Mộc Đạo",
@@ -2928,7 +2928,7 @@ window.GU_DATABASE = [
     "desc": "Dùng nhân loại hài đồng xem như luyện cổ chủ yếu vật liệu, cuối cùng mấy năm, chậm rãi luyện thành, một khi luyện thành, chỉ có thể dùng một lần, kéo dài tuổi thọ, di chứng rất lớn.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 50,
-    "power": 195,
+    "power": 0,
     "recipe": {
       "reqRank": 3,
       "reqDao": "Đan Đạo",
@@ -2994,7 +2994,7 @@ window.GU_DATABASE = [
     "desc": "Này cổ am hiểu nhất ẩn tàng. Mặc dù chỉ có tứ chuyển, lại có hạn chế nguyên biển chân nguyên chi năng.",
     "food": "Cánh hoa nguyệt lan tươi",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Quang Đạo",
@@ -3027,7 +3027,7 @@ window.GU_DATABASE = [
     "desc": "Hiệu dụng hết sức kỳ lạ. Này cổ vô hình không thể, chính là một đoàn huyết khí, bám vào vật khác thể bên trên mới có thể sống sót. Phàm là cổ trùng lây dính khí tức của nó, liền có thể thỉnh thoảng hấp thu tự nhiên nguyên khí. Nhưng nó lại có cực lớn tệ nạn, nhận huyết cuồng cổ ảnh hưởng cổ trùng, đ",
     "food": "Tinh huyết sinh linh tươi sống",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Huyết Đạo",
@@ -3060,7 +3060,7 @@ window.GU_DATABASE = [
     "desc": "Từ hai con Tứ Vị Tửu Trùng cùng bảy loại hương liệu hợp luyện mà thành Thất Hương Tửu Trùng hai con cùng chín loại bách thú vương con mắt hợp luyện mà thành, nhưng chiết xuất hoàng kim chân nguyên một cái tiểu cảnh giới.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Khí Đạo",
@@ -3093,7 +3093,7 @@ window.GU_DATABASE = [
     "desc": "Trải qua huyết mạch quan hệ người tàn sát đẫm máu luyện, có thể tăng lên tư chất cổ sư.",
     "food": "Tinh huyết sinh linh tươi sống",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Huyết Đạo",
@@ -3126,7 +3126,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tâm, chỉ có người lo liệu chính nghĩa, mới có thể thôi động sử dụng. Đạo chích chi đồ, tâm chí không kiên người, thường thường sẽ tại chính khí cổ hạ, trong lòng run sợ, có tật giật mình, trong lòng chiến ý kịch liệt trượt, sinh ra không cách nào đối chiến cảm giác, từ đó không chiến t",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Khí Đạo",
@@ -3159,7 +3159,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng có thể gia tăng ngàn năm tuổi thọ.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
@@ -3192,7 +3192,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể trực tiếp tăng lên tứ chuyển cổ sư một cái tiểu cảnh giới, tại thư Vương Truyền nhận chỗ thu hoạch được.",
     "food": "Bạch kim, hoàng kim tinh khoáng",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
@@ -3225,7 +3225,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, dùng cho tăng lên khí lực, tại phiên chợ mua thu hoạch được.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Lực Đạo",
@@ -3654,7 +3654,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại hậu cần, chuyên môn dùng để phong ấn cổ trùng, khiến cho cổ trùng lâm vào ngủ say, dễ dàng bảo tồn.",
     "food": "Phong linh khí, cuồng phong chi nhãn",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
@@ -3687,7 +3687,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại hậu cần, đầu sói bong bóng cá, dùng cho chứa đựng, Thường Sơn Âm lưu lại cổ trùng.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
@@ -3720,7 +3720,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại cương thi, kinh điển nhất một hệ liệt cổ trùng một trong.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
@@ -3753,7 +3753,7 @@ window.GU_DATABASE = [
     "desc": "Một cỗ đen nhánh dầu hỏa hóa thành một đạo hình rồng, nhưng cũng không phải là thực thể.",
     "food": "Hỏa diễm nham thạch, than củi linh mộc",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
@@ -3786,7 +3786,7 @@ window.GU_DATABASE = [
     "desc": "Một ngọn lửa hóa thành một đạo hình rồng, nhưng cũng không phải là thực thể.",
     "food": "Hỏa diễm nham thạch, than củi linh mộc",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Viêm Đạo",
@@ -3819,7 +3819,7 @@ window.GU_DATABASE = [
     "desc": "Hai con cổ trùng kỳ lạ tương hỗ xoay quanh, ngươi truy ta trục, dùng cho chuyển sinh trưởng thành.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
@@ -3885,7 +3885,7 @@ window.GU_DATABASE = [
     "desc": "Có thể để cho địch nhân nhất cử nhất động, đều muốn càng thêm lãng phí sức lực, gấp bội trên lực lượng hao tổn, từ cổ sư phí sức chỗ thu hoạch được.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Lực Đạo",
@@ -3918,7 +3918,7 @@ window.GU_DATABASE = [
     "desc": "Ký thác vào mắt trái cổ sư, có thể đem con nào đó sói tầm mắt chuyển dời đến cổ sư trong mắt, Thường Sơn Âm lưu lại cổ trùng.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
@@ -3951,7 +3951,7 @@ window.GU_DATABASE = [
     "desc": "Ký thác vào cổ họng cổ sư, thôi động sau cổ sư có thể phát ra Lang Vương gầm thét, để đàn sói chiến lực tăng vọt, Thường Sơn Âm lưu lại cổ trùng.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 65,
-    "power": 335,
+    "power": 0,
     "recipe": {
       "reqRank": 4,
       "reqDao": "Thủy Đạo",
@@ -4050,7 +4050,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể khống chế cổ sư ngũ chuyển để bản thân sử dụng.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Nô Đạo",
@@ -4083,7 +4083,7 @@ window.GU_DATABASE = [
     "desc": "Dùng Nguyệt Quang cổ cùng Ngọc Bì cổ hợp luyện, luyện thành Nguyệt Nghê Thường. Đây là lộ tuyến tương đối hiếm thấy, cao nhất có thể tấn thăng đến ngũ chuyển. Thành tựu Bảo Nguyệt Quang Vương cổ.",
     "food": "Cánh hoa nguyệt lan tươi",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Quang Đạo",
@@ -4116,7 +4116,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, thổ không phải phổ thông khí, mà là nguyên khí. Đem chân nguyên cổ sư bên trong không khiếu, lấy nguyên khí tiêu tán ra ngoài. Thông qua câu thông không khiếu hai người, khiến chân nguyên hao tổn. Thường là thủ đoạn của cổ sư tu vi cao thâm lấy mạnh hiếp yếu. Nhưng mà dùng ở",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Khí Đạo",
@@ -4149,7 +4149,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, một khi dùng, liền có thể khiến cổ sư một lần luyện cổ tất thành, thu hoạch ở Tín Vương Truyền Thừa.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -4215,7 +4215,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, trong nháy mắt tăng lên một cái tiểu cảnh giới, chỉ hữu dụng cổ sư ngũ chuyển, mua ở tiên hạc môn.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -4281,7 +4281,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại nô lệ, ngoại hình như một khối mặt nạ đồng xanh, hình thức cổ phác, chừa lại hai mắt cùng miệng ba cái cửa hang.",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4314,7 +4314,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng thuộc Âm, một khi thôi phát, có thể hình thành sóng âm thế công, phạm vi cực kì rộng lớn, thuộc về cực mạnh quần sát loại cổ trùng. Nhưng tệ nạn là thôi phát lâu, đối cổ sư dây thanh, yết hầu đều sẽ từng có nặng gánh vác. Những này gánh vác siêu việt cực hạn về sau, thường thường liền sẽ",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Thổ Đạo",
@@ -4347,7 +4347,7 @@ window.GU_DATABASE = [
     "desc": "Cương thi loại cổ trùng, kinh điển nhất một hệ liệt cổ trùng một trong, có thể hình thành một đôi rộng lớn hữu lực cánh màu đen, tựa như con dơi, có thể Phi thiên , tổng cộng có ngũ đại Phi Cương.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Kim Đạo",
@@ -4380,7 +4380,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại khống chế, dùng cho khống chế hạc loại dã thú, Thiên Hạc thượng nhân dùng khống chế vạn thú Vương cấp Hạc vương.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4413,7 +4413,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại khống chế, dùng cho khống chế sói loại dã thú, có thể trảm giết Lang Thú vương thu hoạch được.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4446,7 +4446,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại khống chế, dùng cho khống chế hồ loại dã thú, có thể trảm giết hồ Thú Vương thu hoạch được.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4479,7 +4479,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại phụ trợ, vì trộm trời Ma Tôn bản gốc, từ tứ chuyển chén vàng ngân ngọn cổ, kết hợp tứ chuyển bên cạnh suy diễn dẫn cổ, tứ chuyển dời bước hoán hình cổ, hợp luyện mà thành, hai con cổ một con bên trên kim hạ ly bạc, một con bên trên ngân hạ chén vàng. Hai con tạo thành một bộ, mới là ho",
     "food": "Bạch kim, hoàng kim tinh khoáng",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4512,7 +4512,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại hậu cần, dùng cho cất giữ cổ trùng, từ nhị chuyển Địa Tạng hoa cổ một đường đi lên trên tấn thăng đạt được, sử dụng sau hoàn toàn núp ở trong đất chỗ sâu, không hiển lộ mảy may khí tức.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Mộc Đạo",
@@ -4545,7 +4545,7 @@ window.GU_DATABASE = [
     "desc": "Óng ánh sáng long lanh, giống như Hồng Mã Não, phảng phất một con ve, cứ thế thân chi huyết luyện thành, nhưng ngược dòng tìm hiểu đồng nguyên, Thiên Hạc thượng nhân lợi dụng truy tìm cổ nguyệt nhất đại.",
     "food": "Cánh hoa nguyệt lan tươi",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Huyết Đạo",
@@ -4578,7 +4578,7 @@ window.GU_DATABASE = [
     "desc": "Đem tự thân hóa thân tại cùng loại cương thi, thông qua bản thân ngủ say từ đó kéo lại tính mệnh, nhưng cũng không phải là chân chính tăng trưởng tuổi thọ, Thiên Hạc thượng nhân dùng xâu mệnh.",
     "food": "Ngọc thạch tự nhiên, phỉ thúy chi tinh",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4644,7 +4644,7 @@ window.GU_DATABASE = [
     "desc": "Thiết gia trại đương gia cổ trùng, hình thành một đạo dài mảnh trạng giấy vàng phù văn, tiến tới rút ra cổ sư thể nội cổ trùng, Tịnh Phong trấn trụ.",
     "food": "Quặng sắt tinh chế, huyền thiết thô",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4809,7 +4809,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại quỷ hồn, hình hình bầu dục, như là màu đen đá vũ hoa. Nhưng mặt ngoài ấn có bảy đạo màu trắng đường vân, phong cách quỷ dị Âm Mị, này cổ một khi thôi động, liền sẽ tràn ngập màu đen hơi khói. Lục chuyển trở xuống bất luận cái gì cổ trùng, bị hắc khí kia ô nhiễm, liền sẽ lọt vào khác bi",
     "food": "Hồn phách u linh, tinh phách yêu thú",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4842,7 +4842,7 @@ window.GU_DATABASE = [
     "desc": "Tương tự một tiết màu xanh sẫm trúc làm, lớn chừng bàn tay, ở giữa không thông, sờ ở trong tay như ngọc tinh tế trơn bóng. Nguồn gốc từ Thái Cổ thời đại, cho tới bây giờ cực đoan hi hữu. Độc mãnh liệt đến cực điểm, khó có nhằm vào thủ đoạn, hơi không cẩn thận, liền sẽ độc phát thân vong, hóa thành t",
     "food": "Độc dịch bò cạp, kịch độc thảo",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4875,7 +4875,7 @@ window.GU_DATABASE = [
     "desc": "🙁 Cuống rốn hình thái ): Hình như hoa sinh xác, một mảnh kim hoàng xán lạn, mặt ngoài đường vân, như máu đỏ tươi tia, là tiên cổ —— Đệ Nhị Không Khiếu Cổ luyện chế nguyên liệu chủ yếu, lấy ngụy cổ hình thái kết hợp thọ cổ hợp luyện mà thành, có thể trường tồn bốn mươi năm.",
     "food": "Bạch kim, hoàng kim tinh khoáng",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -4908,7 +4908,7 @@ window.GU_DATABASE = [
     "desc": "Phân có hai con, một con mẫu cổ, một con tử cổ. Tác dụng chính là bắc tại lưỡng địa ở trong, hình thành vũ đạo thông lộ. Cổ sư tòng tử cổ cái này bắt đầu vào đi, liền có thể theo mẹ cổ bên kia ra. Đồng dạng, theo mẹ cổ bên kia, cũng có thể khoảnh khắc đến tử cổ nơi này. Lại trong một năm, muốn nuôi",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Thổ Đạo",
@@ -4941,7 +4941,7 @@ window.GU_DATABASE = [
     "desc": "Lấy bạch cốt làm thức ăn, Bạch Cốt Chiến Xa thế công bàng bạc hung hãn, thường thường đem đối thủ nghiền thành thịt muối bùn máu. Phương Nguyên tại hủ độc thảo nguyên thu hoạch được.",
     "food": "Nước suối nguyên tuyền",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -5007,7 +5007,7 @@ window.GU_DATABASE = [
     "desc": "Thượng cổ lực đạo, sớm đã tuyệt tích, so toàn lực ứng phó cổ còn muốn trân quý. Nó không thể đơn độc sử dụng, mà là phải cùng cái khác cổ trùng phối hợp lại. Cùng thiên lực cổ phối hợp, liền có thể khiến cho cổ sư mượn nhờ thiên khung lực lượng. Cùng độ phì của đất cổ phối hợp, liền có thể mượn đến",
     "food": "Độc dịch bò cạp, kịch độc thảo",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Lực Đạo",
@@ -5172,7 +5172,7 @@ window.GU_DATABASE = [
     "desc": "Này cổ có thể thật to giảm miễn Kim Mộc Thủy Hỏa Thổ năm đạo cổ trùng hiệu quả.",
     "food": "Bạch kim, hoàng kim tinh khoáng",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Lực Đạo",
@@ -5205,7 +5205,7 @@ window.GU_DATABASE = [
     "desc": "Ngũ chuyển vũ đạo, một khi thôi động, liền có thể đem hai phe địch ta kéo vào đến một không gian khác bên trong đi, ở nơi đó, hai phe địch ta tiến hành tử chiến, chỉ có phân ra được thắng bại, hoặc là chờ thời gian kết thúc, cũng chính là cổ sư chân nguyên tiêu hao sạch lúc, mới có thể từ không gian",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trụ Đạo",
@@ -5238,7 +5238,7 @@ window.GU_DATABASE = [
     "desc": "Trí đạo cổ trùng, hình thể khá lớn. Có to bằng chậu rửa mặt nhỏ, tương tự nhện, nhưng tám con sờ chân toàn như châm sắt, chân bưng bén nhọn đến cực điểm. Nhện trên thân. Mọc đầy cứng rắn gai ngược lông tơ. Nhưng sinh ra ác niệm, dùng ác niệm suy nghĩ âm mưu quỷ kế, hiệu suất lên cao, vì trí đạo tru",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trí Đạo",
@@ -5271,7 +5271,7 @@ window.GU_DATABASE = [
     "desc": "Trí đạo cổ trùng, nhưng càng tốt hồi ức trí nhớ của mình tình báo, cũng suy nghĩ, có thể thăng cấp vì hồi ức tiên cổ.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trí Đạo",
@@ -5304,7 +5304,7 @@ window.GU_DATABASE = [
     "desc": "Trụ đạo cổ trùng: Nhưng quay lại trong phạm vi nhất định, quá khứ phát sinh sự tình.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -5337,7 +5337,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại điều tra, nhưng thăm dò đạo ngân.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Hàn Đạo",
@@ -5370,7 +5370,7 @@ window.GU_DATABASE = [
     "desc": "Lực đạo cổ trùng, nhưng tụ quần lực vào một thân.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Lực Đạo",
@@ -5403,7 +5403,7 @@ window.GU_DATABASE = [
     "desc": "Ngũ chuyển số phận, khả quan xem xét người khác khí vận, có thể không ngừng thăng cấp, nhưng nói là số phận chân truyền chính yếu nhất nền tảng một trong.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -5436,7 +5436,7 @@ window.GU_DATABASE = [
     "desc": "Thượng cổ cả giận cổ trùng, có thể hấp thu thiên địa bên trong các loại khí, cất giữ, lục chuyển thời điểm, liền có thể thăng làm tiên cổ mọi người chi khí.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Khí Đạo",
@@ -5502,7 +5502,7 @@ window.GU_DATABASE = [
     "desc": "Có thể phụ trợ cổ sư tu hành, gia tăng chân nguyên ôn dưỡng không khiếu hiệu quả. Hiệu quả mặc dù không lớn, nhưng tích lũy tháng ngày, lại là khả quan.",
     "food": "Nước suối nguyên tuyền",
     "mpCost": 80,
-    "power": 515,
+    "power": 0,
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
@@ -5535,7 +5535,7 @@ window.GU_DATABASE = [
     "desc": "( Tiên cổ duy nhất )",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5568,7 +5568,7 @@ window.GU_DATABASE = [
     "desc": "Một trong mười thiên hạ kỳ cổ, xếp thứ 7 trong thập đại kỳ cổ, dựa vào nước trong Quang Âm Chi Hà duy trì sinh cơ. Năng lực là xuyên qua dòng sông thời gian, trở về thời điểm nào đó trong quá khứ, nhưng sẽ tổn thất khí vận.",
     "food": "Ánh sáng ban mai, ngọc quang thạch",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5601,7 +5601,7 @@ window.GU_DATABASE = [
     "desc": "Chỉ cần uống xong bốn loại rượu cực phẩm trên đời này, trong thân thể liền có thể ngưng tụ thành Thần Du Cổ. Cổ này dẫn người ngao du thiên địa, không chỗ nào không đến. Nhưng lúc phát động, chỉ cần người say rượu thần mê, đồng thời địa điểm đến cũng vô pháp khống chế, tại phúc địa địa linh —— Bá Qu",
     "food": "Đồng thau vụn, quặng đồng xích",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5634,7 +5634,7 @@ window.GU_DATABASE = [
     "desc": "Thu hồi quý giá cổ trùng",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5667,7 +5667,7 @@ window.GU_DATABASE = [
     "desc": "Cổ trùng loại tiêu hao, có thể tại phúc địa vận dụng một con phàm cổ, chỉ có thể vận dụng ba lần.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5700,7 +5700,7 @@ window.GU_DATABASE = [
     "desc": "Dùng này cổ có thể hóa cát thành thạch, Tôn Thố chính là nhờ vào đó thuận tiện xây thành ở sa mạc, rất nhiều phàm nhân mang ơn hắn.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Thổ Đạo",
@@ -5799,7 +5799,7 @@ window.GU_DATABASE = [
     "desc": "Trí đạo tiên cổ, có thể sinh ra Nhạc Ý, phụ trợ suy nghĩ, là thất chuyển cổ trùng gần nước ban công hạch tâm cổ trùng một trong.",
     "food": "Nước ngọt linh tuyền, thủy tinh thạch",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Thủy Đạo",
@@ -5832,7 +5832,7 @@ window.GU_DATABASE = [
     "desc": "Lục chuyển vân đạo, nhất là am hiểu trên dưới lên xuống.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5865,7 +5865,7 @@ window.GU_DATABASE = [
     "desc": "Lục chuyển vận đạo, che giấu khí vận bản thân.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5898,7 +5898,7 @@ window.GU_DATABASE = [
     "desc": "Lục chuyển Âm đạo, có thể phát ra mãnh liệt sóng âm.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5964,7 +5964,7 @@ window.GU_DATABASE = [
     "desc": "Nhằm vào cổ tiên duyên thọ chi pháp, có thể hồn đoạt thể, vì tám mươi tám sừng chân dương lâu tám mươi tám chân truyền một trong.",
     "food": "Hồn phách u linh, tinh phách yêu thú",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -5997,7 +5997,7 @@ window.GU_DATABASE = [
     "desc": "Lục chuyển trí đạo, nhưng sinh ra hư tình giả ý, dùng cho nam nữ chi giao.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -6030,7 +6030,7 @@ window.GU_DATABASE = [
     "desc": "Lục chuyển trí đạo, vì Cự Dương Tiên Tôn trước kia sở dụng, nhưng hấp dẫn khác phái.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -6096,7 +6096,7 @@ window.GU_DATABASE = [
     "desc": "Lục chuyển trí đạo, nhưng sinh ra thiện niệm, đối chuyện tốt mưu đồ trên tác dụng thăng, vì trí đạo truyền thừa.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Trí Đạo",
@@ -6129,7 +6129,7 @@ window.GU_DATABASE = [
     "desc": "Trí đạo tiên cổ, có thể suy tính hết thảy truyền thừa manh mối.",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -6162,7 +6162,7 @@ window.GU_DATABASE = [
     "desc": ": Cổ Chân Nhân danh sách cổ trùng phần cuối",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 95,
-    "power": 735,
+    "power": 0,
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
@@ -6223,7 +6223,7 @@ window.GU_DATABASE = [
     "desc": "( Không rõ đẳng cấp )",
     "food": "Linh khí nguyên tuyền thiên địa",
     "mpCost": 140,
-    "power": 1635,
+    "power": 0,
     "recipe": {
       "reqRank": 9,
       "reqDao": "Biến Hóa Đạo",
