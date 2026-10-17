@@ -188,6 +188,84 @@ class SoundEngine {
         osc.start(now);
         osc.stop(now + 0.05);
     }
+
+    // Tiếng thu thập tiền xu / quang linh ngân vang
+    playCoins() {
+        if (!this.enabled) return;
+        this.init();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime;
+        const freqs = [987.77, 1318.51]; // B5 -> E6
+        freqs.forEach((freq, idx) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now + idx * 0.06);
+
+            gain.gain.setValueAtTime(0.06, now + idx * 0.06);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.06 + 0.18);
+
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+
+            osc.start(now + idx * 0.06);
+            osc.stop(now + idx * 0.06 + 0.2);
+        });
+    }
+
+    // Tiếng thành công / đắc đạo / hoàn thành
+    playSuccess() {
+        if (!this.enabled) return;
+        this.init();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime;
+        // Hợp âm Đô trưởng thăng hoa C5 - E5 - G5 - C6
+        const notes = [523.25, 659.25, 783.99, 1046.50];
+        notes.forEach((freq, idx) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, now + idx * 0.07);
+
+            gain.gain.setValueAtTime(0.01, now + idx * 0.07);
+            gain.gain.linearRampToValueAtTime(0.12, now + idx * 0.07 + 0.05);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.07 + 0.9);
+
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+
+            osc.start(now + idx * 0.07);
+            osc.stop(now + idx * 0.07 + 1.0);
+        });
+    }
+
+    // Tiếng cảnh báo / thao tác thất bại
+    playError() {
+        if (!this.enabled) return;
+        this.init();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.linearRampToValueAtTime(110, now + 0.25);
+
+        gain.gain.setValueAtTime(0.12, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.3);
+    }
 }
 
 window.soundEngine = new SoundEngine();
