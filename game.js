@@ -363,8 +363,18 @@ let player = {
 };
 
 // ============================================================
-// 3. TIỆN ÍCH LƯU & TẢI GAME (DEFENSIVE LOCAL STORAGE)
+// 3. TIỆN ÍCH AN TOÀN ÂM THANH & LƯU/TẢI GAME (DEFENSIVE HELPERS)
 // ============================================================
+
+function safePlaySound(methodName) {
+    try {
+        if (window.soundEngine && typeof window.soundEngine[methodName] === "function") {
+            window.soundEngine[methodName]();
+        }
+    } catch (e) {
+        console.warn("Sound play error suppressed:", e);
+    }
+}
 
 function safeGetStorage(key) {
     try {
@@ -2644,14 +2654,25 @@ function startAwakeningMiniGame() {
     if (riverWater) riverWater.innerHTML = "";
 
     // Vòng lặp đếm ngược 20.0 giây
-    clearInterval(miniGameTimer);
+    if (miniGameTimer) {
+        clearInterval(miniGameTimer);
+        miniGameTimer = null;
+    }
+
     const intervalMs = 100;
     miniGameTimer = setInterval(() => {
         miniGameTimeLeft -= (intervalMs / 1000);
         if (miniGameTimeLeft <= 0) {
             miniGameTimeLeft = 0;
-            clearInterval(miniGameTimer);
+            if (miniGameTimer) {
+                clearInterval(miniGameTimer);
+                miniGameTimer = null;
+            }
+            if (timerEl) timerEl.textContent = "0.0s";
+            const river = document.getElementById("river-water");
+            if (river) river.innerHTML = "";
             finishAwakeningMiniGame();
+            return;
         }
         if (timerEl) timerEl.textContent = miniGameTimeLeft.toFixed(1) + "s";
     }, intervalMs);
@@ -2748,21 +2769,27 @@ function spawnSingleOrb() {
         if (orb.dataset.collected === "true") return;
         orb.dataset.collected = "true";
 
+        // 1. Cập nhật điểm số ngay lập tức
         miniGameScore += val;
         const scoreEl = document.getElementById("mini-score");
         if (scoreEl) scoreEl.textContent = `${miniGameScore}%`;
 
-        if (window.soundEngine) window.soundEngine.playCoins();
-
-        // Kích hoạt hiệu ứng bay bổng & gợn sóng sông
-        createOrbCollectEffect(arena, posX, posY, val, isGold);
-
-        // Cập nhật preview tư chất
+        // 2. Cập nhật preview tư chất tương ứng với % đạt được ngay lập tức
         updateMiniRankPreview(miniGameScore);
 
-        // BIẾN MẤT NGAY LẬP TỨC KHÔNG ĐỂ LẠI DẤU VẾT
+        // 3. Biến mất và xóa khỏi DOM ngay lập tức
         orb.style.display = "none";
         if (orb.parentNode) orb.remove();
+
+        // 4. Kích hoạt hiệu ứng bay bổng & gợn sóng sông an toàn
+        try {
+            createOrbCollectEffect(arena, posX, posY, val, isGold);
+        } catch (err) {
+            console.warn("Effect render error:", err);
+        }
+
+        // 5. Phát âm thanh an toàn
+        safePlaySound("playCoins");
     };
 
     orb.addEventListener("pointerdown", collectOrb);
@@ -2804,7 +2831,16 @@ function updateMiniRankPreview(score) {
 }
 
 function finishAwakeningMiniGame() {
-    if (miniGameTimer) clearInterval(miniGameTimer);
+    if (miniGameTimer) {
+        clearInterval(miniGameTimer);
+        miniGameTimer = null;
+    }
+
+    const timerEl = document.getElementById("mini-timer");
+    if (timerEl) timerEl.textContent = "0.0s";
+
+    const riverWater = document.getElementById("river-water");
+    if (riverWater) riverWater.innerHTML = "";
 
     let apt = APTITUDES.C;
     let isTuyetTheForce = false;
@@ -2822,7 +2858,13 @@ function finishAwakeningMiniGame() {
         apt = APTITUDES.C;
     }
 
-    applyAwakeningResult(apt, isTuyetTheForce);
+    try {
+        applyAwakeningResult(apt, isTuyetTheForce);
+    } catch (e) {
+        console.error("applyAwakeningResult error:", e);
+    }
+
+    // Đảm bảo chuyển bước 3 mượt mà
     switchIntroStep(3);
 }
 
@@ -2853,7 +2895,7 @@ function applyAwakeningResult(apt, isTuyetTheForce = false) {
     if (resBadge) resBadge.textContent = apt.name;
     if (resDesc) resDesc.textContent = apt.desc;
 
-    if (window.soundEngine) window.soundEngine.playSuccess();
+    safePlaySound("playSuccess");
 }
 
 function showManualRankSelection() {
@@ -2864,8 +2906,17 @@ function showManualRankSelection() {
 function selectManualRank(rankKey) {
     const safeKey = (rankKey === "C") ? "C" : "B";
     const apt = APTITUDES[safeKey] || APTITUDES.B;
-    if (miniGameTimer) clearInterval(miniGameTimer);
-    applyAwakeningResult(apt, false);
+    if (miniGameTimer) {
+        clearInterval(miniGameTimer);
+        miniGameTimer = null;
+    }
+    const riverWater = document.getElementById("river-water");
+    if (riverWater) riverWater.innerHTML = "";
+    try {
+        applyAwakeningResult(apt, false);
+    } catch (e) {
+        console.error("selectManualRank apply error:", e);
+    }
     switchIntroStep(3);
 }
 
