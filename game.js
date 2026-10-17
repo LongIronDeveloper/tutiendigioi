@@ -414,7 +414,10 @@ function resetPlayerToFreshState(name = "Cổ Nguyệt Phong") {
         name: name,
         rankIdx: 0,
         subIdx: 0,
+        subStageIdx: 0,
         exp: 0,
+        maxExp: 385,
+        isDaiVienMan: false,
         hp: 200,
         maxHp: 200,
         mp: 72,
@@ -437,9 +440,11 @@ function resetPlayerToFreshState(name = "Cổ Nguyệt Phong") {
         linhCan: null,
         cultivateMode: "dual",
 
-        activeDaos: ["quang"],
-        mainDao: "quang",
+        activeDaos: ["moc"],
+        mainDao: "Mộc Đạo",
+        mainTechId: "truong_xuan_cong",
         daoLevels: {
+            moc: { exp: 20, level: 0 },
             quang: { exp: 20, level: 0 }
         },
 
@@ -477,8 +482,8 @@ function resetPlayerToFreshState(name = "Cổ Nguyệt Phong") {
         guInventory: [],
 
         inventory: [
-            { id: "boi_nguyen_dan", name: "Bồi Nguyên Đan (Hồi Thể Lực)", count: 3, type: "stamina", restore: 40 },
-            { id: "bo_khi_dan", name: "Tụ Khí Đan", count: 2, type: "pill", exp: 40 }
+            { id: "boi_nguyen_dan", name: "Bồi Nguyên Đan (Hồi Thể Lực)", count: 3, type: "pill_stamina", restore: 40 },
+            { id: "bo_khi_dan", name: "Tụ Khí Đan (Tăng 40 Tu Vi)", count: 2, type: "pill_exp", exp: 40 }
         ],
 
         beastsHunted: 0,
@@ -487,6 +492,8 @@ function resetPlayerToFreshState(name = "Cổ Nguyệt Phong") {
             { text: "[Năm 1 • Ngày 1] Thức tỉnh tại sườn núi Thanh Trúc Sơn Trại.", type: "info" }
         ]
     };
+
+    recalcMaxExp();
 }
 
 function resetGame() {
@@ -512,7 +519,7 @@ function saveGame() {
         const ok = safeSetStorage("TUTIEN_V4_SAVE", JSON.stringify(player));
         if (ok) {
             addLog("Đã lưu tiến trình tu tiên vào linh hồn ký ức thành công!", "success");
-            if (window.soundEngine) window.soundEngine.playCoins();
+            safePlaySound("playCoins");
             alert("💾 Lưu game thành công! Ký ức tu hành đã được lưu lại.");
         } else {
             alert("⚠️ Trình duyệt chặn ghi bộ nhớ cục bộ (localStorage). Hãy kiểm tra quyền riêng tư của trình duyệt.");
@@ -551,6 +558,17 @@ function loadGame() {
             if (!Array.isArray(player.logEntries)) {
                 player.logEntries = [];
             }
+            if (player.subStageIdx === undefined) {
+                player.subStageIdx = player.subIdx || 0;
+            }
+            if (isNaN(player.exp) || player.exp === undefined) {
+                player.exp = 0;
+            }
+            if (!player.mainTechId && player.techniquesLearned.length > 0) {
+                player.mainTechId = player.techniquesLearned[0].id;
+                player.mainDao = player.techniquesLearned[0].dao || "Mộc Đạo";
+            }
+            recalcMaxExp();
 
             addLog("Đã khôi phục ký ức luân hồi thành công!", "info");
             updateSidebarUI();
@@ -653,9 +671,16 @@ function updateSidebarUI() {
     if (elStaText) elStaText.textContent = isImmortal ? "Vô Tận (Tiên Thể)" : `${Math.round(player.stamina)} / ${player.maxStamina}`;
 
     // Tu Vi & Cảnh Giới
+    if (!player.maxExp || isNaN(player.maxExp) || player.maxExp <= 0) {
+        recalcMaxExp();
+    }
+    if (isNaN(player.exp) || player.exp === undefined || player.exp === null) {
+        player.exp = 0;
+    }
     const curRank = RANKS[player.rankIdx] || RANKS[0];
     const curSub = SUB_STAGES[player.subStageIdx] || SUB_STAGES[0];
-    const expPct = Math.min(100, Math.max(0, Math.round((player.exp / player.maxExp) * 100)));
+    const safeMaxExp = (player.maxExp && !isNaN(player.maxExp)) ? player.maxExp : 385;
+    const expPct = Math.min(100, Math.max(0, Math.round((player.exp / safeMaxExp) * 100))) || 0;
     const elExpFill = document.getElementById("sb-exp-fill");
     const elRealmText = document.getElementById("sb-realm-text");
     if (elExpFill) elExpFill.style.width = expPct + "%";
@@ -791,7 +816,7 @@ const LOCATIONS_CONFIG = {
             { key: "act_feed_gu", label: "Ôn Dưỡng Cổ Trùng", staminaCost: 10, timeCost: 1, desc: "Cung phụng đồ ăn và rót chân nguyên nuôi dưỡng cổ trùng trong không khiếu." },
             { key: "act_rest_tea", label: "Thưởng Trà Ngộ Đạo", staminaCost: 0, timeCost: 1, desc: "Uống trà thư giãn, hồi phục thể lực và thanh lọc tâm trí." },
             { key: "act_schedule", label: "Bế Quan Lập Lịch", staminaCost: 0, timeCost: 0, desc: "Lập kế hoạch bế quan tu luyện dài ngày tự động (Ngày & Giờ)." },
-            { key: "act_leave_home", label: "Xuất Ngoại Lịch Luyện", staminaCost: 10, timeCost: 1, desc: "Rời khỏi gian phòng, tiến vào Bách Thú Lĩnh săn bắn hái dược." }
+            { key: "act_leave_home", label: "Xuất Ngoại Lịch Luyện", staminaCost: 0, timeCost: 5 / 60, desc: "Di chuyển loanh quanh trong sơn trại (5 phút, tu sĩ không tốn thể lực)." }
         ]
     },
     adventure: {
@@ -803,7 +828,7 @@ const LOCATIONS_CONFIG = {
             { key: "act_hunt_beast", label: "Săn Bắn Yêu Thú", staminaCost: 30, timeCost: 3, desc: "Tìm kiếm và chiến đấu yêu thú, thu nội đan/nguyên liệu hoặc bán lấy linh thạch." },
             { key: "act_gather_herbs", label: "Hái Lượm Linh Dược", staminaCost: 20, timeCost: 2, desc: "Tìm kiếm các loại linh thảo, khoáng thạch để làm nguyên liệu luyện cổ." },
             { key: "act_explore_cave", label: "Thám Hiểm Cổ Động", staminaCost: 35, timeCost: 4, desc: "Khám phá di tích hang động viễn cổ, tìm kiếm kỳ ngộ truyền thừa." },
-            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 10, timeCost: 1, desc: "Rời khỏi núi rừng hoang vu, quay lại căn nhà an toàn." }
+            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 0, timeCost: 15 / 60, desc: "Rời khỏi núi rừng hoang vu, quay lại căn nhà an toàn (15 phút)." }
         ]
     },
     market: {
@@ -814,7 +839,7 @@ const LOCATIONS_CONFIG = {
         actions: [
             { key: "act_visit_market", label: "Tiệm Thuốc & Quầy Thu Mua", staminaCost: 5, timeCost: 1, desc: "Mua Bồi Nguyên Đan, Tụ Khí Đan, nguyên liệu hoặc BÁN Yêu Thú lấy Linh Thạch." },
             { key: "act_exchange_money", label: "Đổi Tiền Tiền Trang", staminaCost: 0, timeCost: 1, desc: "Quy đổi hai chiều giữa tiền phàm (Đồng/Bạc/Vàng) và Linh Thạch." },
-            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 10, timeCost: 1, desc: "Rời khỏi chốn ồn ào trở về phòng nghỉ ngơi." }
+            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 0, timeCost: 5 / 60, desc: "Rời khỏi chốn ồn ào trở về phòng nghỉ ngơi (5 phút)." }
         ]
     },
     tournament: {
@@ -824,7 +849,7 @@ const LOCATIONS_CONFIG = {
         icon: "🏆",
         actions: [
             { key: "act_tournament_arena", label: "Khiêu Chiến Lôi Đài", staminaCost: 25, timeCost: 2, desc: "Giao đấu với các đệ tử thiếu niên Cổ Nguyệt gia tộc, tranh đoạt phần thưởng." },
-            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 10, timeCost: 1, desc: "Rời khỏi võ trường trở về phòng." }
+            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 0, timeCost: 5 / 60, desc: "Rời khỏi võ trường trở về phòng (5 phút)." }
         ]
     },
     library: {
@@ -835,8 +860,7 @@ const LOCATIONS_CONFIG = {
         actions: [
             { key: "act_library_shop", label: "Mua Quyển Trục & Cổ Bảo", staminaCost: 5, timeCost: 1, desc: "Đổi Linh Thạch mua Quyển Trục Công Pháp Hàn Lập, Cổ Phương và Cổ Trùng." },
             { key: "act_study_library", label: "Nghiên Cứu Điển Tịch", staminaCost: 15, timeCost: 3, desc: "Đọc cổ tịch gia tộc, gia tăng Ngộ Tính và tích lũy điểm Đạo Cảnh." },
-            { key: "act_practice_technique", label: "Lĩnh Ngộ Công Pháp Mới", staminaCost: 20, timeCost: 2, desc: "Xem danh sách công pháp thượng thừa và tiến hành học tập." },
-            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 10, timeCost: 1, desc: "Rời khỏi thư các trở về phòng." }
+            { key: "act_leave_home", label: "Trở Về Sơn Trại", staminaCost: 0, timeCost: 5 / 60, desc: "Rời khỏi thư các trở về phòng (5 phút)." }
         ]
     }
 };
@@ -872,7 +896,13 @@ function renderCurrentLocationStage() {
                 : (window.ArtEngine && window.ArtEngine.actionCards && window.ArtEngine.actionCards.act_meditate);
             const svgHtml = svgFn ? svgFn() : "";
 
-            const staBadge = act.staminaCost > 0 ? `<span class="act-stamina-tag">⚡ -${act.staminaCost}</span>` : "";
+            let staBadge = "";
+            if (act.staminaCost > 0) {
+                staBadge = `<span class="act-stamina-tag">⚡ -${act.staminaCost}</span>`;
+            } else if (act.timeCost > 0) {
+                const minStr = act.timeCost < 1 ? `${Math.round(act.timeCost * 60)} phút` : `${act.timeCost} giờ`;
+                staBadge = `<span class="act-stamina-tag" style="background: rgba(16, 185, 129, 0.85); color: #fff;">⏱️ ${minStr}</span>`;
+            }
 
             cardEl.innerHTML = `
                 <div class="card-visual-frame">
@@ -938,12 +968,13 @@ function executeAction(actionKey, actConfig = null) {
         return;
     }
     if (actionKey === "act_leave_home") {
+        const isFromWild = (player.currentLocation === "adventure");
         if (player.currentLocation === "home") {
             player.currentLocation = "adventure";
         } else {
             player.currentLocation = "home";
         }
-        advanceTime(1);
+        advanceTime(isFromWild ? (15 / 60) : (5 / 60));
         renderCurrentLocationStage();
         return;
     }
@@ -1421,20 +1452,54 @@ function renderAperturePane() {
 
     const detailsGrid = document.getElementById("aperture-details-grid");
     if (detailsGrid) {
-        const curRank = RANKS[player.rankIdx];
+        const curRank = RANKS[player.rankIdx] || RANKS[0];
+        const curSub = SUB_STAGES[player.subStageIdx] || SUB_STAGES[0];
+        const stageStr = player.isDaiVienMan ? "Đại Viên Mãn" : curSub.name;
+        const expPct = Math.min(100, Math.max(0, Math.round((player.exp / (player.maxExp || 385)) * 100)));
+
+        const linhCanMult = (player.linhCan && player.linhCan.bonusCultivate > 0)
+            ? `x${(1 + player.linhCan.bonusCultivate).toFixed(2)} (+${Math.round(player.linhCan.bonusCultivate * 100)}%)`
+            : "x1.00";
+
         const linhCanInfo = player.linhCan ? `
-            <p class="text-gold">${player.linhCan.name} (${player.linhCan.tier})</p>
-            <small>Ngũ Hành: ${player.linhCan.elements.join(", ")} • Tốc độ tu công pháp: x${player.linhCan.rate}</small>
+            <p class="text-gold" style="font-weight:700;">${player.linhCan.name} (${player.linhCan.tier})</p>
+            <small>Ngũ Hành: <strong>${player.linhCan.elements.join(", ") || "Vô"}</strong> • Tốc độ tu công pháp: <strong class="text-gold">${linhCanMult}</strong></small>
         ` : `
             <p class="text-slate">Chưa Thức Tỉnh Linh Căn</p>
-            <small>Có thể dùng Tẩy Linh Đan tại Cửa Hàng Hệ Thống để đo lại</small>
+            <small>Có thể dùng Tẩy Linh Đan tại Cửa Hàng Hệ Thống để trắc định</small>
         `;
 
         let modeText = "⚡ Kiêm Tu (Cổ Trùng + Công Pháp)";
         if (player.cultivateMode === "gu") modeText = "🐛 Thuần Tu Cổ Sư (Chuyên Nhất Cổ Đạo)";
         if (player.cultivateMode === "technique") modeText = "📜 Thuần Tu Tiên Đạo (Chuyên Nhất Công Pháp)";
 
+        const mainTech = player.techniquesLearned.find(t => t.id === player.mainTechId) || player.techniquesLearned[0];
+        const mainTechName = mainTech ? `${mainTech.name} (${mainTech.masteryStage || 'Nhập Môn'})` : "Trường Xuân Công (Nhập Môn)";
+        const starterGu = player.guInventory[0];
+        const starterGuName = starterGu ? `${starterGu.name} (${starterGu.rank} Chuyển • ${starterGu.path})` : "Chưa Thu Phục";
+
         detailsGrid.innerHTML = `
+            <!-- THẺ HỒ SƠ NHÂN VẬT & ĐẠO CƠ TOÀN DIỆN -->
+            <div class="aperture-stat-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95)); border: 1px solid #eab308; padding: 14px 18px; border-radius: 10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; border-bottom:1px solid #334155; padding-bottom:8px; margin-bottom:10px;">
+                    <div>
+                        <span style="font-size:18px; font-weight:800; color:#fbbf24;">👤 ${player.name}</span>
+                        <span style="font-size:13px; color:#94a3b8; margin-left:10px;">Thọ nguyên: ${player.age} / ${player.maxAge} tuổi</span>
+                    </div>
+                    <div>
+                        <span style="background: rgba(56, 189, 248, 0.2); color:#38bdf8; padding: 4px 10px; border-radius: 6px; font-weight:700; font-size:13px; border:1px solid #0284c7;">
+                            Cảnh giới: ${curRank.name} • ${stageStr} (${expPct}%)
+                        </span>
+                    </div>
+                </div>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; font-size: 13px;">
+                    <div><strong>📜 Công Pháp Chính:</strong> <span class="text-gold">${mainTechName}</span></div>
+                    <div><strong>⭐ Lưu Phái Chính:</strong> <span class="text-cyan">${player.mainDao || 'Mộc Đạo'}</span> <small style="color:#94a3b8;">(Theo công pháp)</small></div>
+                    <div><strong>🐛 Bản Mệnh Cổ:</strong> <span style="color:#34d399;">${starterGuName}</span></div>
+                    <div><strong>⚔️ Chiến Lực Tổng Hợp:</strong> <strong class="text-gold">${player.power || 30} Điểm</strong></div>
+                </div>
+            </div>
+
             <div class="aperture-stat-card">
                 <h4>Vách Không Khiếu</h4>
                 <p>${curRank.wallName}</p>
@@ -1456,7 +1521,7 @@ function renderAperturePane() {
                 <small>${player.specialPhysique.desc}</small>
             </div>
             <div class="aperture-stat-card">
-                <h4>Linh Căn Tiên Đạo (Phàm Nhân)</h4>
+                <h4>Linh Căn Tiên Đạo</h4>
                 ${linhCanInfo}
             </div>
             <div class="aperture-stat-card">
@@ -1464,10 +1529,9 @@ function renderAperturePane() {
                 <p class="text-cyan">${modeText}</p>
                 <small>Quyết định phương thức phối hợp sức mạnh chiến đấu</small>
             </div>
-            <div class="aperture-stat-card">
-                <h4>Cổ Trùng Ngụ Cư</h4>
-                <p class="text-cyan">${player.guInventory.length} Con Trong Không Khiếu</p>
-                <small>${player.guInventory.map(g => g.name).join(", ") || "Chưa có cổ trùng"}</small>
+            <div class="aperture-stat-card" style="grid-column: 1 / -1;">
+                <h4>Cổ Trùng Đang Ôn Dưỡng (${player.guInventory.length} Con)</h4>
+                <p class="text-cyan">${player.guInventory.map(g => `${g.name} (${g.rank} Chuyển • ${g.type || 'Hỗ Trợ'})`).join(", ") || "Chưa có cổ trùng nào trong không khiếu"}</p>
             </div>
         `;
     }
@@ -1525,20 +1589,59 @@ function renderRecipesPane() {
 }
 
 function refineGu(gu) {
-    if (player.stoneLow < 25) {
-        alert("Không đủ Linh Thạch Hạ Phẩm để làm chất xúc tác hợp luyện (Cần 25 viên)!");
-        return;
+    // 1. Xác định yêu cầu Linh Thạch
+    let reqStone = 25;
+    if (gu.recipe && gu.recipe.materials) {
+        const curMat = gu.recipe.materials.find(m => m.type === "currency");
+        if (curMat && curMat.count) reqStone = curMat.count;
+    } else {
+        reqStone = (gu.rank || 1) * 25;
     }
-    if (player.mp < (gu.mpCost || 20)) {
-        alert("Chân nguyên không đủ để duy trì trận pháp luyện cổ!");
+
+    if (player.stoneLow < reqStone) {
+        alert(`⚠️ KHÔNG ĐỦ LINH THẠCH!\n\nHợp luyện ${gu.name} cần ít nhất ${reqStone} viên Linh Thạch Hạ Phẩm làm chất xúc tác ngưng tụ! Hiện có: ${player.stoneLow} viên.`);
         return;
     }
 
-    player.stoneLow -= 25;
-    player.mp -= (gu.mpCost || 20);
+    // 2. Kiểm tra Chân Nguyên
+    const reqMp = gu.mpCost || 20;
+    if (player.mp < reqMp) {
+        alert(`⚠️ KHÔNG ĐỦ CHÂN NGUYÊN!\n\nCần ${reqMp} điểm Chân Nguyên để thúc đẩy trận pháp luyện cổ. Hiện có: ${player.mp} điểm.`);
+        return;
+    }
+
+    // 3. Kiểm tra Nguyên Liệu Lưu Phái / Dược Liệu trong Túi Trữ Vật
+    const pathKeyword = (gu.path || "").toLowerCase().replace(" đạo", "");
+    const matIndex = player.inventory.findIndex(i => {
+        if (!i || i.count <= 0) return false;
+        const iname = (i.name || "").toLowerCase();
+        const iid = (i.id || "").toLowerCase();
+        return iname.includes(pathKeyword) ||
+               iid.includes(pathKeyword) ||
+               (gu.path.includes("Mộc") && iname.includes("thảo")) ||
+               (gu.path.includes("Kim") && (iname.includes("thiết") || iname.includes("quặng"))) ||
+               (gu.path.includes("Thổ") && (iname.includes("thạch") || iname.includes("quặng"))) ||
+               (gu.path.includes("Khí") && (iname.includes("khí") || iname.includes("tửu") || iname.includes("đan"))) ||
+               (gu.path.includes("Quang") && iname.includes("nguyệt")) ||
+               iid.startsWith("core_") || iid.startsWith("skin_") || iname.includes("nguyên liệu");
+    });
+
+    if (matIndex === -1) {
+        alert(`⚠️ THIẾU NGUYÊN LIỆU HỢP LUYỆN!\n\nĐể hợp luyện "${gu.name}" (${gu.rank} Chuyển • ${gu.path}), đạo hữu bắt buộc phải có nguyên liệu ${gu.path} (hoặc dược thảo/khoáng thạch/yêu đan tương thích) trong Túi Trữ Vật!\n\n💡 Cách kiếm nguyên liệu:\n- Xuất ngoại đến Bách Thú Lĩnh: Săn bắt Yêu Thú hoặc Hái Lượm Linh Dược\n- Đến Phường Thị: Mua khoáng thạch, linh thảo tại Tiệm Thuốc.`);
+        return;
+    }
+
+    const matchedItem = player.inventory[matIndex];
+
+    // Tiêu hao tài nguyên
+    player.stoneLow -= reqStone;
+    player.mp -= reqMp;
+    matchedItem.count -= 1;
+    if (matchedItem.count <= 0) {
+        player.inventory.splice(matIndex, 1);
+    }
 
     const baseRate = gu.recipe && gu.recipe.successRate ? gu.recipe.successRate : 75;
-    // Tinh thần lực và Luyện Đạo tăng thêm tỷ lệ thành công
     const bonusRate = Math.min(20, Math.floor(player.spiritPower / 2));
     const finalRate = Math.min(95, baseRate + bonusRate);
 
@@ -1551,20 +1654,20 @@ function refineGu(gu) {
             rank: gu.rank,
             path: gu.path,
             type: gu.type || "Hỗ Trợ",
-            food: gu.food || "Linh thảo",
+            food: gu.food || "Các loại danh tửu, rượu ngon thế gian",
             power: gu.power || 30,
             mpCost: gu.mpCost || 20
         };
         player.guInventory.push(newGu);
         player.systemPoints += 15;
-        if (window.soundEngine) window.soundEngine.playSuccess();
-        addLog(`🎉 Hợp luyện thành công! Ngươi đã luyện xuất cổ trùng: ${gu.name} (${gu.rank} Chuyển)!`, "special");
-        alert(`🎉 Hợp luyện thành công! Nhận được ${gu.name} (${gu.rank} Chuyển).`);
+        safePlaySound("playSuccess");
+        addLog(`🎉 Hợp luyện thành công! Ngươi tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch, luyện xuất: ${gu.name} (${gu.rank} Chuyển)!`, "special");
+        alert(`🎉 Hợp luyện thành công!\n\nĐã tiêu hao 1 ${matchedItem.name} & ${reqStone} Linh Thạch.\nNhận được Cổ Trùng: ${gu.name} (${gu.rank} Chuyển • ${gu.path}) vào Không Khiếu!`);
     } else {
         // Thất bại
-        if (window.soundEngine) window.soundEngine.playError();
-        addLog(`💥 Lò luyện nổ tung! Hợp luyện ${gu.name} thất bại, tiêu hao nguyên liệu!`, "danger");
-        alert(`💥 Hợp luyện thất bại! Cổ trùng nổ tung, tiêu hao 25 Linh Thạch.`);
+        safePlaySound("playError");
+        addLog(`💥 Lò luyện nổ tung! Hợp luyện ${gu.name} thất bại, tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch!`, "danger");
+        alert(`💥 Hợp luyện thất bại!\n\nLò luyện chấn động nổ tung, tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch làm tro bụi.`);
     }
 
     updateSidebarUI();
@@ -1602,11 +1705,12 @@ function renderTechniquesSystemPane() {
         else if ((player.rankIdx + 1) < tech.reqRank) reasonCantLearn = "🔒 Cảnh Giới Chưa Đủ";
 
         const canLearn = !learned && hasLinhCan && !isGuOnly && player.comprehension >= tech.reqComprehension && (player.rankIdx + 1) >= tech.reqRank;
+        const isMainTech = (player.mainTechId === tech.id);
 
         card.innerHTML = `
             <div class="tech-card-header">
                 <div>
-                    <h4>${tech.name}</h4>
+                    <h4>${tech.name} ${isMainTech ? '<span style="background:#fbbf24; color:#111; font-size:10px; padding:2px 6px; border-radius:4px; margin-left:6px; font-weight:bold;">⭐ CÔNG PHÁP CHÍNH</span>' : ''}</h4>
                     <span class="tech-rank-badge">${tech.rank} Chuyển • ${tech.dao}</span>
                 </div>
                 <span class="tech-status-tag">${learned ? `Đạt: ${learned.masteryStage}` : 'Chưa Lĩnh Ngộ'}</span>
@@ -1622,9 +1726,12 @@ function renderTechniquesSystemPane() {
             <div class="tech-action-footer">
                 ${learned ? `
                     <div class="tech-mastery-progress">
-                        <small>Độ thành thục: ${learned.masteryExp} điểm (Linh Căn: x${player.linhCan ? player.linhCan.rate : 1.0})</small>
+                        <small>Độ thành thục: ${learned.masteryExp} điểm (Linh Căn: x${player.linhCan ? (1 + (player.linhCan.bonusCultivate || 0)).toFixed(2) : '1.00'})</small>
                     </div>
-                    <button class="btn-primary btn-practice-tech-sys" data-techid="${tech.id}">🧘 Bế Quan Diễn Luyện (-20 Thể Lực)</button>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
+                        <button class="btn-primary btn-practice-tech-sys" data-techid="${tech.id}" style="flex:1;">🧘 Bế Quan Diễn Luyện (-20 Thể Lực)</button>
+                        ${!isMainTech ? `<button class="btn-subtle btn-set-main-tech" data-techid="${tech.id}" style="border:1px solid #d4af37; color:#fbbf24; background:rgba(212,175,55,0.15); padding:6px 12px; font-size:12px;">⚡ Vận Hành Làm Công Pháp Chính</button>` : ''}
+                    </div>
                 ` : `
                     <button class="btn-primary btn-learn-tech-sys" data-techid="${tech.id}" ${canLearn ? '' : 'disabled'}>
                         ${canLearn ? '📜 Lĩnh Ngộ Công Pháp' : reasonCantLearn}
@@ -1638,6 +1745,12 @@ function renderTechniquesSystemPane() {
                 practiceTechnique(tech, learned);
                 renderTechniquesSystemPane();
             });
+            const btnSetMain = card.querySelector(".btn-set-main-tech");
+            if (btnSetMain) {
+                btnSetMain.addEventListener("click", () => {
+                    setMainTechnique(tech.id);
+                });
+            }
         } else if (canLearn) {
             card.querySelector(".btn-learn-tech-sys").addEventListener("click", () => {
                 learnTechnique(tech);
@@ -1655,32 +1768,58 @@ function renderDaosPane() {
     const grid = document.getElementById("daos-catalog-grid");
     if (!summary || !grid) return;
 
+    const curMainTech = window.TECHNIQUES_DATABASE ? window.TECHNIQUES_DATABASE.find(t => t.id === player.mainTechId) : null;
+    const curMainTechName = curMainTech ? curMainTech.name : "Trường Xuân Công";
+
     summary.innerHTML = `
-        <span>Các Lưu Phái Đã Chọn (${player.activeDaos.length}/5): 
-        <strong>${player.activeDaos.map(d => {
-            const found = DAO_LIST.find(x => x.id === d);
-            const lvl = player.daoLevels[d] ? player.daoLevels[d].level : 0;
-            return `${found ? found.name : d} (${DAO_LEVELS[lvl].name})`;
-        }).join(", ")}</strong></span>
+        <div style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.3); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                <div>
+                    <span style="color:#888; font-size:13px;">⭐ Lưu Phái Chính Bản Mệnh:</span>
+                    <strong style="color:#fbbf24; font-size:16px; margin-left:6px;">${player.mainDao || 'Mộc Đạo'}</strong>
+                </div>
+                <div style="font-size:12px; color:#aaa;">
+                    (Định hình tự động bởi Công Pháp Chính: <span style="color:#6ee7b7; font-weight:600;">${curMainTechName}</span>)
+                </div>
+            </div>
+            <div style="margin-top:8px; font-size:12px; color:#bbb;">
+                💡 <em>Quy tắc Đạo giới:</em> Lưu phái chính gắn liền với công pháp đạo cơ đang vận hành. Để đổi lưu phái chính, hãy vào tab <strong>Công Pháp Thượng Thừa</strong> và vận hành công pháp thuộc lưu phái tương ứng.
+            </div>
+        </div>
+        <div style="font-size:13px; color:#ddd; margin-bottom:8px;">
+            Lưu Phái Đang Kiêm Tu: <strong>${(player.activeDaos || []).map(d => {
+                const found = DAO_LIST.find(x => x.id === d);
+                const lvl = player.daoLevels[d] ? player.daoLevels[d].level : 0;
+                return `${found ? found.name : d} (${DAO_LEVELS[lvl].name})`;
+            }).join(", ") || 'Chưa kiêm tu'}</strong>
+        </div>
     `;
 
     grid.innerHTML = "";
 
     DAO_LIST.forEach(dao => {
-        const isActive = player.activeDaos.includes(dao.id);
+        const isMainDao = (dao.id === (player.mainDao || "Mộc Đạo"));
+        const isActive = player.activeDaos.includes(dao.id) || isMainDao;
         const curExp = player.daoLevels[dao.id] ? player.daoLevels[dao.id].exp : 0;
         const curLvl = player.daoLevels[dao.id] ? player.daoLevels[dao.id].level : 0;
         const lvlInfo = DAO_LEVELS[curLvl];
         const nextLvlInfo = DAO_LEVELS[curLvl + 1];
 
         const card = document.createElement("div");
-        card.className = `dao-card ${isActive ? 'active-dao' : ''}`;
+        card.className = `dao-card ${isMainDao ? 'main-active-dao' : (isActive ? 'active-dao' : '')}`;
+        if (isMainDao) {
+            card.style.borderColor = "#fbbf24";
+            card.style.boxShadow = "0 0 10px rgba(251, 191, 36, 0.2)";
+        }
 
         const isGrandmaster = curLvl >= 3;
 
         card.innerHTML = `
             <div class="dao-card-header">
-                <strong>${dao.name}</strong>
+                <div>
+                    <strong>${dao.name}</strong>
+                    ${isMainDao ? `<span style="background:#fbbf24; color:#111; font-size:10px; padding:2px 6px; border-radius:4px; margin-left:6px; font-weight:bold;">⭐ LƯU PHÁI CHÍNH</span>` : ''}
+                </div>
                 <span class="dao-level-badge">${lvlInfo.name}</span>
             </div>
             <p class="dao-desc">${dao.desc}</p>
@@ -1695,17 +1834,7 @@ function renderDaosPane() {
                 <span>${dao.killerMove}</span>
                 <small>${isGrandmaster ? '⚡ ĐÃ KHAI SÁNG & THI TRIỂN ĐƯỢC' : '🔒 Cần đạt Đại Tông Sư'}</small>
             </div>
-            ${!isActive && player.activeDaos.length < 5 ? `<button class="btn-subtle btn-choose-dao" data-daoid="${dao.id}">Chọn Tu Lưu Phái Này</button>` : ''}
         `;
-
-        if (!isActive && player.activeDaos.length < 5) {
-            card.querySelector(".btn-choose-dao").addEventListener("click", () => {
-                player.activeDaos.push(dao.id);
-                if (!player.daoLevels[dao.id]) player.daoLevels[dao.id] = { exp: 0, level: 0 };
-                renderDaosPane();
-                updateSidebarUI();
-            });
-        }
 
         grid.appendChild(card);
     });
@@ -1820,38 +1949,31 @@ function renderShopPane() {
             player.systemPoints -= it.pts;
 
             if (it.type === "pill" && it.canCotRestore) {
-                player.canCot = Math.min(100, player.canCot + it.canCotRestore);
-                alert("🎉 Đã dùng Tẩy Tủy Thần Đan, Căn Cốt hồi phục hoàn mỹ 100%!");
+                addItemToInventory("tay_tuy_dan", 1, "Tẩy Tủy Thần Đan", "pill_cancot", { canCotRestore: 100 });
+                alert("🎉 Đã mua thành công Tẩy Tủy Thần Đan! Vật phẩm đã được chuyển vào Túi Trữ Vật. Hãy mở túi đồ khi cần hồi phục Căn Cốt.");
             } else if (it.type === "stamina") {
-                addItemToInventory("bo_the_kim_dan", it.count, "Bổ Thể Kim Đan (Hồi 50 Thể Lực)");
-                alert(`🎉 Đã nhận ${it.count} viên Bổ Thể Kim Đan vào túi trữ vật!`);
-            } else if (it.type === "tay_linh") {
-                player.linhCan = null;
-                linhCanRollsLeft = 10;
-                alert("🌊 Đã dùng Tẩy Linh Đan tẩy trừ toàn bộ tạp chất linh căn! Đạo hữu có thể mở lại Đo Linh Bàn (10 lượt rút) để chọn linh căn mới.");
-                openModal("modal-system");
-                switchToSystemTab("systab-aperture");
-            } else if (it.type === "exp") {
-                player.exp += (it.expVal || 500);
-                checkExpThreshold();
-                alert(`✨ Đã dùng ${it.name}, trực tiếp lĩnh ngộ +${it.expVal || 500} Tu Vi!`);
-            } else if (it.type === "longevity") {
-                player.maxAge += (it.years || 10);
-                alert(`🌟 Đã dùng ${it.name}, kéo dài thọ nguyên thêm +${it.years || 10} năm! (Thọ nguyên tối đa: ${player.maxAge} tuổi).`);
-            } else if (it.type === "stone") {
-                player.stoneLow += (it.stoneVal || 500);
-                alert(`💎 Đã nhận +${it.stoneVal || 500} Linh Thạch Hạ Phẩm vào túi trữ vật!`);
-            } else if (it.type === "tech" && it.techId) {
-                const techObj = window.TECHNIQUES_DATABASE ? window.TECHNIQUES_DATABASE.find(t => t.id === it.techId) : null;
-                if (techObj) {
-                    const alreadyLearned = player.techniquesLearned.find(t => t.id === techObj.id);
-                    if (alreadyLearned) {
-                        alreadyLearned.masteryExp += 100;
-                        alert(`📜 Ngươi đã học công pháp ${techObj.name} rồi! Đã tăng thêm +100 điểm diễn luyện thành thục.`);
-                    } else {
-                        learnTechnique(techObj);
-                    }
-                }
+                const count = it.count || 5;
+                addItemToInventory("bo_the_kim_dan", count, "Bổ Thể Kim Đan", "pill_stamina", { restore: 50 });
+                alert(`🎉 Đã nhận ${count} viên Bổ Thể Kim Đan vào Túi Trữ Vật!`);
+            } else if (it.type === "pill_exp") {
+                addItemToInventory("ngung_khi_dan", 3, "Ngưng Khí Đan", "pill_exp", { expGain: 100 });
+                alert("🎉 Đã nhận 3 viên Ngưng Khí Đan vào Túi Trữ Vật! Uống vào tăng +100 Tu Vi mỗi viên.");
+            } else if (it.type === "age") {
+                addItemToInventory("dinh_nhan_dan", 1, "Định Nhan Thần Đan", "pill_age", { ageAdd: 50 });
+                alert("🎉 Đã nhận 1 viên Định Nhan Thần Đan vào Túi Trữ Vật! Dùng để kéo dài thêm +50 năm thọ nguyên.");
+            } else if (it.type === "reroll_linhcan") {
+                addItemToInventory("tay_linh_dan", 1, "Tẩy Linh Đan", "pill_reroll");
+                alert("🎉 Đã nhận 1 viên Tẩy Linh Đan vào Túi Trữ Vật! Mở túi dùng khi muốn tẩy trừ linh căn để trắc định lại.");
+            } else if (it.type === "scroll" && it.techId) {
+                addItemToInventory("scroll_" + it.techId, 1, it.name, "scroll", { techId: it.techId });
+                alert(`🎉 Đã mua và chuyển ${it.name} vào Túi Trữ Vật! Mở túi đồ bấm "Lĩnh Ngộ Công Pháp" để học.`);
+            } else if (it.type === "recipe" && it.recipeId) {
+                addItemToInventory("recipe_" + it.recipeId, 1, it.name, "recipe", { recipeId: it.recipeId });
+                alert(`🎉 Đã mua và chuyển ${it.name} vào Túi Trữ Vật! Mở túi đồ bấm "Nghiên Cứu Cổ Phương" để học.`);
+            } else if (it.type === "stone_high") {
+                player.stoneHigh += (it.count || 10);
+                player.stoneLow += (it.count || 10) * 1000;
+                alert(`💎 Đã quy đổi ${it.count || 10} Linh Thạch Thượng Phẩm thành +10.000 Linh Thạch Hạ Phẩm dồi dào!`);
             } else if (it.type === "gu" && it.guId) {
                 const guData = window.GU_DATABASE ? window.GU_DATABASE.find(g => g.id === it.guId) : null;
                 if (guData) {
@@ -1862,16 +1984,16 @@ function renderShopPane() {
                         path: guData.path,
                         type: guData.type || "Hỗ Trợ",
                         power: guData.power || 50,
-                        food: guData.food || "Linh tuyền",
+                        food: guData.food || "Các loại danh tửu, rượu ngon thế gian",
                         mpCost: guData.mpCost || 25
                     });
-                    alert(`🎉 Đã thu nhận cổ trùng thượng cổ: ${guData.name} (${guData.rank} Chuyển • ${guData.path}) vào không khiếu!`);
+                    alert(`🎉 Đã thu nhận cổ trùng thượng cổ: ${guData.name} (${guData.rank} Chuyển • ${guData.path}) vào Không Khiếu!`);
                 }
             }
 
             // Lưu game tức thì
             saveGame();
-            if (window.soundEngine) window.soundEngine.playCoins();
+            safePlaySound("playCoins");
             updateSidebarUI();
             renderShopPane();
         });
@@ -1983,7 +2105,7 @@ function practiceTechnique(tech, learned) {
     if (player.rankIdx < 5) player.stamina -= 20;
     advanceTime(2);
 
-    const linhCanRate = player.linhCan ? player.linhCan.rate : 1.0;
+    const linhCanRate = player.linhCan ? (1 + (player.linhCan.bonusCultivate || 0)) : 1.0;
     const masteryGain = Math.round(30 * linhCanRate);
     const expGain = Math.round(15 * linhCanRate);
 
@@ -2015,10 +2137,48 @@ function learnTechnique(tech) {
         masteryExp: 0,
         masteryStage: "Nhập Môn"
     });
+    // Nếu chưa có mainTechId, tự động đặt làm công pháp chính
+    if (!player.mainTechId) {
+        player.mainTechId = tech.id;
+        player.mainDao = tech.dao;
+        if (!player.activeDaos.includes(tech.dao)) {
+            player.activeDaos.unshift(tech.dao);
+        }
+        if (!player.daoLevels[tech.dao]) {
+            player.daoLevels[tech.dao] = { exp: 0, level: 0 };
+        }
+    }
     if (window.soundEngine) window.soundEngine.playSuccess();
     addLog(`Đã lĩnh ngộ thành công công pháp: ${tech.name}!`, "special");
     alert(`Lĩnh ngộ thành công ${tech.name}!`);
     updateSidebarUI();
+}
+
+function setMainTechnique(techId) {
+    const tech = window.TECHNIQUES_DATABASE ? window.TECHNIQUES_DATABASE.find(t => t.id === techId) : null;
+    if (!tech) return;
+    
+    player.mainTechId = tech.id;
+    player.mainDao = tech.dao;
+    
+    // Đảm bảo tech.dao có trong activeDaos
+    if (!player.activeDaos.includes(tech.dao)) {
+        player.activeDaos.unshift(tech.dao);
+    }
+    if (!player.daoLevels[tech.dao]) {
+        player.daoLevels[tech.dao] = { exp: 0, level: 0 };
+    }
+    
+    addLog(`Đã chuyển sang vận hành [${tech.name}] làm Công Pháp Chính! Lưu phái chủ đạo định hình thành: ${tech.dao}.`, "special");
+    if (window.soundEngine) window.soundEngine.playSuccess();
+    
+    updateSidebarUI();
+    renderTechniquesSystemPane();
+    renderAperturePane();
+    const daosPane = document.getElementById("sys-daos-pane");
+    if (daosPane && !daosPane.classList.contains("hidden")) {
+        renderDaosPane();
+    }
 }
 
 // ============================================================
@@ -2132,12 +2292,13 @@ function rewardRandomGu(rank = 1) {
 // 13. TÚI TRỮ VẬT & TIỆN ÍCH VẬT PHẨM
 // ============================================================
 
-function addItemToInventory(id, count = 1, name = "Vật Phẩm") {
+function addItemToInventory(id, count = 1, name = "Vật Phẩm", type = "material", extra = {}) {
     const existing = player.inventory.find(i => i.id === id);
     if (existing) {
         existing.count += count;
+        if (extra) Object.assign(existing, extra);
     } else {
-        player.inventory.push({ id, name, count, type: "material" });
+        player.inventory.push({ id, name, count, type, ...extra });
     }
 }
 
@@ -2147,30 +2308,98 @@ function renderInventoryModal() {
     grid.innerHTML = "";
 
     if (player.inventory.length === 0) {
-        grid.innerHTML = `<p style="color:#94a3b8; font-style:italic;">Túi trữ vật trống không.</p>`;
+        grid.innerHTML = `<p style="color:#94a3b8; font-style:italic;">Túi trữ vật trống không. Hãy đến Phường Thị hoặc Cửa Hàng Hệ Thống để sắm bảo vật.</p>`;
         return;
     }
 
-    player.inventory.forEach(item => {
+    player.inventory.forEach((item, idx) => {
         const card = document.createElement("div");
         card.className = "inventory-item-card";
+
+        let useBtnHtml = "";
+        const isStaminaPill = item.type === "pill_stamina" || item.id === "boi_nguyen_dan" || item.id === "bo_the_kim_dan";
+        const isExpPill = item.type === "pill_exp" || item.id === "bo_khi_dan" || item.id === "ngung_khi_dan";
+        const isCanCotPill = item.type === "pill_cancot" || item.id === "tay_tuy_dan";
+        const isAgePill = item.type === "pill_age" || item.id === "dinh_nhan_dan";
+        const isRerollPill = item.type === "pill_reroll" || item.id === "tay_linh_dan";
+        const isScroll = item.type === "scroll" || item.id.startsWith("scroll_");
+        const isRecipe = item.type === "recipe" || item.id.startsWith("recipe_");
+
+        if (isStaminaPill) {
+            const addVal = item.restore || (item.id === "bo_the_kim_dan" ? 50 : 40);
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">💊 Uống (Hồi +${addVal} Thể Lực)</button>`;
+        } else if (isExpPill) {
+            const addExp = item.exp || item.expGain || (item.id === "ngung_khi_dan" ? 100 : 40);
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">✨ Uống (Tăng +${addExp} Tu Vi)</button>`;
+        } else if (isCanCotPill) {
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">🦴 Uống (Hồi Phục 100% Căn Cốt)</button>`;
+        } else if (isAgePill) {
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">⏳ Uống (Tăng +50 Năm Thọ Nguyên)</button>`;
+        } else if (isRerollPill) {
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">🌊 Dùng (Tẩy Linh Đan - Trắc Định Lại)</button>`;
+        } else if (isScroll) {
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">📜 Lĩnh Ngộ Công Pháp</button>`;
+        } else if (isRecipe) {
+            useBtnHtml = `<button class="btn-subtle btn-use-inv" data-idx="${idx}">📖 Khắc Sâu Cổ Phương</button>`;
+        }
+
         card.innerHTML = `
             <div class="inv-item-name">${item.name}</div>
             <div class="inv-item-count">Số lượng: <strong class="text-gold">${item.count}</strong></div>
-            ${item.id === 'boi_nguyen_dan' ? '<button class="btn-subtle btn-use-inv-item">Uống (Hồi 40 Thể Lực)</button>' : ''}
-            ${item.id === 'bo_khi_dan' ? '<button class="btn-subtle btn-use-inv-item">Uống (Tăng 40 Tu Vi)</button>' : ''}
-            ${item.id === 'bo_the_kim_dan' ? '<button class="btn-subtle btn-use-inv-item">Uống (Hồi 50 Thể Lực)</button>' : ''}
+            ${useBtnHtml}
         `;
 
-        const btnUse = card.querySelector(".btn-use-inv-item");
+        const btnUse = card.querySelector(".btn-use-inv");
         if (btnUse) {
             btnUse.addEventListener("click", () => {
                 if (item.count <= 0) return;
                 item.count -= 1;
-                if (item.id === 'boi_nguyen_dan') player.stamina = Math.min(player.maxStamina, player.stamina + 40);
-                if (item.id === 'bo_khi_dan') { player.exp += 40; checkExpThreshold(); }
-                if (item.id === 'bo_the_kim_dan') player.stamina = Math.min(player.maxStamina, player.stamina + 50);
-                if (window.soundEngine) window.soundEngine.playCoins();
+
+                if (isStaminaPill) {
+                    const addVal = item.restore || (item.id === "bo_the_kim_dan" ? 50 : 40);
+                    player.stamina = Math.min(player.maxStamina, player.stamina + addVal);
+                    addLog(`Đã dùng 1 viên ${item.name}, hồi phục ${addVal} Thể Lực!`, "success");
+                } else if (isExpPill) {
+                    const addExp = item.exp || item.expGain || (item.id === "ngung_khi_dan" ? 100 : 40);
+                    player.exp += addExp;
+                    checkExpThreshold();
+                    addLog(`Đã dùng 1 viên ${item.name}, gia tăng +${addExp} Tu Vi!`, "success");
+                } else if (isCanCotPill) {
+                    player.canCot = 100;
+                    addLog(`Đã dùng 1 viên ${item.name}, Căn Cốt hồi phục 100% hoàn mỹ!`, "special");
+                    alert("🎉 Đã dùng Tẩy Tủy Thần Đan, Căn Cốt của ngươi đã hồi phục 100% hoàn mỹ!");
+                } else if (isAgePill) {
+                    player.maxAge += 50;
+                    addLog(`Đã dùng 1 viên ${item.name}, kéo dài thêm +50 năm thọ nguyên (${player.maxAge} tuổi)!`, "special");
+                    alert(`🌟 Đã dùng Định Nhan Thần Đan! Thọ nguyên tối đa tăng lên: ${player.maxAge} tuổi.`);
+                } else if (isRerollPill) {
+                    player.linhCan = null;
+                    linhCanRollsLeft = 10;
+                    addLog("Đã tẩy rửa sạch sẽ toàn bộ tạp chất linh căn!", "special");
+                    alert("🌊 Tẩy rửa linh căn thành công! Đạo hữu có thể chuyển sang Đo Linh Bàn (10 lượt rút) để trắc định lại linh căn mới.");
+                    closeModal("modal-inventory");
+                    openModal("modal-system");
+                    switchToSystemTab("systab-aperture");
+                } else if (isScroll) {
+                    const tid = item.techId || item.id.replace("scroll_", "");
+                    const techObj = window.TECHNIQUES_DATABASE ? window.TECHNIQUES_DATABASE.find(t => t.id === tid) : null;
+                    if (techObj) {
+                        learnTechnique(techObj);
+                    } else {
+                        alert("Đã mở quyển trục và lĩnh ngộ bí kíp thành công!");
+                    }
+                } else if (isRecipe) {
+                    alert("Đã khắc sâu cổ phương vào thức hải! Đạo hữu có thể vào tab Cổ Phương & Hợp Luyện để luyện chế.");
+                    closeModal("modal-inventory");
+                    openModal("modal-system");
+                    switchToSystemTab("systab-recipes");
+                }
+
+                if (item.count <= 0) {
+                    player.inventory.splice(idx, 1);
+                }
+
+                safePlaySound("playCoins");
                 updateSidebarUI();
                 renderInventoryModal();
             });
@@ -3011,7 +3240,7 @@ function displayRolledLinhCan(linhCan) {
     }
 
     if (descEl) descEl.textContent = linhCan.desc;
-    if (buffEl) buffEl.textContent = `Hệ số tương thích công pháp: x${linhCan.rate} Tốc độ tu vi`;
+    if (buffEl) buffEl.textContent = `Hệ số tương thích công pháp: x${(1 + (linhCan.bonusCultivate || 0)).toFixed(2)} Tốc độ tu vi`;
 }
 
 function lockCurrentLinhCan() {
@@ -3190,7 +3419,8 @@ function setupEventListeners() {
             const targetLoc = btn.getAttribute("data-location");
             if (targetLoc && LOCATIONS_CONFIG[targetLoc]) {
                 player.currentLocation = targetLoc;
-                advanceTime(1);
+                const travelMins = targetLoc === "adventure" ? (15 / 60) : (5 / 60);
+                advanceTime(travelMins);
                 renderCurrentLocationStage();
             }
         });
