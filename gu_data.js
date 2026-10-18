@@ -1,6 +1,3 @@
-/**
- * GU_DATA.JS (v5.0 Updated Database - 9 Ranks Complete)
- */
 window.GU_DATABASE = [
   {
     "id": "t_u_tr_ng",
@@ -15,6 +12,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Khí Đạo",
+      "method": "Tự Nhiên / Thu Thập",
+      "desc": "Giải thạch từ Tử Kim Thạch tại đổ thạch trường hoặc đoạt từ di hài Hoa Tửu Hành Giả. Lấy rượu thơm nuôi dưỡng.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -22,8 +21,8 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Khí Đạo Cấp 1",
-          "count": 2,
+          "name": "Tử Kim Thạch (Đổ Thạch) hoặc Danh Tửu",
+          "count": 1,
           "type": "material"
         }
       ],
@@ -44,6 +43,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Quang Đạo",
+      "method": "Nuôi Dưỡng Tự Nhiên / Trấn Tộc",
+      "desc": "Trấn tộc cổ trùng của bộ tộc Cổ Nguyệt. Phóng nguyệt nhận lam sắc 10m. Nuôi bằng cánh hoa nguyệt lan.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -51,8 +52,8 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Quang Đạo Cấp 1",
-          "count": 2,
+          "name": "Cánh Hoa Nguyệt Lan",
+          "count": 5,
           "type": "material"
         }
       ],
@@ -72,19 +73,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
+      "method": "Thảo Loại / Gieo Trồng",
+      "desc": "Cổ trùng dạng thực vật, tưới Chân Nguyên sẽ sinh trưởng và tiết ra rượu thơm làm thức ăn nuôi Tửu Trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (25 viên)",
-          "count": 25,
+          "name": "Linh Thạch (20 viên)",
+          "count": 20,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 1",
-          "count": 2,
+          "name": "Hạt Giống Tửu Nang Hoa",
+          "count": 1,
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 90
     }
   },
   {
@@ -100,19 +103,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
+      "method": "Thảo Loại Tự Nhiên",
+      "desc": "Kết thành những túi hạt giống như cơm trắng dùng làm lương thực nơi hoang dã, nguyên liệu luyện A Thỉ Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (25 viên)",
-          "count": 25,
+          "name": "Linh Thạch (20 viên)",
+          "count": 20,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 1",
+          "name": "Hạt Cỏ Đồng Cỏ",
           "count": 2,
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 90
     }
   },
   {
@@ -128,6 +133,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Lực Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Hùng Lực cổ sơ cấp thông qua nguyên liệu Lực Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -135,7 +142,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 1",
+          "name": "Nguyên Liệu Lực Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -156,6 +163,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thủy Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Khê Lưu cổ sơ cấp thông qua nguyên liệu Thủy Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -163,7 +172,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 1",
+          "name": "Nguyên Liệu Thủy Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -184,6 +193,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thảo Nhân cổ sơ cấp thông qua nguyên liệu Mộc Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -191,7 +202,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 1",
+          "name": "Nguyên Liệu Mộc Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -212,6 +223,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Đồng Bì cổ sơ cấp thông qua nguyên liệu Kim Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -219,7 +232,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 1",
+          "name": "Nguyên Liệu Kim Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -240,6 +253,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Lực Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Man Lực Thiên Ngưu cổ sơ cấp thông qua nguyên liệu Lực Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -247,7 +262,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 1",
+          "name": "Nguyên Liệu Lực Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -268,6 +283,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Ám Đạo",
+      "method": "Ký Sinh Dã Thú",
+      "desc": "Gia tăng vĩnh viễn sức mạnh heo rừng đen cho Cổ Sư, dùng làm nguyên liệu hợp luyện Hắc Tông Cổ.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -275,7 +292,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Ám Đạo Cấp 1",
+          "name": "Huyết Nhục Heo Rừng Đen",
           "count": 2,
           "type": "material"
         }
@@ -296,14 +313,16 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Nuôi Dưỡng Tự Nhiên",
+      "desc": "Mái tóc dài ra cứng như dây thép xanh để quấn giữ hoặc đâm xuyên kẻ địch tầm gần, nguyên liệu luyện Hắc Tông Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (25 viên)",
-          "count": 25,
+          "name": "Linh Thạch (20 viên)",
+          "count": 20,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Thanh Trúc Ti",
           "count": 2,
           "type": "material"
         }
@@ -324,6 +343,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thủy Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Tịnh Thủy cổ sơ cấp thông qua nguyên liệu Thủy Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -331,7 +352,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 1",
+          "name": "Nguyên Liệu Thủy Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -352,6 +373,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thư trùng sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -359,7 +382,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -380,6 +403,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thổ Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thạch Bì cổ sơ cấp thông qua nguyên liệu Thổ Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -387,7 +412,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thổ Đạo Cấp 1",
+          "name": "Nguyên Liệu Thổ Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -408,6 +433,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thiết Bì cổ sơ cấp thông qua nguyên liệu Kim Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -415,7 +442,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 1",
+          "name": "Nguyên Liệu Kim Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -436,14 +463,16 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Tạo lớp ánh sáng ngọc bích bao phủ da, phòng ngự cao hơn Đồng Bì và Thạch Bì, là nguyên liệu luyện Bạch Ngọc Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (25 viên)",
-          "count": 25,
+          "name": "Linh Thạch (30 viên)",
+          "count": 30,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Bột Ngọc Thạch Bích",
           "count": 2,
           "type": "material"
         }
@@ -464,6 +493,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thú Bì cổ sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -471,7 +502,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -492,6 +523,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Hoàng Lạc Thiên Ngưu cổ sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -499,7 +532,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -520,19 +553,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Xú Thí Cổ + Phạn Đại Thảo + Bùn đầm lầy thối rữa. Trúng chiêu gây đau bụng dữ dội đại tiện mất tự chủ. Bước 1 luyện Ngôn Nhi Vô Tín Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (25 viên)",
-          "count": 25,
-          "type": "currency"
+          "name": "Xú Thí Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 1",
+          "name": "Phạn Đại Thảo Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Hủ Xú Chiêu Nê (Bùn đầm lầy thối)",
           "count": 2,
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 80
     }
   },
   {
@@ -548,6 +588,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Phấn Thỉ cổ sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -555,7 +597,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -576,6 +618,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Ký Sinh Dã Thú",
+      "desc": "Gia tăng vĩnh viễn nhất trư chi lực cho cơ thể Cổ Sư, cải tạo thể chất mà không làm cơ bắp phình to thô kệch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -583,7 +627,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Huyết Nhục Heo Rừng Trắng",
           "count": 2,
           "type": "material"
         }
@@ -604,14 +648,16 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Quang Đạo",
+      "method": "Tăng Phúc / Phụ Trợ",
+      "desc": "Khuếch đại uy lực công kích của Nguyệt Quang Cổ khi kích hoạt đồng thời.",
       "materials": [
         {
-          "name": "Linh Thạch (25 viên)",
-          "count": 25,
+          "name": "Linh Thạch (20 viên)",
+          "count": 20,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Quang Đạo Cấp 1",
+          "name": "Tinh Quang Thạch",
           "count": 2,
           "type": "material"
         }
@@ -632,6 +678,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Long Hoàn Khúc Khúc cổ sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -639,7 +687,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -660,6 +708,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Sinh Tức Thảo sơ cấp thông qua nguyên liệu Mộc Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -667,7 +717,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 1",
+          "name": "Nguyên Liệu Mộc Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -688,6 +738,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Quang Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thiểm Quang cổ sơ cấp thông qua nguyên liệu Quang Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -695,7 +747,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Quang Đạo Cấp 1",
+          "name": "Nguyên Liệu Quang Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -716,6 +768,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Ngưng Tụ Chiến Trường",
+      "desc": "Ngưng tụ và phóng ra mũi giáo bằng xương trắng sắc nhọn đâm xuyên mục tiêu, thăng luyện lên Loa Toàn Cốt Thương.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -723,7 +777,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Bạch Cốt Mảnh",
           "count": 2,
           "type": "material"
         }
@@ -744,6 +798,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thanh Đồng Xá Lợi cổ sơ cấp thông qua nguyên liệu Kim Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -751,7 +807,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 1",
+          "name": "Nguyên Liệu Kim Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -772,6 +828,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Ngự Khuyển cổ sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -779,7 +837,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -800,6 +858,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Thổ Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Ẩn Thạch cổ sơ cấp thông qua nguyên liệu Thổ Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -807,7 +867,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thổ Đạo Cấp 1",
+          "name": "Nguyên Liệu Thổ Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -828,6 +888,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Mộc Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Cốt Trúc cổ sơ cấp thông qua nguyên liệu Mộc Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -835,7 +897,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 1",
+          "name": "Nguyên Liệu Mộc Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -856,21 +918,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Ám Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thanh Ti Cổ và Hắc Thỉ Cổ hợp luyện. Lông tơ biến thành màu đen dài cứng đan kết thành hộ giáp bờm đen.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Ám Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Thanh Ti Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Hắc Thỉ Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
         }
       ],
       "successRate": 75
@@ -889,6 +948,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Mộc Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Địa Tàng Hoa cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Mộc Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -896,14 +957,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Mộc Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Mộc",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -922,21 +983,23 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện Ngọc Bì Cổ cùng Bạch Thỉ Cổ. Lớp giáp ngọc trắng trong suốt kiên cố đứng hàng đầu Nhị Chuyển.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Ngọc Bì Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Bạch Thỉ Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Bạch Ngọc Tinh Thạch",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -955,6 +1018,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện U Ảnh Tùy Hành cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Thủy Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -962,14 +1027,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -988,6 +1053,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Xà Tín cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Biến Hóa Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -995,14 +1062,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1021,21 +1088,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Nguyệt Quang Cổ và Tiểu Quang Cổ hợp luyện. Tối đa hóa sắc bén và uy lực chém phá, nguyên liệu chính luyện Huyết Nguyệt Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Quang Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Nguyệt Quang Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Tiểu Quang Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
         }
       ],
       "successRate": 75
@@ -1054,24 +1118,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Mộc Đạo",
+      "method": "Thảo Loại Quý Hiếm",
+      "desc": "Cổ trị liệu trân quý, tưới Chân Nguyên sẽ mọc ra từng chiếc lá Sinh Cơ Diệp (Nhất Chuyển) để dùng hoặc bán.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 2",
-          "count": 4,
+          "name": "Sinh Cơ Diệp (Nhất Chuyển)",
+          "count": 5,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Mộc Linh Dịch",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 70
     }
   },
   {
@@ -1087,21 +1148,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Nguyệt Quang Cổ kết hợp Toàn Phong Cổ. Lưỡi đao ánh trăng màu lục bay theo quỹ đạo đường cong vòng vèo đánh lén.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Quang Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Nguyệt Quang Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Toàn Phong Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
         }
       ],
       "successRate": 75
@@ -1120,6 +1178,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Bạch Trùng Kiển từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Biến Hóa Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1127,14 +1187,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1153,21 +1213,23 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Khí Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Dùng 2 con Tửu Trùng Nhất Chuyển kết hợp 4 loại rượu mang đủ 4 vị Toan-Điềm-Khổ-Lạt hợp luyện mà thành. Tinh luyện Xích Thiết chân nguyên lên nửa tiểu cảnh giới.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
+          "name": "Tửu Trùng (Nhất Chuyển)",
+          "count": 2,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Khí Đạo Cấp 2",
-          "count": 4,
+          "name": "Rượu Tứ Vị (Chua, Ngọt, Đắng, Cay)",
+          "count": 1,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Thạch (60 viên)",
+          "count": 60,
+          "type": "currency"
         }
       ],
       "successRate": 75
@@ -1186,21 +1248,23 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Nguyệt Quang Cổ kết hợp Ngân Thạch Cổ. Lưỡi đao ánh trăng giữ nguyên uy lực nhưng kéo dài tầm bắn gấp đôi (20m).",
       "materials": [
+        {
+          "name": "Nguyệt Quang Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Ngân Thạch Cổ (Scar Stone)",
+          "count": 1,
+          "type": "material"
+        },
         {
           "name": "Linh Thạch (50 viên)",
           "count": 50,
           "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Quang Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
         }
       ],
       "successRate": 75
@@ -1219,21 +1283,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện từ Cốt Thương Cổ. Mũi giáo xoay tròn tốc độ cao như mũi khoan xuyên thủng giáp phòng ngự.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Cốt Thương Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Xương Thú Xoắn Ốc",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1252,6 +1313,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Thủy Tráo cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Thủy Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1259,14 +1322,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1285,6 +1348,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Xích Thiết Xá Lợi cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Kim Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1292,14 +1357,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Kim Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1318,6 +1383,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Độc Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Cường Thủ cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Độc Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1325,14 +1392,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Độc Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Độc Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Độc",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1351,6 +1418,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Thổ Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Thạch Khiếu cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Thổ Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1358,14 +1427,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thổ Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Thổ Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Thổ",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1384,6 +1453,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Lực Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Tông Hùng Bản Lực cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Lực Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1391,14 +1462,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Lực Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1417,6 +1488,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Thập Niên Thọ cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Biến Hóa Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1424,14 +1497,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1450,6 +1523,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Viêm Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Thanh Nhiệt cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Viêm Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1457,14 +1532,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Viêm Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Viêm Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Viêm",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1483,6 +1558,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Chỉ Hạc cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Biến Hóa Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1490,14 +1567,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1516,6 +1593,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Du Cương cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Kim Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1523,14 +1602,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Kim Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1549,21 +1628,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Biến Hóa",
+      "desc": "Mọc vảy khúc xạ ánh sáng giúp tàng hình hoàn toàn trước mắt thường khi đứng yên hoặc di chuyển chậm.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Ngư Lân Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Huyễn Quang Sa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1582,24 +1658,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Mộc Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Xú Thí Cổ + Phạn Đại Thảo + Bùn đầm lầy thối rữa. Trúng chiêu gây đau bụng dữ dội đại tiện mất tự chủ. Bước 1 luyện Ngôn Nhi Vô Tín Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (50 viên)",
-          "count": 50,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
+          "name": "Xú Thí Cổ (Nhất Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Phạn Đại Thảo Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Hủ Xú Chiêu Nê (Bùn đầm lầy thối)",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 80
     }
   },
   {
@@ -1615,6 +1693,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Ảnh Thương cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Biến Hóa Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1622,14 +1702,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1648,6 +1728,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Viêm Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Quỷ Hỏa cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Viêm Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1655,14 +1737,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Viêm Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Viêm Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Viêm",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1681,6 +1763,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 2,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện Tích Ốc cổ từ Cổ trùng Nhất Chuyển cùng hệ kết hợp nguyên liệu Biến Hóa Đạo.",
       "materials": [
         {
           "name": "Linh Thạch (50 viên)",
@@ -1688,14 +1772,14 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 2",
-          "count": 4,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhất Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (2 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Khoáng / Dược Thảo Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 75
@@ -1714,24 +1798,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -1747,21 +1833,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện từ Hắc Tông Cổ. Toàn bộ lông mọc dài cứng như kim thép đan thành giáp.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Kim Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
+          "name": "Hắc Tông Cổ (Nhị Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Tinh Thiết Quặng",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 65
@@ -1780,21 +1863,23 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bạch Ngọc Cổ kết hợp cổ phòng ngự Thủy đạo. Hóa thành lớp giáp ánh sáng trắng tròn trịa phòng ngự toàn diện.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
+          "name": "Bạch Ngọc Cổ (Nhị Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Thủy Phòng Cổ / Thủy Giáp Cổ",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Bạch Quang Sa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 65
@@ -1813,24 +1898,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Khí Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Thăng luyện từ 2 con Tứ Vị Tửu Trùng và 7 loại hương liệu quý. Đề thuần Bạch Ngân chân nguyên lên nửa tiểu cảnh giới.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
+          "name": "Tứ Vị Tửu Trùng (Nhị Chuyển)",
+          "count": 2,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Khí Đạo Cấp 3",
-          "count": 6,
+          "name": "Thất Hương Dược Thảo",
+          "count": 7,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Thạch (150 viên)",
+          "count": 150,
+          "type": "currency"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -1846,21 +1933,23 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tạo Tác Nguyên Liên Tiên Tôn",
+      "desc": "Đứng thứ 6 Thập Đại Kỳ Cổ: Nguyên tuyền di động tự động sản sinh chân nguyên tinh khiết như tư chất Giáp Đẳng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
+          "name": "Nguyên Tuyền Cốt Lõi",
+          "count": 1,
+          "type": "special"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
+          "name": "Mộc Linh Liên Hoa",
+          "count": 2,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Thạch (200 viên)",
+          "count": 200,
+          "type": "currency"
         }
       ],
       "successRate": 65
@@ -1879,24 +1968,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lôi Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Lôi Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lôi Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Lôi Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Lôi",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -1912,24 +2003,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lực Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Lực Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Lực Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -1945,24 +2038,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Khí Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Khí Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Khí Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Khí Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Khí",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -1978,24 +2073,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2011,24 +2108,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2044,21 +2143,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Kim/Lực Đạo",
+      "desc": "Biến cơ thể ánh sắc vàng kim rực rỡ, độ cứng rắn và chịu đòn vượt trội hơn Thiên Bồng Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Kim Đạo Cấp 3",
-          "count": 6,
+          "name": "Kim Cương Tinh Thạch",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
+          "name": "Đồng Bì Cổ (Nhị Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
         }
       ],
       "successRate": 65
@@ -2077,24 +2173,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Huyết Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Huyết Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Huyết Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Huyết Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Huyết",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2110,21 +2208,23 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Chân truyền Huyết Hải Lão Tổ: Lưỡi đao trăng đỏ tươi gây vết thương chảy máu không ngừng. Thức ăn chỉ cần máu tươi.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Quang Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
+          "name": "Nguyệt Mang Cổ (Nhị Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Huyết Khí Cổ / Huyết Tích Cổ",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Huyết Dịch Tinh Hoa",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 65
@@ -2143,24 +2243,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kiếm Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Kiếm Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kiếm Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Kiếm Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Kiếm",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2176,24 +2278,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lôi Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Lôi Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lôi Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Lôi Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Lôi",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2209,24 +2313,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kiếm Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Kiếm Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kiếm Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Kiếm Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Kiếm",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2242,24 +2348,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Quang Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Quang Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Quang Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Quang",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2275,24 +2383,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Thủy Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2308,24 +2418,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2341,24 +2453,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Phong Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Phong Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Phong Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Phong Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Phong",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2374,24 +2488,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2407,24 +2523,31 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng (3 bước)",
+      "desc": "Chỉ tồn tại đúng 10 hơi thở sau khi luyện thành, nhưng xóa bỏ hoàn toàn sự ràng buộc và phản phệ của Độc Thệ Cổ.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
+          "name": "A Thỉ Cổ (Nhị Chuyển)",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
+          "name": "Đại Lực Cổ (Nhị Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Sư Hống Cổ",
+          "count": 1,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Chỉ Hạc Cổ (3 màu: Lam, Xanh, Hồng)",
+          "count": 3,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 50
     }
   },
   {
@@ -2440,24 +2563,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2473,24 +2598,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
+      "method": "Truyền Thừa Bạch Cốt Sơn",
+      "desc": "Cổ tiêu hao cải tạo toàn bộ khung xương của Cổ Sư thành xương sắt đen cứng cáp vĩnh viễn.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Kim Đạo Cấp 3",
-          "count": 6,
+          "name": "Hắc Thiết Tinh",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
+          "name": "Cốt Tủy Đan",
           "count": 1,
-          "type": "monster_core"
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 70
     }
   },
   {
@@ -2506,24 +2628,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2539,24 +2663,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lực Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Lực Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Lực Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2572,24 +2698,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Kim Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Kim Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2605,24 +2733,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Kim Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Kim Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2638,24 +2768,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lực Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Lực Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Lực Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2671,24 +2803,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2704,24 +2838,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Mộc Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Mộc Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Mộc Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Mộc",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2737,24 +2873,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Biến Hóa Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2770,24 +2908,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Lôi Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Lôi Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lôi Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Lôi Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Lôi",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2803,24 +2943,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Hàn Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Hàn Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Hàn Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Hàn Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Hàn",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2836,24 +2978,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Thủy Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2869,21 +3013,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Mộc Đạo",
+      "method": "Trấn Tộc Mộc Đạo",
+      "desc": "Hóa thân Thụ tinh hấp thụ sinh khí tự nhiên, nếu dùng quá lâu sẽ bị mộc hóa thành cây vô tri.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 3",
-          "count": 6,
+          "name": "Thụ Tinh Mộc Hạch",
+          "count": 1,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Trường Xuân Đằng",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 65
@@ -2902,24 +3043,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Hàn Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Hàn Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Hàn Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Hàn Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Hàn",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2935,24 +3078,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Đan Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Hợp luyện tinh hoa Đan Đạo Tam Chuyển gia tăng uy lực và phạm vi tác dụng.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
+          "name": "Linh Thạch (120 viên)",
+          "count": 120,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Đan Đạo Cấp 3",
-          "count": 6,
-          "type": "material"
+          "name": "Cổ Trùng Đan Nhị Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Dược / Yêu Thú Tinh Hoa Đan",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 60
     }
   },
   {
@@ -2968,21 +3113,18 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 3,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Truyền Thừa Bạch Cốt Sơn",
+      "desc": "Trị thương huyết nhục cực mạnh, lột sạch thịt chỉ còn xương trắng vẫn có thể mọc lại tức thì.",
       "materials": [
         {
-          "name": "Linh Thạch (75 viên)",
-          "count": 75,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 3",
-          "count": 6,
+          "name": "Bạch Cốt Linh Tủy",
+          "count": 2,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (3 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Huyết Nhục Thảo",
+          "count": 2,
+          "type": "material"
         }
       ],
       "successRate": 65
@@ -3001,24 +3143,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Quang Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Quang Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Quang Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Quang",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3034,24 +3178,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Huyết Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Huyết Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Huyết Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Huyết Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Huyết",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3067,24 +3213,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Khí Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "2 Thất Hương Tửu Trùng hợp cùng nhãn cầu 9 loài Bách Thú Vương. Tinh luyện Hoàng Kim chân nguyên lên nửa tiểu cảnh giới.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
-          "type": "currency"
+          "name": "Thất Hương Tửu Trùng (Tam Chuyển)",
+          "count": 2,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Khí Đạo Cấp 4",
-          "count": 8,
+          "name": "Nhãn Cầu Bách Thú Vương",
+          "count": 9,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
+          "type": "currency"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3100,24 +3248,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Huyết Đạo",
+      "method": "Huyết Tế & Dị Thể Ma Đạo",
+      "desc": "Chân truyền Huyết Hải Lão Tổ: Hấp thụ máu người cùng huyết thống rót vào không khiếu nâng tư chất lên Giáp đẳng (90%+).",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
-          "type": "currency"
+          "name": "Máu Tươi Thân Tộc Cùng Dòng Máu",
+          "count": 10,
+          "type": "special"
         },
         {
-          "name": "Nguyên Liệu Huyết Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
+          "name": "Pha Lê Huyết Đầu Lâu",
           "count": 1,
-          "type": "monster_core"
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 50
     }
   },
   {
@@ -3133,24 +3278,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Khí Đạo",
+      "method": "Truyền Thừa Thiết Gia",
+      "desc": "Tỏa khí thế chính nghĩa khiến kẻ tiểu nhân, ma đầu kinh hồn bạt vía tụt giảm ý chí chiến đấu.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Khí Đạo Cấp 4",
-          "count": 8,
+          "name": "Chính Khí Thạch",
+          "count": 2,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
+          "name": "Kim Cương Thiết",
           "count": 1,
-          "type": "monster_core"
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 50
     }
   },
   {
@@ -3166,24 +3308,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3199,24 +3343,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Kim Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3232,24 +3378,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Lực Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Lực Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Lực Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3265,24 +3413,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Phong Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Phong Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Phong Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Phong Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Phong",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3298,24 +3448,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Hàn Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Hàn Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Hàn Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Hàn Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Hàn",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3331,24 +3483,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Kim Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3364,24 +3518,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Mộc Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Mộc Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Mộc Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Mộc",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3397,24 +3553,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Kim Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3430,24 +3588,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Kim Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3463,24 +3623,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Kim Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3496,24 +3658,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3529,24 +3693,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Thủy Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3562,24 +3728,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Thủy Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3595,24 +3763,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3628,24 +3798,36 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Phong Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Phương Nguyên tự tay luyện chế tại Tam Vương Sơn: Đâm thủng gai xương qua da mọc đôi cánh xương rộng lớn bay lượn.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
-          "type": "currency"
+          "name": "Vô Túc Điểu (Tam Chuyển)",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Phong Đạo Cấp 4",
-          "count": 8,
+          "name": "Cửu Cung Hoa",
+          "count": 1,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
+          "name": "Vấn Đỉnh Thạch",
           "count": 1,
-          "type": "monster_core"
+          "type": "material"
+        },
+        {
+          "name": "Kim Ô Lưu Tinh",
+          "count": 1,
+          "type": "material"
+        },
+        {
+          "name": "Hàn Băng Thảo",
+          "count": 1,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3661,24 +3843,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3694,24 +3878,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3727,24 +3913,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Kim Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Kim Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3760,24 +3948,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3793,24 +3983,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Viêm Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Viêm Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Viêm Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Viêm Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Viêm",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3826,24 +4018,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3859,24 +4053,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Lực Đạo",
+      "method": "Đổ Thạch Lão Nhân Thạch",
+      "desc": "Hạt nhân Lực đạo: chịu thương tổn càng nặng, nỗi đau đớn càng lớn thì sức mạnh bộc phát càng tăng vọt gấp bội.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Lực Đạo Cấp 4",
-          "count": 8,
+          "name": "Lão Nhân Thạch (Đổ Thạch)",
+          "count": 1,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Linh Thạch (250 viên)",
+          "count": 250,
+          "type": "currency"
         }
       ],
-      "successRate": 55
+      "successRate": 40
     }
   },
   {
@@ -3892,24 +4083,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Lực Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Lực Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Lực Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3925,24 +4118,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3958,24 +4153,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Thủy Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Thủy Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -3991,24 +4188,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Viêm Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Viêm Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Viêm Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Viêm Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Viêm",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -4024,24 +4223,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 4,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Bí phương Tứ Chuyển ngưng tụ đạo ngân Biến Hóa Đạo sâu sắc vào cơ thể Cổ trùng.",
       "materials": [
         {
-          "name": "Linh Thạch (100 viên)",
-          "count": 100,
+          "name": "Linh Thạch (300 viên)",
+          "count": 300,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 4",
-          "count": 8,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tam Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (4 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Bách Thú Vương Cốt Tủy Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 55
+      "successRate": 45
     }
   },
   {
@@ -4057,24 +4258,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Nô Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Nô Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Nô Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Nô",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4090,24 +4293,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Quang Đạo",
+      "method": "Nuôi Dưỡng Tự Nhiên / Trấn Tộc",
+      "desc": "Trấn tộc cổ trùng của bộ tộc Cổ Nguyệt. Phóng nguyệt nhận lam sắc 10m. Nuôi bằng cánh hoa nguyệt lan.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
+          "name": "Linh Thạch (25 viên)",
+          "count": 25,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Quang Đạo Cấp 6",
-          "count": 12,
+          "name": "Cánh Hoa Nguyệt Lan",
+          "count": 5,
           "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
         }
       ],
-      "successRate": 35
+      "successRate": 85
     }
   },
   {
@@ -4123,24 +4323,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Khí Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Khí Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Khí Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -4156,24 +4353,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -4189,24 +4383,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Thủy Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Thủy Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -4222,24 +4413,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -4255,24 +4443,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Mộc Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Mộc Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -4288,24 +4473,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4321,24 +4508,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Thổ Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thổ Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Thổ Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Thổ",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4354,24 +4543,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4387,24 +4578,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4420,24 +4613,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4453,24 +4648,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4486,24 +4683,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4519,24 +4718,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Mộc Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Mộc Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Mộc Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Mộc",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4552,24 +4753,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Huyết Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Huyết Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Huyết Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Huyết",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4585,24 +4788,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4618,24 +4823,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4651,24 +4858,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4684,24 +4893,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4717,24 +4928,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4750,24 +4963,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Kim Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Kim Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Kim Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Kim",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4783,24 +4998,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4816,24 +5033,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4849,24 +5068,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4882,24 +5103,31 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện 2 Giai Đoạn Lang Gia / Bá Quy",
+      "desc": "Mở ra Không Khiếu / Tiên Khiếu thứ hai hoàn toàn độc lập, nắm giữ lượng nguyên gấp đôi và tu 2 lưu phái song song.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
-          "type": "currency"
+          "name": "Bách Niên Thọ Cổ",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
+          "name": "Vỏ Củ Lạc Vàng Óng",
+          "count": 1,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
+          "name": "Thần Du Cổ (Lục Chuyển)",
           "count": 1,
-          "type": "monster_core"
+          "type": "gu"
+        },
+        {
+          "name": "Vạn Cổ Trùng Phụ Trợ",
+          "count": 1,
+          "type": "special"
         }
       ],
-      "successRate": 45
+      "successRate": 25
     }
   },
   {
@@ -4915,24 +5143,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Thổ Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thổ Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Thổ Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Thổ",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4948,24 +5178,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -4981,24 +5213,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5014,24 +5248,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Lực Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Lực Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5047,24 +5283,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5080,24 +5318,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trụ Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Trụ Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Trụ Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Trụ",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5113,24 +5353,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Thủy Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Thủy Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Thủy",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5146,24 +5388,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Phong Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Phong Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Phong Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Phong",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5179,24 +5423,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Lực Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Lực Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5212,24 +5458,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trụ Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Trụ Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Trụ Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Trụ",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5245,24 +5493,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trí Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Trí Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Trí Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Trí",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5278,24 +5528,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Trí Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Trí Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Trí Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Trí",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5311,24 +5563,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5344,24 +5598,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Hàn Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Hàn Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Hàn Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Hàn",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5377,24 +5633,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Lực Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Lực Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Lực Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Lực",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5410,24 +5668,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5443,24 +5703,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Khí Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Khí Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Khí Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Khí",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5476,24 +5738,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5509,24 +5773,26 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 5,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Đỉnh Phong Phàm Cấp",
+      "desc": "Đỉnh phong Phàm Cổ Ngũ Chuyển mang một tia vận vị quy tắc Tiên Đạo.",
       "materials": [
         {
-          "name": "Linh Thạch (125 viên)",
-          "count": 125,
+          "name": "Linh Thạch (800 viên)",
+          "count": 800,
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 5",
-          "count": 10,
-          "type": "material"
+          "name": "Cổ Trùng Biến Hóa Tứ Chuyển",
+          "count": 1,
+          "type": "gu"
         },
         {
-          "name": "Nội Đan Yêu Thú (5 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thiên Thú Vương Tinh Phách Biến Hóa",
+          "count": 2,
+          "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 30
     }
   },
   {
@@ -5542,24 +5808,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5575,24 +5838,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Tạo Tác Hồng Liên Ma Tôn",
+      "desc": "Tự bạo nhục thân và tiên khiếu, mang ý chí bơi ngược dòng Quang Âm Trường Hà về quá khứ trọng sinh.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
+          "name": "Nước Sông Quang Âm Trường Hà",
           "count": 1,
-          "type": "monster_core"
+          "type": "special"
+        },
+        {
+          "name": "Huyết Hải Sinh Linh (Vô số)",
+          "count": 1,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 15
     }
   },
   {
@@ -5608,24 +5868,16 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Thiên Địa Dựng Dục Từ 4 Mỹ Tửu",
+      "desc": "Uống cạn 4 loại cực phẩm mỹ tửu thiên hạ ngưng tụ thành. Say rượu mê man ngao du khắp năm vực chín trời.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
+          "name": "Bốn Loại Cực Phẩm Mỹ Tửu Thiên Hạ",
           "count": 1,
-          "type": "monster_core"
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 25
     }
   },
   {
@@ -5641,24 +5893,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5674,24 +5923,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5707,24 +5953,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Thổ Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Thổ Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Thổ Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5740,24 +5983,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Đan Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Đan Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Đan Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5773,24 +6013,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Lực Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Lực Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Lực Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5806,24 +6043,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Thủy Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Thủy Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Thủy Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5839,24 +6073,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5872,24 +6103,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5905,24 +6133,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5938,24 +6163,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -5971,24 +6193,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6004,24 +6223,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6037,24 +6253,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6070,24 +6283,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Ám Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Ám Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Ám Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6103,24 +6313,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Trí Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Trí Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Trí Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6136,24 +6343,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6169,24 +6373,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 6,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
       "materials": [
         {
-          "name": "Linh Thạch (150 viên)",
-          "count": 150,
-          "type": "currency"
-        },
-        {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 6",
-          "count": 12,
+          "name": "Tiên Tài Biến Hóa Lục Chuyển",
+          "count": 3,
           "type": "material"
         },
         {
-          "name": "Nội Đan Yêu Thú (6 Chuyển)",
-          "count": 1,
-          "type": "monster_core"
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 20
     }
   },
   {
@@ -6202,6 +6403,8 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 1,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Hợp Luyện Cơ Bản",
+      "desc": "Phối chế Thiên Cơ cổ sơ cấp thông qua nguyên liệu Biến Hóa Đạo và linh thạch.",
       "materials": [
         {
           "name": "Linh Thạch (25 viên)",
@@ -6209,7 +6412,7 @@ window.GU_DATABASE = [
           "type": "currency"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 1",
+          "name": "Nguyên Liệu Biến Hóa Cấp 1",
           "count": 2,
           "type": "material"
         }
@@ -6230,24 +6433,21 @@ window.GU_DATABASE = [
     "recipe": {
       "reqRank": 9,
       "reqDao": "Biến Hóa Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
       "materials": [
         {
-          "name": "Linh Thạch (225 viên)",
-          "count": 225,
-          "type": "currency"
+          "name": "Bản Nguyên Tiên Tài Biến Hóa Cửu Chuyển",
+          "count": 3,
+          "type": "special"
         },
         {
-          "name": "Nguyên Liệu Biến Hóa Đạo Cấp 9",
-          "count": 18,
-          "type": "material"
-        },
-        {
-          "name": "Nội Đan Yêu Thú (9 Chuyển)",
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
           "count": 1,
-          "type": "monster_core"
+          "type": "special"
         }
       ],
-      "successRate": 35
+      "successRate": 5
     }
   },
   {
@@ -6260,7 +6460,21 @@ window.GU_DATABASE = [
     "food": "Nghịch Lưu Hà",
     "mpCost": 300,
     "desc": "Tiên Cổ huyền thoại trong Nhân Tổ Truyện. Hạt nhân sát chiêu Nghịch Lưu Hộ Thân Ấn, phản xạ lại mọi đòn tấn công và miễn nhiễm cổ trùng đối phương.",
-    "supportEffect": "Miễn nhiễm toàn bộ sát thương và phản hồi 50% sát thương về kẻ tấn công."
+    "supportEffect": "Miễn nhiễm toàn bộ sát thương và phản hồi 50% sát thương về kẻ tấn công.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Nhân Đạo",
+      "method": "Đi Ngược Dòng Nghịch Lưu Hà Đến Đích",
+      "desc": "Tự động ngưng tụ khi đi bộ hết dòng sông Nghịch Lưu Hà, chủ nhân Thiên Địa Bí Cảnh Nghịch Lưu Hà.",
+      "materials": [
+        {
+          "name": "Ý Chí Bất Khuất Không Gục Ngã Trong Nghịch Lưu Hà",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "van_nga_tien_co",
@@ -6271,7 +6485,46 @@ window.GU_DATABASE = [
     "power": 6500,
     "food": "Hồn phách bách vạn nhân",
     "mpCost": 400,
-    "desc": "Hình dạng con rết kim loại khổng lồ 10 mét có một vạn chiếc chân. Tiêu hao hồn phách phân hóa biển hư ảnh Lực Đạo áp đảo vạn địch."
+    "desc": "Hình dạng con rết kim loại khổng lồ 10 mét có một vạn chiếc chân. Tiêu hao hồn phách phân hóa biển hư ảnh Lực Đạo áp đảo vạn địch.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Nhân Đạo",
+      "method": "Sát Chiêu Hóa Cổ (Phương Nguyên / Lang Gia)",
+      "desc": "Rết kim loại khổng lồ dài 10m có 1 vạn chân, phân hóa vô số hư ảnh Lực Đạo mang theo hồn phách áp đảo quân địch.",
+      "materials": [
+        {
+          "name": "Ẩm Đao Tửu",
+          "count": 1,
+          "type": "material"
+        },
+        {
+          "name": "Phàm Phong Cổ",
+          "count": 1,
+          "type": "material"
+        },
+        {
+          "name": "Tiền Hậu Thần Trở Châm",
+          "count": 1,
+          "type": "material"
+        },
+        {
+          "name": "Phù Sinh Hỏa",
+          "count": 1,
+          "type": "material"
+        },
+        {
+          "name": "Tự Lực Cánh Sinh Cổ",
+          "count": 1,
+          "type": "material"
+        },
+        {
+          "name": "Toàn Lực Dĩ Phó Cổ",
+          "count": 1,
+          "type": "material"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "thien_co_tien_co_7",
@@ -6283,7 +6536,26 @@ window.GU_DATABASE = [
     "food": "Mảnh vỡ tinh quang",
     "mpCost": 350,
     "desc": "Hỏi trực tiếp Thiên Địa để khám phá chân tướng sự thật của vạn vật và suy diễn thiên cơ biến hóa.",
-    "supportEffect": "Nhìn thấu toàn bộ sơ hở và điểm yếu của đối thủ trong chiến đấu."
+    "supportEffect": "Nhìn thấu toàn bộ sơ hở và điểm yếu của đối thủ trong chiến đấu.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Thiên Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Thiên Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "nga_hanh_nga_to_co",
@@ -6295,7 +6567,26 @@ window.GU_DATABASE = [
     "food": "Hồng Táo Tiên Nguyên",
     "mpCost": 250,
     "desc": "Tiên Cổ của Phượng Cửu Ca, cho phép phớt lờ mọi quy tắc hạn chế của môi trường để tự do thi triển sát chiêu.",
-    "supportEffect": "Xóa bỏ mọi bùa chú khống chế và phong ấn trên cơ thể."
+    "supportEffect": "Xóa bỏ mọi bùa chú khống chế và phong ấn trên cơ thể.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Luật Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Luật Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "cau_thi_van_tien_co",
@@ -6307,7 +6598,26 @@ window.GU_DATABASE = [
     "food": "Bùn bẩn tự nhiên",
     "mpCost": 200,
     "desc": "Chí bảo Vận Đạo của Cự Dương Tiên Tôn trong Vương Đình Phúc Địa, bảo vệ và tăng vọt vận khí bản thân, chuyển hung thành cát.",
-    "supportEffect": "Tăng 40 điểm Khí Vận may mắn, tăng 25% tỷ lệ rơi vật phẩm quý hiếm."
+    "supportEffect": "Tăng 40 điểm Khí Vận may mắn, tăng 25% tỷ lệ rơi vật phẩm quý hiếm.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Vận Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Vận Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "nhan_nhu_co_tien_co",
@@ -6319,7 +6629,26 @@ window.GU_DATABASE = [
     "food": "Nước sông Thời Gian",
     "mpCost": 350,
     "desc": "Tiên Cổ Trụ Đạo chí bảo của Thái Bạch Vân Sinh, khôi phục toàn bộ trạng thái cơ thể người dùng quay về một khoảnh khắc trước khi bị thương tổn.",
-    "supportEffect": "Lập tức hồi phục 80% Khí Huyết và tiêu trừ mọi trạng thái tẩu hỏa nhập ma."
+    "supportEffect": "Lập tức hồi phục 80% Khí Huyết và tiêu trừ mọi trạng thái tẩu hỏa nhập ma.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Trụ Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Trụ Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "giang_son_nhu_co",
@@ -6331,7 +6660,26 @@ window.GU_DATABASE = [
     "food": "Bùn đất địa mạch cổ",
     "mpCost": 300,
     "desc": "Khôi phục toàn bộ núi sông, địa mạch, phúc địa bị tàn phá trở lại nguyên trạng ban đầu hoàn hảo.",
-    "supportEffect": "Gia cố khiếu bích không khiếu và hồi phục 100% Căn Cốt."
+    "supportEffect": "Gia cố khiếu bích không khiếu và hồi phục 100% Căn Cốt.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Trụ Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Trụ Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "phi_kiem_tien_co",
@@ -6342,7 +6690,26 @@ window.GU_DATABASE = [
     "power": 7500,
     "food": "Kim loại quý Canh Tinh",
     "mpCost": 380,
-    "desc": "Di sản Kiếm Đạo của Á Tiên Tôn Bạc Thanh, phóng ra phi kiếm công kích xuyên thấu hư không với tốc độ hàng đầu Thất Chuyển."
+    "desc": "Di sản Kiếm Đạo của Á Tiên Tôn Bạc Thanh, phóng ra phi kiếm công kích xuyên thấu hư không với tốc độ hàng đầu Thất Chuyển.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Kiếm Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Kiếm Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "kiem_don_tien_co",
@@ -6354,7 +6721,26 @@ window.GU_DATABASE = [
     "food": "Khí tức phi kiếm",
     "mpCost": 280,
     "desc": "Hóa thân thành kiếm quang bay lượn với tốc độ kinh thế hãi tục, né tránh mọi đòn tấn công tầm xa.",
-    "supportEffect": "Tăng 80 điểm Thân Pháp và 50% tỷ lệ né tránh hoàn toàn."
+    "supportEffect": "Tăng 80 điểm Thân Pháp và 50% tỷ lệ né tránh hoàn toàn.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Kiếm Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Kiếm Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "quan_tam_tien_co",
@@ -6366,7 +6752,26 @@ window.GU_DATABASE = [
     "food": "Tâm ý thanh tịnh",
     "mpCost": 260,
     "desc": "Xếp hạng 4 trong Thập Đại Kỳ Cổ do Vô Cực Ma Tôn sáng tạo, khắc tinh tối thượng có thể xóa bỏ và hóa giải mọi loại minh ước thề nguyền.",
-    "supportEffect": "Miễn trừ hoàn toàn phản phệ của các loại cổ độc thệ và cấm chế."
+    "supportEffect": "Miễn trừ hoàn toàn phản phệ của các loại cổ độc thệ và cấm chế.",
+    "recipe": {
+      "reqRank": 7,
+      "reqDao": "Luật Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Thất Chuyển trụ cột chiến lược của Cổ Tiên Ngũ Vực.",
+      "materials": [
+        {
+          "name": "Tiên Tài Luật Thất Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Hồng Táo Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 15
+    }
   },
   {
     "id": "thai_do_co",
@@ -6378,7 +6783,21 @@ window.GU_DATABASE = [
     "food": "Tâm lực",
     "mpCost": 0,
     "desc": "Tiên Cổ truyền kỳ từ Nhân Tổ Truyện. Hạt nhân sát chiêu Gặp Mặt Từng Quen Biết, ngụy trang tuyệt đối không cần Tiên Nguyên mà chỉ tiêu hao Tâm Lực.",
-    "supportEffect": "Ngụy trang hoàn hảo tu vi, danh tính và khí tức trước mọi cường giả dò xét."
+    "supportEffect": "Ngụy trang hoàn hảo tu vi, danh tính và khí tức trước mọi cường giả dò xét.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Trí Đạo",
+      "method": "Thần Thoại Nhân Tổ Truyện",
+      "desc": "Chiếc mặt nạ che giấu bản tâm, chỉ tiêu hao Tâm Lực chứ không cần Bạch Lệ Tiên Nguyên, hạt nhân Gặp Mặt Từng Quen Biết.",
+      "materials": [
+        {
+          "name": "Mặt Nạ Thái Độ Nhân Tổ",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "hoi_co",
@@ -6390,7 +6809,26 @@ window.GU_DATABASE = [
     "food": "Nước mắt hối hận",
     "mpCost": 500,
     "desc": "Thập Đại Kỳ Cổ mang quy tắc Hối Hận, hạt nhân xây dựng Tứ Nguyên Phương Hối Huyết Luyện Trì giúp bảo toàn tiên tài khi luyện cổ thất bại.",
-    "supportEffect": "Nếu hợp luyện thất bại, bảo toàn 70% nguyên liệu quý hiếm."
+    "supportEffect": "Nếu hợp luyện thất bại, bảo toàn 70% nguyên liệu quý hiếm.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Trí Đạo",
+      "method": "Thần Thoại Nhân Tổ Truyện / Nhạc Thổ",
+      "desc": "Hạt nhân xây dựng Tứ Nguyên Phương Hối Huyết Luyện Trì cho phép quay lại bước trước khi luyện cổ thất bại.",
+      "materials": [
+        {
+          "name": "Hối Hận Tâm Tinh",
+          "count": 1,
+          "type": "special"
+        },
+        {
+          "name": "Bạch Lệ Tiên Thạch",
+          "count": 3,
+          "type": "material"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "hong_van_te_thien_co",
@@ -6402,7 +6840,21 @@ window.GU_DATABASE = [
     "food": "Khí vận chúng sinh",
     "mpCost": 600,
     "desc": "Chí bảo Vận Đạo đỉnh phong của Cự Dương Tiên Tôn trong Lầu Chân Dương 88 Góc, biến người sở hữu thành con cưng của Thiên Đạo, tai ương tự hóa cơ duyên.",
-    "supportEffect": "Khí Vận tăng +100 điểm, tỷ lệ thành công trong mọi hành vi tăng 35%."
+    "supportEffect": "Khí Vận tăng +100 điểm, tỷ lệ thành công trong mọi hành vi tăng 35%.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Vận Đạo",
+      "method": "Cự Dương Tiên Tôn Tích Lũy Vạn Năm",
+      "desc": "Khắc đạo ngân Vận Đạo vĩnh viễn, khí vận cao ngang trời biến mọi tai ương thành kỳ ngộ không tưởng.",
+      "materials": [
+        {
+          "name": "Chúng Sinh Vận Khí Triệu Năm Lầu Chân Dương",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "tu_thuy_luu_nien",
@@ -6414,7 +6866,26 @@ window.GU_DATABASE = [
     "food": "Nước sông Thời Gian",
     "mpCost": 400,
     "desc": "Bát Chuyển Trụ Đạo của Hắc Phàm Chân Truyền, ngoại lệ cho phép kích hoạt bằng tiên nguyên cấp thấp, sản sinh vô tận Niên Cổ.",
-    "supportEffect": "Tăng gấp 2 lần lượng tu vi thu được trong mọi phiên bế quan tu luyện."
+    "supportEffect": "Tăng gấp 2 lần lượng tu vi thu được trong mọi phiên bế quan tu luyện.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Trụ Đạo",
+      "method": "Hắc Phàm Chân Truyền",
+      "desc": "Sản sinh vô tận Niên Cổ, cho phép Cổ Tiên Lục/Thất Chuyển kích hoạt bằng Thanh Đề/Hồng Táo Tiên Nguyên.",
+      "materials": [
+        {
+          "name": "Quang Âm Chi Thủy Vô Tận",
+          "count": 2,
+          "type": "special"
+        },
+        {
+          "name": "Niên Cổ Cổ Đại",
+          "count": 5,
+          "type": "material"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "thuy_luyen_tien_co",
@@ -6426,7 +6897,26 @@ window.GU_DATABASE = [
     "food": "Thủy tinh linh dịch",
     "mpCost": 550,
     "desc": "Linh kiện cốt lõi của Trường Mao Lão Tổ để xây dựng Luyện Hải, mô phỏng đặc tính thẩm thấu của nước luyện hóa trận bàn đối thủ.",
-    "supportEffect": "Tăng 80% tỷ lệ hợp luyện Tiên Cổ thành công."
+    "supportEffect": "Tăng 80% tỷ lệ hợp luyện Tiên Cổ thành công.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Luyện Đạo",
+      "method": "Lang Gia Phái Trường Mao Lão Tổ",
+      "desc": "Hạt nhân kiến tạo Luyện Hải, cạy phá đồng hóa trận bàn đối phương như chiếc xà beng.",
+      "materials": [
+        {
+          "name": "Tiên Tài Thủy Đạo Bát Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Luyện Trận Trận Bàn",
+          "count": 1,
+          "type": "material"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "bat_chuyen_tuu_trung",
@@ -6438,7 +6928,31 @@ window.GU_DATABASE = [
     "food": "Tam Hoàng Ngũ Đế Tửu",
     "mpCost": 500,
     "desc": "Phiên bản tối thượng hợp luyện từ Tam Hoàng Ngũ Đế Tửu, đề thuần Bạch Lệ Tiên Nguyên thành Hoàng Hạnh Tiên Nguyên của Tôn Giả.",
-    "supportEffect": "Cô đọng toàn bộ Chân Nguyên/Tiên Nguyên lên phẩm chất Tôn Giả, tăng 100% hiệu suất thi pháp."
+    "supportEffect": "Cô đọng toàn bộ Chân Nguyên/Tiên Nguyên lên phẩm chất Tôn Giả, tăng 100% hiệu suất thi pháp.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Thực Đạo",
+      "method": "Tam Hoàng Ngũ Đế Tửu Hợp Luyện",
+      "desc": "Đề thuần Bạch Lệ Tiên Nguyên (Bát Chuyển) thành Hoàng Hạnh Tiên Nguyên (Cửu Chuyển) của Tôn GiẢ.",
+      "materials": [
+        {
+          "name": "Cửu Nhãn Tửu Trùng (Tứ Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Tam Hoàng Mỹ Tửu (x3)",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Ngũ Đế Mỹ Tửu (x5)",
+          "count": 5,
+          "type": "material"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "dot_bien_tien_co",
@@ -6449,7 +6963,26 @@ window.GU_DATABASE = [
     "power": 24000,
     "food": "Huyết nhục dị thú",
     "mpCost": 800,
-    "desc": "Cưỡng chế làm đột biến tế bào kẻ địch thành mô dã thú cây cối tự cắn xé cơ thể vật chủ, sát thương biến thái cực độ."
+    "desc": "Cưỡng chế làm đột biến tế bào kẻ địch thành mô dã thú cây cối tự cắn xé cơ thể vật chủ, sát thương biến thái cực độ.",
+    "recipe": {
+      "reqRank": 8,
+      "reqDao": "Biến Hóa Đạo",
+      "method": "Luyện Đạo Tôn Cấp",
+      "desc": "Tiên Cổ Bát Chuyển bá chủ thời đại, uy áp ngập tràn thiên địa.",
+      "materials": [
+        {
+          "name": "Tiên Tài Biến Hóa Bát Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Bạch Lệ Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 10
+    }
   },
   {
     "id": "tuc_menh_co",
@@ -6461,7 +6994,21 @@ window.GU_DATABASE = [
     "food": "Ý chí Thiên Đạo",
     "mpCost": 1000,
     "desc": "Chí bảo Cửu Chuyển trên đỉnh Giam Thiên Tháp đại diện cho Định Số vạn vật từ thuở khai thiên lập địa. Định đoạt sinh tử mọi loài.",
-    "supportEffect": "Định mệnh che chở: Không thể bị hạ sát nếu thọ nguyên chưa tận."
+    "supportEffect": "Định mệnh che chở: Không thể bị hạ sát nếu thọ nguyên chưa tận.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Thiên Đạo",
+      "method": "Thiên Đạo Tự Nhiên Dựng Dục",
+      "desc": "Nhện đen trắng đại diện Định Số vạn vật: ai phải chết sẽ chết, cấm tiệt phục sinh cho đến khi bị Phương Nguyên xóa sổ.",
+      "materials": [
+        {
+          "name": "Thiên Đạo Định Mệnh Chi Tinh",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "tri_tue_co",
@@ -6473,7 +7020,21 @@ window.GU_DATABASE = [
     "food": "Thọ nguyên người sống",
     "mpCost": 0,
     "desc": "Một trong ba cổ trùng đầu tiên đối thoại với Nhân Tổ. Tỏa ra Vầng Sáng Trí Tuệ tạo vô tận linh cảm suy diễn cổ phương và sát chiêu tức thời.",
-    "supportEffect": "Tăng +150 Ngộ Tính và +150 Trí Mưu, giải trừ mọi bình cảnh tu luyện."
+    "supportEffect": "Tăng +150 Ngộ Tính và +150 Trí Mưu, giải trừ mọi bình cảnh tu luyện.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Trí Đạo",
+      "method": "Thần Thoại Nhân Tổ Truyện",
+      "desc": "Tỏa vầng sáng trí tuệ sinh ra vô tận linh cảm tức thời, đánh đổi bằng việc thiêu đốt tuổi thọ người sống.",
+      "materials": [
+        {
+          "name": "Vầng Sáng Trí Tuệ Thiên Địa",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "ai_tinh_co",
@@ -6485,7 +7046,21 @@ window.GU_DATABASE = [
     "food": "Chân tình ái luyến",
     "mpCost": 0,
     "desc": "Tiên Cổ phi logic vạn năng trong Nhân Tổ Truyện, tự do lựa chọn ký chủ, từng đánh trọng thương Túc Mệnh Cổ vì tình yêu bất tuân quy luật số phận.",
-    "supportEffect": "Khi lâm vào tuyệt cảnh, tự động bộc phát thần tích cứu mạng chủ nhân."
+    "supportEffect": "Khi lâm vào tuyệt cảnh, tự động bộc phát thần tích cứu mạng chủ nhân.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Trí Đạo",
+      "method": "Thần Thoại Nhân Tổ Truyện",
+      "desc": "Cổ trùng phi logic vạn năng duy nhất từng làm nứt vỡ Túc Mệnh Cổ, tự chọn ký chủ Thánh Nữ Linh Duyên Trai.",
+      "materials": [
+        {
+          "name": "Tình Yêu Chân Thành Không Hối Tiếc",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "thien_nguyen_bao_hoang_lien",
@@ -6497,7 +7072,26 @@ window.GU_DATABASE = [
     "food": "Nguyên tuyền vô tận",
     "mpCost": 0,
     "desc": "Xếp hạng 6 trong Thập Đại Tiên Cổ do Nguyên Liên Tiên Tôn sáng tạo. Tự động sản sinh Hoàng Hạnh Tiên Nguyên tinh khiết bất tận mỗi ngày.",
-    "supportEffect": "Hồi phục 100% Chân Nguyên / Tiên Nguyên sau mỗi canh giờ."
+    "supportEffect": "Hồi phục 100% Chân Nguyên / Tiên Nguyên sau mỗi canh giờ.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Mộc Đạo",
+      "method": "Nguyên Liên Tiên Tôn Thăng Luyện",
+      "desc": "Tự động sản sinh ra lượng lớn Hoàng Hạnh Tiên Nguyên tinh khiết mỗi năm, giải quyết thiếu hụt năng lượng Tôn Giả.",
+      "materials": [
+        {
+          "name": "Thiên Nguyên Bảo Vương Liên (Ngũ Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 3,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "cuu_han_co",
@@ -6508,7 +7102,26 @@ window.GU_DATABASE = [
     "power": 120000,
     "food": "Lòng cừu hận vạn năm",
     "mpCost": 1500,
-    "desc": "Tiên Cổ truyền thuyết nuôi dưỡng hàng chục vạn năm trong cơ thể Thái Cổ Hoang Thú Thanh Trừu, tích tụ cừu hận vô biên bộc phát sức hủy diệt kinh hoàng."
+    "desc": "Tiên Cổ truyền thuyết nuôi dưỡng hàng chục vạn năm trong cơ thể Thái Cổ Hoang Thú Thanh Trừu, tích tụ cừu hận vô biên bộc phát sức hủy diệt kinh hoàng.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Trí Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
+      "materials": [
+        {
+          "name": "Bản Nguyên Tiên Tài Trí Cửu Chuyển",
+          "count": 3,
+          "type": "special"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "cuu_chuyen_thien_co_co",
@@ -6520,7 +7133,26 @@ window.GU_DATABASE = [
     "food": "Tiên tài Thiên Đạo",
     "mpCost": 1200,
     "desc": "Hạt nhân sát chiêu Mông Lung Thiên Cơ của Phương Nguyên, đánh cắp toàn bộ trí tuệ của Thiên Đạo và che mắt các vị Tôn Giả khác.",
-    "supportEffect": "Che giấu tuyệt đối thực lực và vị trí trước mọi đòn điều tra suy diễn."
+    "supportEffect": "Che giấu tuyệt đối thực lực và vị trí trước mọi đòn điều tra suy diễn.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Thiên Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
+      "materials": [
+        {
+          "name": "Bản Nguyên Tiên Tài Thiên Cửu Chuyển",
+          "count": 3,
+          "type": "special"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "hoa_co_cuu_chuyen",
@@ -6531,7 +7163,26 @@ window.GU_DATABASE = [
     "power": 150000,
     "food": "Thái Cổ Bạch Thiên quang hỏa",
     "mpCost": 1800,
-    "desc": "Tiên Cổ hoang dã Cửu Chuyển trú ngụ trong lõi Mặt Trời của Bạch Thiên, hiện thân của bản nguyên ngọn lửa trên toàn thế giới."
+    "desc": "Tiên Cổ hoang dã Cửu Chuyển trú ngụ trong lõi Mặt Trời của Bạch Thiên, hiện thân của bản nguyên ngọn lửa trên toàn thế giới.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Hỏa Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
+      "materials": [
+        {
+          "name": "Bản Nguyên Tiên Tài Hỏa Cửu Chuyển",
+          "count": 3,
+          "type": "special"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "quang_co_cuu_chuyen",
@@ -6542,7 +7193,26 @@ window.GU_DATABASE = [
     "power": 140000,
     "food": "Thái Dương quang mang",
     "mpCost": 1700,
-    "desc": "Hiện thân của ánh sáng bản nguyên trong vũ trụ, chiếu rọi khắp Ngũ Vực Cửu Thiên, tốc độ và uy lực quang mang tuyệt đỉnh."
+    "desc": "Hiện thân của ánh sáng bản nguyên trong vũ trụ, chiếu rọi khắp Ngũ Vực Cửu Thiên, tốc độ và uy lực quang mang tuyệt đỉnh.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Quang Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
+      "materials": [
+        {
+          "name": "Bản Nguyên Tiên Tài Quang Cửu Chuyển",
+          "count": 3,
+          "type": "special"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "luc_luong_co",
@@ -6553,7 +7223,26 @@ window.GU_DATABASE = [
     "power": 200000,
     "food": "Tuổi trẻ và tự do",
     "mpCost": 2000,
-    "desc": "Cổ trùng lực lượng tối thượng trong Nhân Tổ Truyện, trao cho người sở hữu sức mạnh bài sơn đảo hải vô địch thiên hạ."
+    "desc": "Cổ trùng lực lượng tối thượng trong Nhân Tổ Truyện, trao cho người sở hữu sức mạnh bài sơn đảo hải vô địch thiên hạ.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Lực Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
+      "materials": [
+        {
+          "name": "Bản Nguyên Tiên Tài Lực Cửu Chuyển",
+          "count": 3,
+          "type": "special"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "quy_cu_co",
@@ -6565,7 +7254,26 @@ window.GU_DATABASE = [
     "food": "Trật tự thiên địa",
     "mpCost": 1500,
     "desc": "Một bộ hai con gồm Khuôn Phép (Quy) và Thước Mực (Củ), bắt giữ mọi loại Cổ trùng trên thế gian kể cả Thọ Cổ.",
-    "supportEffect": "Phong tỏa và tước đoạt toàn bộ Cổ trùng và kỹ năng của đối thủ trong 2 hiệp."
+    "supportEffect": "Phong tỏa và tước đoạt toàn bộ Cổ trùng và kỹ năng của đối thủ trong 2 hiệp.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Luật Đạo",
+      "method": "Thiên Địa Tự Nhiên / Đại Đạo Tối Thượng",
+      "desc": "Tiên Cổ Cửu Chuyển đỉnh cao Đại Đạo, sánh ngang Cửu Chuyển Cổ Tôn.",
+      "materials": [
+        {
+          "name": "Bản Nguyên Tiên Tài Luật Cửu Chuyển",
+          "count": 3,
+          "type": "special"
+        },
+        {
+          "name": "Hoàng Hạnh Tiên Thạch Mạch",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
   },
   {
     "id": "vinh_sinh_co",
@@ -6577,6 +7285,216 @@ window.GU_DATABASE = [
     "food": "Hy Vọng Cổ",
     "mpCost": 0,
     "desc": "Đích đến tối thượng của Cổ Nguyệt Phương Nguyên và Nhân Tổ Truyện. Mang lại sinh mệnh vĩnh hằng bất tử, siêu thoát khỏi mọi kiếp nạn và quy luật vũ trụ.",
-    "supportEffect": "Bất tử bất diệt, thọ nguyên vô hạn, vĩnh hằng cùng thiên địa."
+    "supportEffect": "Bất tử bất diệt, thọ nguyên vô hạn, vĩnh hằng cùng thiên địa.",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Nhân Đạo",
+      "method": "Luyện Cổ, Luyện Người, Luyện Trời",
+      "desc": "Đích đến tối thượng: mang lại sinh mệnh vĩnh hằng bất tử và sức mạnh vô địch vượt qua Hỗn Độn Đại Nạn.",
+      "materials": [
+        {
+          "name": "Toàn Bộ Sinh Linh Ngũ Vực & Chư Tôn",
+          "count": 1,
+          "type": "special"
+        },
+        {
+          "name": "Hy Vọng Cổ (Chìa Khóa Khai Khiếu)",
+          "count": 1,
+          "type": "gu"
+        }
+      ],
+      "successRate": 5
+    }
+  },
+  {
+    "id": "nguyet_nghe_thuong",
+    "name": "Nguyệt Nghê Thường",
+    "rank": 2,
+    "path": "Quang Đạo",
+    "type": "Phòng Ngự",
+    "desc": "Tạo ra dải lụa ánh trăng bao quanh cơ thể để phòng ngự bản thân và có thể phóng dải lụa ra bảo vệ cho đồng đội xung quanh.",
+    "food": "Cánh hoa nguyệt lan",
+    "mpCost": 35,
+    "power": 0,
+    "supportEffect": "Dải lụa nguyệt quang hộ thể bản thân và đồng đội",
+    "recipe": {
+      "reqRank": 2,
+      "reqDao": "Quang Đạo",
+      "method": "Tuyến Tính & Đa Tầng",
+      "desc": "Do Ngọc Bì Cổ và Nguyệt Quang Cổ hợp luyện. Tạo dải lụa ánh trăng bảo vệ bản thân và che chắn đồng đội xung quanh.",
+      "materials": [
+        {
+          "name": "Ngọc Bì Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Nguyệt Quang Cổ (Nhất Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Nguyệt Hoa Sa",
+          "count": 2,
+          "type": "material"
+        }
+      ],
+      "successRate": 75
+    }
+  },
+  {
+    "id": "dinh_tien_du_co",
+    "name": "Định Tiên Du Cổ",
+    "rank": 6,
+    "path": "Vũ Đạo",
+    "type": "Hỗ Trợ",
+    "desc": "Một trong Tứ Đại Di Động Tiên Cổ; chỉ trong vòng 3 hơi thở có thể đưa cơ thể người sử dụng dịch chuyển tức thời đến bất kỳ địa điểm nào trên thế giới.",
+    "food": "Thanh Đề Tiên Nguyên",
+    "mpCost": 50,
+    "power": 0,
+    "supportEffect": "Dịch chuyển tức thời khắp năm vực chín trời trong 3 hơi thở",
+    "recipe": {
+      "reqRank": 6,
+      "reqDao": "Vũ Đạo",
+      "method": "Giải Mã Ngụ Ngôn Nhân Tổ Truyện",
+      "desc": "Dịch chuyển tức thời đến bất kỳ địa điểm nào trên thế giới trong 3 hơi thở nếu trong não có ký ức hình ảnh cụ thể.",
+      "materials": [
+        {
+          "name": "Thần Du Cổ (Lục Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Định Tinh Cổ (Ngũ Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Bích Không Cổ (Ngũ Chuyển)",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Thái Cổ Vinh Diệu Chi Quang",
+          "count": 1,
+          "type": "special"
+        },
+        {
+          "name": "Tam Canh Cổ x2 & Bách Chiến Bất Đãi Cổ",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 20
+    }
+  },
+  {
+    "id": "huyet_than_tu",
+    "name": "Huyết Thần Tử",
+    "rank": 6,
+    "path": "Huyết Đạo",
+    "type": "Tấn Công",
+    "desc": "Xếp hạng 7 Thập Đại Ma Cổ: Tạo phân thân máu giữ nguyên chiến lực cấp Tiên và hút máu kẻ địch để tự nhân bản.",
+    "food": "Huyết dịch tiên tài",
+    "mpCost": 60,
+    "power": 1500,
+    "supportEffect": "Phân thân máu cấp Tiên chiến đấu và nhân bản vô hạn",
+    "recipe": {
+      "reqRank": 6,
+      "reqDao": "Huyết Đạo",
+      "method": "Luyện Đạo Tiên Cấp",
+      "desc": "Tiên Cổ Lục Chuyển đại diện cho mảnh ghép hoàn chỉnh của Đại Đạo, duy nhất thế gian.",
+      "materials": [
+        {
+          "name": "Tiên Tài Huyết Lục Chuyển",
+          "count": 3,
+          "type": "material"
+        },
+        {
+          "name": "Thanh Đề Tiên Thạch",
+          "count": 2,
+          "type": "special"
+        }
+      ],
+      "successRate": 20
+    }
+  },
+  {
+    "id": "chi_ton_tien_thai_co",
+    "name": "Chí Tôn Tiên Thai Cổ",
+    "rank": 9,
+    "path": "Nhân Đạo",
+    "type": "Hỗ Trợ",
+    "desc": "Đánh giá SSS+: Hóa thành cơ thể máu thịt Chí Tôn Tiên Thai Thể với Đạo Ngân không bài xích lẫn nhau, tu luyện đồng thời vạn đạo.",
+    "food": "Tiên Khiếu Cổ Tiên cùng cấp bậc",
+    "mpCost": 100,
+    "power": 50000,
+    "supportEffect": "Đạo ngân hoàn toàn không bài xích, dung hợp vạn đạo quy tắc",
+    "recipe": {
+      "reqRank": 9,
+      "reqDao": "Nhân Đạo",
+      "method": "Huyết Tế & Dị Thể Ma Đạo (U Hồn Ma Tôn 10 vạn năm)",
+      "desc": "Đánh giá SSS+: Hóa thành cơ thể máu thịt Chí Tôn Tiên Thai Thể với Đạo Ngân không bài xích lẫn nhau, tu luyện đồng thời vạn đạo.",
+      "materials": [
+        {
+          "name": "Thập Tuyệt Tiên Cương Vô Sinh Đại Trận",
+          "count": 1,
+          "type": "special"
+        },
+        {
+          "name": "10 Thể Thập Tuyệt Đạo Cổ Tài",
+          "count": 10,
+          "type": "special"
+        },
+        {
+          "name": "10 Vạn Năm Tài Nguyên Ảnh Tông",
+          "count": 1,
+          "type": "special"
+        }
+      ],
+      "successRate": 5
+    }
+  },
+  {
+    "id": "ai_sinh_ly",
+    "name": "Ái Sinh Ly",
+    "rank": 2,
+    "element": "Độc Đạo",
+    "path": "Độc Đạo",
+    "type": "Công kích kịch độc",
+    "description": "Được mệnh danh là \"Nhị chuyển cổ trùng đệ nhất độc\", một khi trúng độc gần như không có thuốc chữa ở tầng phàm nhân cấp thấp. Hợp luyện từ Sinh Tức Thảo cùng Quả Phụ Chu và Hồng Châm Hạt.",
+    "stats": {
+      "atk": 35,
+      "def": 0,
+      "speed": 5,
+      "cost": 18
+    },
+    "recipe": {
+      "reqRank": 2,
+      "reqDao": {
+        "poison": 100,
+        "refinement": 150
+      },
+      "method": "Hợp Luyện Kịch Độc",
+      "desc": "Nhị chuyển cổ trùng đệ nhất độc! Dùng Sinh Tức Thảo (trị liệu) kết hợp Quả Phụ Chu và Hồng Châm Hạt tạo kịch độc sinh-ly-tử-biệt vô phương cứu chữa.",
+      "materials": [
+        {
+          "name": "Sinh Tức Thảo",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Quả Phụ Chu",
+          "count": 1,
+          "type": "gu"
+        },
+        {
+          "name": "Hồng Châm Hạt",
+          "count": 1,
+          "type": "gu"
+        }
+      ],
+      "successRate": 70
+    }
   }
 ];
