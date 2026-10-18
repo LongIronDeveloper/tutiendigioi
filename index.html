@@ -514,7 +514,7 @@
                 <button class="sys-tab-btn" data-systab="systab-stats">🧬 Cộng Điểm Thuộc Tính</button>
                 <button class="sys-tab-btn" data-systab="systab-shop">🛒 Cửa Hàng Hệ Thống</button>
                 <button class="sys-tab-btn" data-systab="systab-quests">🎯 Nhiệm Vụ Hệ Thống</button>
-                <button class="sys-tab-btn" data-systab="systab-ai">🎨 Tạo Ảnh AI Gemini Dev</button>
+                <button class="sys-tab-btn" data-systab="systab-dev">🛠️ Bảng Điều Khiển Dev</button>
             </div>
 
             <div class="system-body">
@@ -538,68 +538,97 @@
 
                 <!-- 3. Cổ Phương & Hợp Luyện Cổ Trùng -->
                 <div id="systab-recipes" class="systab-pane">
-                    <p class="sys-pane-desc">Danh mục 194 cổ phương nguyên tác Cổ Chân Nhân. Tiêu hao nguyên liệu & chân nguyên để hợp luyện cổ trùng:</p>
+                    <p class="sys-pane-desc">Danh mục cổ phương nguyên tác Cổ Chân Nhân. Tiêu hao nguyên liệu & chân nguyên để hợp luyện cổ trùng:</p>
                     <div class="recipe-filter-bar">
                         <select id="recipe-rank-filter" class="sys-filter-select">
-                            <option value="all">Tất Cả Chuyển (1 - 6)</option>
+                            <option value="all">Tất Cả Chuyển (1 - 9)</option>
                             <option value="1">Nhất Chuyển</option>
                             <option value="2">Nhị Chuyển</option>
                             <option value="3">Tam Chuyển</option>
                             <option value="4">Tứ Chuyển</option>
                             <option value="5">Ngũ Chuyển</option>
                             <option value="6">Lục Chuyển (Tiên Cổ)</option>
+                            <option value="7">Thất Chuyển (Tiên Cổ)</option>
+                            <option value="8">Bát Chuyển (Tiên Cổ)</option>
+                            <option value="9">Cửu Chuyển (Cổ Tôn)</option>
                         </select>
                         <input type="text" id="recipe-search-input" class="sys-input" placeholder="🔍 Tìm tên cổ phương...">
                     </div>
                     <div class="recipes-catalog-grid" id="recipes-catalog-grid"></div>
                 </div>
 
-                <!-- 4. Công Pháp Thượng Thừa (Kinh Điển Hàn Lập) -->
+                <!-- 4. Công Pháp Thượng Thừa (Tra Cứu Bách Khoa) -->
                 <div id="systab-techniques" class="systab-pane">
-                    <p class="sys-pane-desc">10 Đại công pháp kinh điển Phàm Nhân Tu Tiên. Mỗi công pháp gồm 4 cấp độ thành thạo: Nhập Môn ➔ Tiểu Thành ➔ Trung Thành ➔ Đại Thành:</p>
+                    <p class="sys-pane-desc">Toàn thư công pháp thượng thừa Phàm Nhân Tu Tiên & Cổ Chân Nhân. Tra cứu phẩm cấp, hiệu ứng và nguồn gốc thu thập (học công pháp qua Quyển Trục trong Túi Trữ Vật):</p>
                     <div class="tech-list-grid" id="sys-tech-list-grid"></div>
                 </div>
 
-                <!-- 4. 30 Lưu Phái Đạo Cảnh -->
+                <!-- 5. 30 Lưu Phái Đạo Cảnh & Hệ Thống Đạo Ngân -->
                 <div id="systab-daos" class="systab-pane">
-                    <p class="sys-pane-desc">Nhân vật tu tối đa <strong>5 trong 30 Lưu Phái</strong>. Đạt cảnh giới <strong>ĐẠI TÔNG SƯ</strong> để khai sáng và thi triển <strong>SÁT CHIÊU</strong>:</p>
+                    <p class="sys-pane-desc">Hệ thống Đạo Ngân nguyên tác Cổ Chân Nhân. Thôn phệ Đạo Ngân đất trời để nâng cao cảnh giới lưu phái. Đạt <strong>ĐẠI TÔNG SƯ (150.000 Đạo Ngân)</strong> kèm Ngộ Tính ≥ 30, Trí Mưu ≥ 25, Khí Vận ≥ 20 để khai sáng <strong>SÁT CHIÊU</strong>:</p>
                     <div class="active-daos-summary" id="active-daos-summary"></div>
                     <div class="daos-catalog-grid" id="daos-catalog-grid"></div>
                 </div>
 
-                <!-- 5. Cộng Điểm Thuộc Tính (10 Điểm Hệ Thống = 1 Stat) -->
+                <!-- 6. Cộng Điểm Thuộc Tính (10 Điểm Hệ Thống = 1 Stat) -->
                 <div id="systab-stats" class="systab-pane">
                     <p class="sys-pane-desc">Tiêu hao <strong>10 Điểm Hệ Thống</strong> để cộng vĩnh viễn <strong>1 Điểm</strong> cho bất kỳ thuộc tính nào:</p>
                     <div class="sys-stat-allocation-grid" id="sys-stat-grid"></div>
                 </div>
 
-                <!-- 6. Cửa Hàng Hệ Thống -->
+                <!-- 7. Cửa Hàng Hệ Thống -->
                 <div id="systab-shop" class="systab-pane">
                     <div class="sys-shop-grid" id="sys-shop-grid"></div>
                 </div>
 
-                <!-- 7. Nhiệm Vụ Hệ Thống -->
+                <!-- 8. Nhiệm Vụ Hệ Thống -->
                 <div id="systab-quests" class="systab-pane">
                     <div class="quests-list" id="sys-quests-list"></div>
                 </div>
 
-                <!-- 8. Tạo Ảnh AI Gemini Dev -->
-                <div id="systab-ai" class="systab-pane">
-                    <div class="ai-generator-panel">
-                        <h3>🎨 Bộ Máy Tạo Ảnh Minh Họa Gemini AI Dev</h3>
-                        <p class="sub-desc">Sinh ảnh minh họa chi tiết theo chuẩn model <code>gemini-3.8-flash</code> / <code>gemini-nano-banana-2.1</code>.</p>
-                        <div class="ai-input-group">
-                            <label>Nhập Gemini API Key (để trống sẽ dùng ArtEngine Vector Procedural):</label>
-                            <input type="password" id="gemini-api-key" placeholder="AIzaSy..." class="sys-input">
+                <!-- 9. Chế Độ Nhà Phát Triển (Dev Mode Console) -->
+                <div id="systab-dev" class="systab-pane">
+                    <div class="dev-mode-panel" style="background: rgba(15, 23, 42, 0.9); border: 2px solid #eab308; border-radius: 10px; padding: 18px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #334155; padding-bottom:12px; margin-bottom:16px;">
+                            <div>
+                                <h3 style="color:#fbbf24; margin:0; font-size:18px;">🛠️ BẢNG ĐIỀU KHIỂN NHÀ PHÁT TRIỂN (DEV CONSOLE)</h3>
+                                <p style="color:#94a3b8; font-size:13px; margin:4px 0 0 0;">Quyền năng sáng thế hỗ trợ kiểm thử tính năng và cân bằng game tức thì.</p>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <span style="font-size:13px; color:#cbd5e1;">Trạng thái:</span>
+                                <button id="btn-toggle-devmode" class="btn-primary" style="background:#10b981; border-color:#059669; padding:6px 14px; font-weight:700;">🟢 Đang Bật</button>
+                            </div>
                         </div>
-                        <div class="ai-input-group">
-                            <label>Mô tả cảnh vật hoặc hành động tu tiên:</label>
-                            <input type="text" id="ai-scene-prompt" value="Thiếu niên tu sĩ ngồi xếp bằng trên tảng đá cổ, xung quanh kiếm khí màu ngọc bích bay lượn và sấm sét rền vang" class="sys-input">
+
+                        <div id="dev-console-actions" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+                            <button class="btn-subtle" onclick="window.devBreakthrough()" style="background:rgba(56, 189, 248, 0.15); border:1px solid #38bdf8; color:#7dd3fc; padding:10px;">
+                                ⚡ Đột Phá Cảnh Giới Tiếp Theo
+                            </button>
+                            <button class="btn-subtle" onclick="window.devSetDaiVienMan()" style="background:rgba(234, 179, 8, 0.15); border:1px solid #eab308; color:#fde047; padding:10px;">
+                                ✨ Thăng Cấp Lên Đại Viên Mãn
+                            </button>
+                            <button class="btn-subtle" onclick="window.devMaxRank()" style="background:rgba(168, 85, 247, 0.15); border:1px solid #a855f7; color:#d8b4fe; padding:10px;">
+                                👑 Đặt Cấp Cửu Chuyển (Max Rank)
+                            </button>
+                            <button class="btn-subtle" onclick="window.devFullStats()" style="background:rgba(16, 185, 129, 0.15); border:1px solid #10b981; color:#6ee7b7; padding:10px;">
+                                ❤️ Đầy HP / MP / Thể Lực & Căn Cốt
+                            </button>
+                            <button class="btn-subtle" onclick="window.devAddMoney()" style="background:rgba(251, 191, 36, 0.15); border:1px solid #fbbf24; color:#fef08a; padding:10px;">
+                                💰 +100k Linh Thạch & +10k Điểm
+                            </button>
+                            <button class="btn-subtle" onclick="window.devGiveScrolls()" style="background:rgba(59, 130, 246, 0.15); border:1px solid #3b82f6; color:#93c5fd; padding:10px;">
+                                📜 Nhận Tất Cả Quyển Trục Công Pháp
+                            </button>
+                            <button class="btn-subtle" onclick="window.devGiveGu()" style="background:rgba(236, 72, 153, 0.15); border:1px solid #ec4899; color:#fbcfe8; padding:10px;">
+                                🐛 Nhận Bộ Tiên Cổ Cửu Chuyển
+                            </button>
+                            <button class="btn-subtle" onclick="window.devAddDaoMarks()" style="background:rgba(139, 92, 246, 0.15); border:1px solid #8b5cf6; color:#c4b5fd; padding:10px;">
+                                🌟 +150.000 Đạo Ngân (Đại Tông Sư)
+                            </button>
+                            <button class="btn-subtle" onclick="window.devAdvanceTime()" style="background:rgba(244, 63, 94, 0.15); border:1px solid #f43f5e; color:#fecdd3; padding:10px;">
+                                ⏳ Tua Nhanh 30 Ngày
+                            </button>
                         </div>
-                        <div class="ai-btn-row">
-                            <button id="btn-generate-ai-scene" class="btn-primary">⚡ Tạo Ảnh Minh Họa Ngay</button>
-                        </div>
-                        <div id="ai-result-preview" class="ai-preview-box"></div>
                     </div>
                 </div>
             </div>
@@ -878,6 +907,35 @@
                 </div>
                 <div id="ltab-gus" class="lib-pane">
                     <div class="lib-items-grid" id="lib-gus-grid"></div>
+                </div>
+            </div>
+        </div>
+    <!-- MODAL XÁC NHẬN LĨNH NGỘ CÔNG PHÁP (TỪ TÚI ĐỒ) -->
+    <div id="modal-confirm-learn-tech" class="modal-overlay hidden">
+        <div class="modal-box" style="max-width: 520px; border: 2px solid #eab308; background: #0f172a; padding: 20px; border-radius: 12px;">
+            <div class="modal-header" style="border-bottom: 1px solid #334155; padding-bottom: 10px; margin-bottom: 14px;">
+                <h3 id="confirm-tech-title" style="color: #fbbf24; margin: 0; font-size: 18px;">📜 XÁC NHẬN LĨNH NGỘ CÔNG PHÁP</h3>
+                <button id="btn-close-confirm-tech" class="btn-icon-close">✕</button>
+            </div>
+            <div class="modal-body" id="confirm-tech-body">
+                <div id="confirm-tech-desc-card" style="background: rgba(30, 41, 59, 0.8); border: 1px solid #475569; border-radius: 8px; padding: 14px; margin-bottom: 14px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 8px;">
+                        <strong id="confirm-tech-name" style="font-size: 16px; color: #6ee7b7;">Trường Xuân Công</strong>
+                        <span id="confirm-tech-rank-badge" class="recipe-rank-badge">1 Chuyển • Mộc Đạo</span>
+                    </div>
+                    <p id="confirm-tech-desc" style="font-size: 13px; color: #cbd5e1; line-height: 1.5; margin: 0;"></p>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid #334155; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+                    <h4 style="color: #38bdf8; font-size: 14px; margin: 0 0 8px 0;">🔍 ĐỐI CHIẾU ĐIỀU KIỆN LĨNH NGỘ:</h4>
+                    <div id="confirm-tech-requirements" style="font-size: 13px; display: grid; gap: 6px;">
+                        <!-- Render trạng thái điều kiện: Linh căn, Ngộ tính, Cảnh giới -->
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button id="btn-cancel-learn-tech" class="btn-secondary" style="padding: 8px 16px;">Hủy Bỏ</button>
+                    <button id="btn-do-learn-tech" class="btn-primary" style="padding: 8px 20px; font-weight: 700;">✨ Tiến Hành Lĩnh Ngộ</button>
                 </div>
             </div>
         </div>
