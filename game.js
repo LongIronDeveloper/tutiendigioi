@@ -1729,6 +1729,8 @@ function renderRecipesPane() {
         }
 
         const successRate = gu.recipe && gu.recipe.successRate ? gu.recipe.successRate : 80;
+        const methodText = (gu.recipe && gu.recipe.method) ? `<div style="font-size:12px; color:#38bdf8; margin: 4px 0;">⚡ <strong>Phương pháp:</strong> ${gu.recipe.method}</div>` : "";
+        const descText = (gu.recipe && gu.recipe.desc) ? `<div style="font-size:12px; color:#cbd5e1; margin-bottom: 6px; font-style:italic;">📜 <strong>Bí phương:</strong> ${gu.recipe.desc}</div>` : "";
 
         card.innerHTML = `
             <div class="recipe-card-header">
@@ -1736,6 +1738,8 @@ function renderRecipesPane() {
                 <span class="recipe-rank-badge">${gu.rank} Chuyển • ${gu.path}</span>
             </div>
             <p class="recipe-desc">${gu.desc}</p>
+            ${methodText}
+            ${descText}
             <div class="recipe-requirements">
                 <strong>Nguyên liệu phối hợp:</strong>
                 <ul>${matsHtml}</ul>
@@ -3027,16 +3031,52 @@ const LIBRARY_SCROLLS = [
 ];
 
 const LIBRARY_RECIPES = [
-    { id: "recipe_tuu_trung", name: "Cổ Phương Tửu Trùng", rank: 1, price: 60, desc: "Bản vẽ phối chế Tửu Trùng (Khí Đạo Hỗ Trợ): Tinh luyện chân nguyên nâng cao nửa tiểu cảnh giới." },
-    { id: "recipe_bach_ngoc", name: "Cổ Phương Bạch Ngọc Cổ", rank: 1, price: 50, desc: "Bản vẽ phối chế Bạch Ngọc Cổ (Kim Đạo Phòng Ngự): Hóa da ngọc bất hoại đao thương." },
+    // Nhất Chuyển
+    { id: "recipe_tuu_trung", name: "Cổ Phương Tửu Trùng", rank: 1, price: 60, desc: "Phương pháp ngưng tụ Tửu Trùng (Khí Đạo Hỗ Trợ): Tử Kim Thạch + Linh Thạch x25. Tinh luyện chân nguyên nâng cao nửa tiểu cảnh giới." },
+    { id: "recipe_nguyet_quang", name: "Cổ Phương Nguyệt Quang Cổ", rank: 1, price: 50, desc: "Bản vẽ phối chế Nguyệt Quang Cổ (Quang Đạo): Cánh hoa nguyệt lan + Linh Thạch x25. Phóng u lam nguyệt nhận 10m." },
+    { id: "recipe_bach_thi", name: "Cổ Phương Bạch Thỉ Cổ", rank: 1, price: 50, desc: "Bản vẽ nuôi dưỡng Bạch Thỉ Cổ (Lực Đạo): Heo rừng trắng huyết nhục + Linh Thạch x25. Tăng vĩnh viễn nhất trư chi lực." },
+    { id: "recipe_ngoc_bi", name: "Cổ Phương Ngọc Bì Cổ", rank: 1, price: 50, desc: "Bản vẽ ngưng tụ Ngọc Bì Cổ (Thổ/Ngọc Đạo): Bột ngọc thạch bích + Linh Thạch x30. Lớp sáng ngọc bích hộ thể." },
+
+    // Nhị Chuyển
+    { id: "recipe_bach_ngoc", name: "Cổ Phương Bạch Ngọc Cổ", rank: 2, price: 80, desc: "Bản vẽ hợp luyện Bạch Ngọc Cổ (Thổ/Ngọc Đạo): Ngọc Bì Cổ + Bạch Thỉ Cổ. Lớp giáp ngọc trắng trong suốt bất hoại." },
     { id: "recipe_thiet_bi", name: "Cổ Phương Thiết Bì Cổ", rank: 2, price: 80, desc: "Bản vẽ hợp luyện Thiết Bì Cổ (Kim Đạo Phòng Ngự): Heo sắt da giáp + Huyền thiết khoáng." },
-    { id: "recipe_nguyet_ngan", name: "Cổ Phương Nguyệt Ngân Cổ", rank: 2, price: 90, desc: "Bản vẽ hợp luyện Nguyệt Ngân Cổ (Quang Đạo Công Kích): Nguyệt Quang Cổ + Ngân bích quặng." },
-    { id: "recipe_tu_vi_tuu_trung", name: "Cổ Phương Tứ Vị Tửu Trùng", rank: 2, price: 120, desc: "Bản vẽ hợp luyện Tứ Vị Tửu Trùng (Khí Đạo): Tửu Trùng + Rượu cay/ngọt/đắng/chát tinh túy." },
-    { id: "recipe_huyet_nguyet", name: "Cổ Phương Huyết Nguyệt Cổ", rank: 3, price: 160, desc: "Bản vẽ hợp luyện Huyết Nguyệt Cổ (Huyết Đạo Công Kích): Nguyệt Quang Cổ + Huyết Tích Cổ." },
-    { id: "recipe_thien_bong", name: "Cổ Phương Thiên Bồng Cổ", rank: 3, price: 180, desc: "Bản vẽ hợp luyện Thiên Bồng Cổ (Kim Đạo Phòng Ngự): Bạch Ngọc Cổ + Thiết Bì Cổ tuyệt phẩm." },
-    { id: "recipe_cot_duc", name: "Cổ Phương Cốt Dực Cổ", rank: 3, price: 200, desc: "Bản vẽ hợp luyện Cốt Dực Cổ (Vũ Đạo Phi Hành): Cốt dực hoang thú + Phong nhận dực cốt." },
-    { id: "recipe_that_tinh_tuu_trung", name: "Cổ Phương Thất Tinh Tửu Trùng", rank: 3, price: 250, desc: "Bản vẽ hợp luyện Thất Tinh Tửu Trùng (Khí Đạo): Tứ Vị Tửu Trùng + Thất Tinh Thảo + Rượu trăng sao." },
-    { id: "recipe_xa_loi_3", name: "Cổ Phương Bạch Ngân Xá Lợi Cổ", rank: 3, price: 220, desc: "Bản vẽ luyện đan cổ tăng trực tiếp 1 tiểu cảnh giới Tam Chuyển." }
+    { id: "recipe_tu_vi_tuu_trung", name: "Cổ Phương Tứ Vị Tửu Trùng", rank: 2, price: 120, desc: "Bản vẽ hợp luyện Tứ Vị Tửu Trùng (Khí Đạo): Tửu Trùng x2 + Rượu Tứ Vị (Chua, Ngọt, Đắng, Cay). Tinh luyện Xích Thiết chân nguyên." },
+    { id: "recipe_nguyet_ngan", name: "Cổ Phương Nguyệt Ngân Cổ", rank: 2, price: 90, desc: "Bản vẽ hợp luyện Nguyệt Ngân Cổ (Quang Đạo): Nguyệt Quang Cổ + Ngân Thạch Cổ. Tầm bắn vươn xa 20 mét." },
+    { id: "recipe_nguyet_toan", name: "Cổ Phương Nguyệt Toàn Cổ", rank: 2, price: 90, desc: "Bản vẽ hợp luyện Nguyệt Toàn Cổ (Quang Đạo): Nguyệt Quang Cổ + Toàn Phong Cổ. Lưỡi đao trăng uốn lượn đường cong đánh lén." },
+    { id: "recipe_nguyet_mang", name: "Cổ Phương Nguyệt Mang Cổ", rank: 2, price: 100, desc: "Bản vẽ hợp luyện Nguyệt Mang Cổ (Quang Đạo): Nguyệt Quang Cổ + Tiểu Quang Cổ. Tối đa hóa sắc bén và uy lực chém phá." },
+    { id: "recipe_nguyet_nghe_thuong", name: "Cổ Phương Nguyệt Nghê Thường", rank: 2, price: 110, desc: "Bản vẽ hợp luyện Nguyệt Nghê Thường (Quang Đạo): Ngọc Bì Cổ + Nguyệt Quang Cổ. Dải lụa trăng che chắn bản thân và đồng đội." },
+    { id: "recipe_hac_tong", name: "Cổ Phương Hắc Tông Cổ", rank: 2, price: 85, desc: "Bản vẽ hợp luyện Hắc Tông Cổ (Biến Hóa Đạo): Thanh Ti Cổ + Hắc Thỉ Cổ. Hộ giáp lông bờm đen kiên cố." },
+    { id: "recipe_loa_toan_cot_thuong", name: "Cổ Phương Loa Toàn Cốt Thương", rank: 2, price: 95, desc: "Bản vẽ hợp luyện Loa Toàn Cốt Thương (Cốt Đạo): Cốt Thương Cổ + Xương Xoắn Ốc. Mũi giáo xoay tròn xuyên thủng giáp." },
+    { id: "recipe_ai_sinh_ly", name: "Cổ Phương Ái Sinh Ly", rank: 2, price: 130, desc: "Bản vẽ hợp luyện Ái Sinh Ly (Độc Đạo): Sinh Tức Thảo + Quả Phụ Chu + Hồng Châm Hạt. Nhị chuyển đệ nhất độc." },
+
+    // Tam Chuyển
+    { id: "recipe_huyet_nguyet", name: "Cổ Phương Huyết Nguyệt Cổ", rank: 3, price: 160, desc: "Bản vẽ hợp luyện Huyết Nguyệt Cổ (Huyết Đạo): Nguyệt Mang Cổ + Huyết Khí/Tích Cổ. Huyết đao ăn mòn sinh lực." },
+    { id: "recipe_thien_bong", name: "Cổ Phương Thiên Bồng Cổ", rank: 3, price: 180, desc: "Bản vẽ hợp luyện Thiên Bồng Cổ (Kim Đạo): Bạch Ngọc Cổ + Thủy Phòng Cổ. Áo giáp ánh sáng trắng tròn trịa hộ thể." },
+    { id: "recipe_that_tinh_tuu_trung", name: "Cổ Phương Thất Tinh Tửu Trùng", rank: 3, price: 200, desc: "Bản vẽ hợp luyện Thất Tinh Tửu Trùng (Khí Đạo): Tứ Vị Tửu Trùng x2 + Thất Tinh Thảo + Rượu trăng sao." },
+    { id: "recipe_kim_cuong", name: "Cổ Phương Kim Cương Cổ", rank: 3, price: 190, desc: "Bản vẽ hợp luyện Kim Cương Cổ (Kim Đạo): Đồng Bì Cổ + Kim Cương Tinh Thạch x3. Thân như thần kim bất hoại." },
+    { id: "recipe_cuong_tong", name: "Cổ Phương Cương Tông Cổ", rank: 3, price: 175, desc: "Bản vẽ hợp luyện Cương Tông Cổ (Biến Hóa Đạo): Hắc Tông Cổ + Tinh Thiết Quặng x2. Lông thép đan giáp sắc bén." },
+    { id: "recipe_cu_xi_kim_ngo", name: "Cổ Phương Cứ Xỉ Kim Ngô", rank: 3, price: 210, desc: "Bản vẽ phối chế Cứ Xỉ Kim Ngô (Kim Đạo): Kim Ngô Thân Thể + Cưa Răng Cổ. Rết vàng ngàn răng cưa xoay tròn cưa đứt mọi vật." },
+    { id: "recipe_ngon_nhi_vo_tin", name: "Cổ Phương Ngôn Nhi Vô Tín Cổ", rank: 3, price: 250, desc: "Bí phương 3 bước Ngôn Nhi Vô Tín (Tín Đạo): A Thỉ Cổ + Đại Lực Cổ + Sư Hống Cổ + 3 Chỉ Hạc Cổ. Hóa giải hoàn toàn Độc Thệ Cổ." },
+    { id: "recipe_thien_nguyen_bao_lien", name: "Cổ Phương Thiên Nguyên Bảo Liên", rank: 3, price: 300, desc: "Bản vẽ sáng tạo Nguyên Liên Tiên Tôn: Mạch Nguyên Tuyền + Mộc Linh Liên Hoa. Nguyên tuyền di động tự hồi chân nguyên." },
+    { id: "recipe_xa_loi_3", name: "Cổ Phương Bạch Ngân Xá Lợi Cổ", rank: 3, price: 220, desc: "Bản vẽ luyện đan cổ tăng trực tiếp 1 tiểu cảnh giới Tam Chuyển." },
+
+    // Tứ Chuyển
+    { id: "recipe_cot_duc", name: "Cổ Phương Cốt Dực Cổ", rank: 4, price: 260, desc: "Bản vẽ hợp luyện Cốt Dực Cổ (Vũ Đạo): Vô Túc Điểu + Cửu Cung Hoa + Vấn Đỉnh Thạch + Kim Ô Lưu Tinh + Hàn Băng Thảo. Đôi cánh xương phi hành." },
+    { id: "recipe_cuu_nhan_tuu_trung", name: "Cổ Phương Cửu Nhãn Tửu Trùng", rank: 4, price: 280, desc: "Bản vẽ hợp luyện Cửu Nhãn Tửu Trùng (Khí Đạo): Thất Hương Tửu Trùng x2 + Nhãn cầu 9 loài Bách Thú Vương. Tinh luyện Hoàng Kim chân nguyên." },
+    { id: "recipe_hoanh_xung_truc_trang", name: "Cổ Phương Hoành Xung Trực Tráng", rank: 4, price: 250, desc: "Bản vẽ hợp luyện Hoành Xung Trực Tráng (Lực Đạo): Hoành Xung Cổ + Trực Tráng Cổ. Xung phong ngang dọc 200 bước." },
+    { id: "recipe_huyet_lo", name: "Cổ Phương Huyết Lô Cổ", rank: 4, price: 320, desc: "Chân truyền Huyết Hải Ma Đạo: Máu tươi thân tộc cùng dòng máu x10 + Pha lê đầu lâu. Nâng tư chất lên Giáp Đẳng (90%+)." },
+    { id: "recipe_kho_luc", name: "Cổ Phương Khổ Lực Cổ", rank: 4, price: 290, desc: "Bản vẽ khai mở Khổ Lực Cổ (Lực Đạo): Lão Nhân Thạch + Linh Thạch x250. Đau đớn càng lớn, sức mạnh bộc phát càng tăng vọt." },
+
+    // Ngũ Chuyển
+    { id: "recipe_thoi_boi_hoan_tran", name: "Cổ Phương Thôi Bôi Hoán Trản", rank: 5, price: 450, desc: "Bản vẽ Đạo Thiên Ma Tôn: Kim Bôi Ngân Trản + Bàng Thôi Trắc Dẫn + Di Bộ Hoán Hình. Trao đổi vật tư xuyên qua giới bích Ngũ Vực." },
+    { id: "recipe_bach_chien_bat_dai", name: "Cổ Phương Bách Chiến Bất Đãi", rank: 5, price: 500, desc: "Bản vẽ Thượng Cổ Tín Vương (Luyện Đạo): Thượng Cổ Chiến Hồn + Luyện Đạo Chân Thạch. Cưỡng chế 100% tỷ lệ luyện cổ thành công." },
+    { id: "recipe_tinh_mon", name: "Cổ Phương Tinh Môn Cổ", rank: 5, price: 480, desc: "Bản vẽ Phương Nguyên & Lang Gia (Vũ Đạo): Song Tinh Thạch x2 + Hắc Thiên Tinh Quang x3. Cánh cổng ánh sao xuyên không vạn dặm." },
+
+    // Tiên Cổ Thần Thoại (Lục Chuyển -> Cửu Chuyển)
+    { id: "recipe_dinh_tien_du", name: "Tiên Cổ Phương Định Tiên Du", rank: 6, price: 1200, desc: "Bí phương Nhân Tổ Truyện (Vũ Đạo): Thần Du Cổ + Định Tinh Cổ + Bích Không Cổ + Vinh Diệu Chi Quang + Tam Canh Cổ + Bách Chiến Bất Đãi. Dịch chuyển tức thời khắp thế gian." },
+    { id: "recipe_van_nga", name: "Tiên Cổ Phương Vạn Ngã", rank: 7, price: 2500, desc: "Sát chiêu hóa cổ Phương Nguyên: Ẩm Đao Tửu + Phàm Phong Cổ + Tiền Hậu Thần Trở Châm + Phù Sinh Hỏa + Tự Lực Cánh Sinh + Toàn Lực Dĩ Phó. Vạn rết lực đạo phân thân." },
+    { id: "recipe_tuu_trung_bat_chuyen", name: "Tiên Cổ Phương Bát Chuyển Tửu Trùng", rank: 8, price: 6000, desc: "Cổ phương truyền thuyết: Cửu Nhãn Tửu Trùng + Tam Hoàng Ngũ Đế Tửu (8 loại danh tửu). Đề thuần Bạch Lệ Tiên Nguyên thành Hoàng Hạnh Tiên Nguyên Cổ Tôn." },
+    { id: "recipe_chi_ton_tien_thai", name: "Tiên Cổ Phương Chí Tôn Tiên Thai", rank: 9, price: 20000, desc: "Đại kế 10 vạn năm U Hồn Ma Tôn: Thập Tuyệt Tiên Cương Vô Sinh Đại Trận + 10 cá thể Thập Tuyệt Thể + 10 vạn năm tài nguyên. Thể chất vạn đạo không bài xích đạo ngân." }
 ];
 
 function renderLibraryShop() {
