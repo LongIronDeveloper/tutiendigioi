@@ -3,7 +3,7 @@ window.GU_DATABASE = [
     "id": "t_u_tr_ng",
     "name": "Tửu trùng",
     "rank": 1,
-    "path": "Khí Đạo",
+    "path": "Thực Đạo",
     "type": "Hỗ Trợ",
     "desc": "Lấy rượu làm thức ăn, có thể lăng không phi hành. Nó có thể cô đọng chiết xuất chân nguyên đề cao nửa giai, nhưng chỉ hữu hiệu với cổ sư nhất chuyển.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
@@ -26,9 +26,11 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": false
     },
-    "supportEffect": "Cô đọng chân nguyên đề cao nửa giai, nâng phẩm chất chân nguyên"
+    "supportEffect": "Cô đọng chân nguyên đề cao nửa giai, nâng phẩm chất chân nguyên",
+    "element": "Thực Đạo"
   },
   {
     "id": "nguy_t_quang_c",
@@ -57,7 +59,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -87,7 +90,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 90
+      "successRate": 90,
+      "canRefine": false
     }
   },
   {
@@ -117,7 +121,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 90
+      "successRate": 90,
+      "canRefine": false
     }
   },
   {
@@ -147,7 +152,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -177,7 +183,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -207,7 +214,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -237,7 +245,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -267,7 +276,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -297,7 +307,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -327,7 +338,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -357,7 +369,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -387,7 +400,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -417,7 +431,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -447,7 +462,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -477,7 +493,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -507,7 +524,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -537,7 +555,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -572,7 +591,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 80
+      "successRate": 80,
+      "canRefine": true
     }
   },
   {
@@ -602,7 +622,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -632,7 +653,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -662,7 +684,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -692,7 +715,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -722,7 +746,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -752,7 +777,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -782,7 +808,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -812,7 +839,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -842,7 +870,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -872,7 +901,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": false
     }
   },
   {
@@ -902,7 +932,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -932,7 +963,8 @@ window.GU_DATABASE = [
           "type": "gu"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -967,7 +999,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1002,7 +1035,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1037,7 +1071,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1072,7 +1107,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1102,7 +1138,8 @@ window.GU_DATABASE = [
           "type": "gu"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1132,7 +1169,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 70
+      "successRate": 70,
+      "canRefine": true
     }
   },
   {
@@ -1162,7 +1200,8 @@ window.GU_DATABASE = [
           "type": "gu"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1197,14 +1236,15 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
     "id": "t_v_t_u_tr_ng",
     "name": "Tứ Vị Tửu Trùng",
     "rank": 2,
-    "path": "Khí Đạo",
+    "path": "Thực Đạo",
     "type": "Hỗ Trợ",
     "desc": "Từ hai con Tửu Trùng thêm bốn loại rựu ngon là “ngọt bùi cay đắng” hợp luyện mà thành, có thể cô đọng chiết xuất chân nguyên giúp đề cao nửa giai, chỉ hữu hiệu với nhị chuyển cổ sư.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
@@ -1232,8 +1272,10 @@ window.GU_DATABASE = [
           "type": "currency"
         }
       ],
-      "successRate": 75
-    }
+      "successRate": 75,
+      "canRefine": true
+    },
+    "element": "Thực Đạo"
   },
   {
     "id": "nguy_t_ng_n_c",
@@ -1267,7 +1309,8 @@ window.GU_DATABASE = [
           "type": "currency"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1297,7 +1340,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1332,7 +1376,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1367,7 +1412,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1402,7 +1448,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1437,7 +1484,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1472,7 +1520,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1507,7 +1556,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": false
     }
   },
   {
@@ -1542,7 +1592,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1577,7 +1628,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1612,7 +1664,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1642,7 +1695,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1677,7 +1731,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 80
+      "successRate": 80,
+      "canRefine": false
     }
   },
   {
@@ -1712,7 +1767,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1747,7 +1803,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1782,7 +1839,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -1817,7 +1875,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -1847,7 +1906,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
@@ -1882,14 +1942,15 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
     "id": "th_t_h_ng_t_u_tr_ng",
     "name": "Thất Hương Tửu Trùng",
     "rank": 3,
-    "path": "Khí Đạo",
+    "path": "Thực Đạo",
     "type": "Hỗ Trợ",
     "desc": "Tứ Vị Tửu Trùng tấn thăng mà thành, nó có thể cô đọng chân nguyên, đem chân nguyên cổ sư tăng lên một tiểu cảnh giới, nhưng chỉ giới hạn trong tam chuyển.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
@@ -1917,8 +1978,10 @@ window.GU_DATABASE = [
           "type": "currency"
         }
       ],
-      "successRate": 60
-    }
+      "successRate": 60,
+      "canRefine": true
+    },
+    "element": "Thực Đạo"
   },
   {
     "id": "thi_n_nguy_n_b_o_li_n_c",
@@ -1952,7 +2015,8 @@ window.GU_DATABASE = [
           "type": "currency"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
@@ -1987,7 +2051,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2022,7 +2087,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2057,7 +2123,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2092,7 +2159,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": false
     }
   },
   {
@@ -2127,7 +2195,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2157,7 +2226,8 @@ window.GU_DATABASE = [
           "type": "gu"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
@@ -2192,7 +2262,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2227,7 +2298,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
@@ -2262,7 +2334,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2297,7 +2370,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2332,7 +2406,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2367,7 +2442,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2402,7 +2478,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2437,7 +2514,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2472,7 +2550,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2507,7 +2586,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2547,7 +2627,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 50
+      "successRate": 50,
+      "canRefine": true
     }
   },
   {
@@ -2582,7 +2663,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": false
     }
   },
   {
@@ -2612,7 +2694,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 70
+      "successRate": 70,
+      "canRefine": true
     }
   },
   {
@@ -2647,7 +2730,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2682,7 +2766,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2717,7 +2802,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2752,7 +2838,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2787,7 +2874,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2822,7 +2910,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2857,7 +2946,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2892,7 +2982,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2927,7 +3018,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2962,7 +3054,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -2997,7 +3090,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -3027,7 +3121,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
@@ -3062,7 +3157,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -3097,7 +3193,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 60
+      "successRate": 60,
+      "canRefine": true
     }
   },
   {
@@ -3127,7 +3224,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 65
+      "successRate": 65,
+      "canRefine": true
     }
   },
   {
@@ -3162,7 +3260,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3197,14 +3296,15 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
     "id": "c_u_nh_n_t_u_tr_ng",
     "name": "Cửu Nhãn Tửu Trùng",
     "rank": 4,
-    "path": "Khí Đạo",
+    "path": "Thực Đạo",
     "type": "Hỗ Trợ",
     "desc": "Từ hai con Tứ Vị Tửu Trùng cùng bảy loại hương liệu hợp luyện mà thành Thất Hương Tửu Trùng hai con cùng chín loại bách thú vương con mắt hợp luyện mà thành, nhưng chiết xuất hoàng kim chân nguyên một cái tiểu cảnh giới.",
     "food": "Các loại danh tửu, rượu ngon thế gian",
@@ -3232,8 +3332,10 @@ window.GU_DATABASE = [
           "type": "currency"
         }
       ],
-      "successRate": 45
-    }
+      "successRate": 45,
+      "canRefine": true
+    },
+    "element": "Thực Đạo"
   },
   {
     "id": "huy_t_l_c",
@@ -3262,7 +3364,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 50
+      "successRate": 50,
+      "canRefine": true
     }
   },
   {
@@ -3292,7 +3395,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 50
+      "successRate": 50,
+      "canRefine": true
     }
   },
   {
@@ -3327,7 +3431,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": false
     }
   },
   {
@@ -3362,7 +3467,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3397,7 +3503,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3432,7 +3539,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3467,7 +3575,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3502,7 +3611,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3537,7 +3647,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3572,7 +3683,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3607,7 +3719,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3642,7 +3755,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3677,7 +3791,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3712,7 +3827,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3747,7 +3863,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3782,7 +3899,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3827,7 +3945,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3862,7 +3981,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3897,7 +4017,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3932,7 +4053,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -3967,7 +4089,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4002,7 +4125,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4037,7 +4161,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4067,7 +4192,8 @@ window.GU_DATABASE = [
           "type": "currency"
         }
       ],
-      "successRate": 40
+      "successRate": 40,
+      "canRefine": true
     }
   },
   {
@@ -4102,7 +4228,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4137,7 +4264,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4172,7 +4300,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4207,7 +4336,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4242,7 +4372,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 45
+      "successRate": 45,
+      "canRefine": true
     }
   },
   {
@@ -4277,7 +4408,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4307,7 +4439,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -4337,7 +4470,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -4367,7 +4501,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -4397,7 +4532,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -4427,7 +4563,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -4457,7 +4594,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -4492,7 +4630,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4527,7 +4666,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4562,7 +4702,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4597,7 +4738,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4632,7 +4774,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4667,7 +4810,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4702,7 +4846,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4737,7 +4882,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4772,7 +4918,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4807,7 +4954,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4842,7 +4990,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4877,7 +5026,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4912,7 +5062,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4947,7 +5098,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -4982,7 +5134,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5017,7 +5170,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5052,7 +5206,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5087,7 +5242,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": false
     }
   },
   {
@@ -5127,7 +5283,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 25
+      "successRate": 25,
+      "canRefine": true
     }
   },
   {
@@ -5162,7 +5319,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5197,7 +5355,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5232,7 +5391,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5267,7 +5427,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5302,7 +5463,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5337,7 +5499,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5372,7 +5535,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5407,7 +5571,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5442,7 +5607,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5477,7 +5643,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5512,7 +5679,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5547,7 +5715,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5582,7 +5751,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5617,7 +5787,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5652,7 +5823,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5687,7 +5859,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5722,7 +5895,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5757,7 +5931,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5792,7 +5967,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 30
+      "successRate": 30,
+      "canRefine": true
     }
   },
   {
@@ -5822,7 +5998,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -5852,7 +6029,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -5877,7 +6055,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 25
+      "successRate": 25,
+      "canRefine": false
     }
   },
   {
@@ -5907,7 +6086,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -5937,7 +6117,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -5967,7 +6148,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -5997,7 +6179,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6027,7 +6210,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6057,7 +6241,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6087,7 +6272,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6117,7 +6303,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6147,7 +6334,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6177,7 +6365,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6207,7 +6396,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6237,7 +6427,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6267,7 +6458,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6297,7 +6489,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6327,7 +6520,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6357,7 +6551,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6387,7 +6582,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -6417,7 +6613,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 85
+      "successRate": 85,
+      "canRefine": true
     }
   },
   {
@@ -6447,7 +6644,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -6473,7 +6671,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 10
+      "successRate": 10,
+      "canRefine": true
     }
   },
   {
@@ -6523,7 +6722,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6554,7 +6754,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6585,7 +6786,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6616,7 +6818,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6647,7 +6850,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6678,7 +6882,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6708,7 +6913,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6739,7 +6945,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6770,7 +6977,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 15
+      "successRate": 15,
+      "canRefine": true
     }
   },
   {
@@ -6796,7 +7004,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 10
+      "successRate": 10,
+      "canRefine": true
     }
   },
   {
@@ -6827,7 +7036,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 10
+      "successRate": 10,
+      "canRefine": true
     }
   },
   {
@@ -6853,7 +7063,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -6884,7 +7095,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 10
+      "successRate": 10,
+      "canRefine": true
     }
   },
   {
@@ -6915,7 +7127,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 10
+      "successRate": 10,
+      "canRefine": true
     }
   },
   {
@@ -6951,8 +7164,10 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 10
-    }
+      "successRate": 10,
+      "canRefine": true
+    },
+    "element": "Thực Đạo"
   },
   {
     "id": "dot_bien_tien_co",
@@ -6981,7 +7196,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 10
+      "successRate": 10,
+      "canRefine": true
     }
   },
   {
@@ -7007,7 +7223,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7033,7 +7250,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7059,7 +7277,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7090,7 +7309,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7120,7 +7340,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7151,7 +7372,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7181,7 +7403,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7211,7 +7434,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7241,7 +7465,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7272,7 +7497,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7303,7 +7529,8 @@ window.GU_DATABASE = [
           "type": "gu"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7339,7 +7566,8 @@ window.GU_DATABASE = [
           "type": "material"
         }
       ],
-      "successRate": 75
+      "successRate": 75,
+      "canRefine": true
     }
   },
   {
@@ -7385,7 +7613,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -7416,7 +7645,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 20
+      "successRate": 20,
+      "canRefine": true
     }
   },
   {
@@ -7452,7 +7682,8 @@ window.GU_DATABASE = [
           "type": "special"
         }
       ],
-      "successRate": 5
+      "successRate": 5,
+      "canRefine": true
     }
   },
   {
@@ -7494,7 +7725,8 @@ window.GU_DATABASE = [
           "type": "gu"
         }
       ],
-      "successRate": 70
+      "successRate": 70,
+      "canRefine": true
     }
   }
 ];
