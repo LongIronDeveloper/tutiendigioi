@@ -29,17 +29,25 @@ Mỗi khi phát triển tính năng mới, chỉnh sửa logic hoặc tái cấu
 - Nếu phát hiện lỗi: Ghi rõ danh sách lỗi và chuyển lại cho Coder sửa.
 - Nếu code đạt chuẩn: Phê duyệt và chuyển tiếp sang Tester.
 
-### Phase 4: [TESTER AGENT] (Thực thi kiểm thử thực tế)
-- Tạo file kiểm thử tự động (ví dụ: `tests/test_vXX_features.py`).
-- Sử dụng công cụ terminal (`run_command`) để chạy test thực tế:
-  ```bash
-  node -c game.js
-  python -m unittest discover tests -v
-  ```
-- Phân tích kết quả thực thi:
-  - Nếu có lỗi: Lập Bug Report chi tiết (Input gây lỗi, Expected vs Actual, Traceback) và gửi lại cho [CODER AGENT] sửa.
+### Phase 4: [TESTER AGENT] (Chiến lược Kiểm thử Thông minh 2 Tầng)
+- Tạo file kiểm thử tự động tập trung vào tính năng/bug hiện tại (ví dụ: `tests/test_vXX_features.py`).
+- **Tầng 1: Hot Testing (Vòng lặp sửa lỗi tức thì):**
+  - Trong suốt quá trình Coder sửa lỗi, CHỈ chạy file test của tính năng hiện tại với cờ dừng ngay khi gặp lỗi (`-f`):
+    ```bash
+    python -m unittest -f tests/test_vXX_features.py
+    ```
+  - Nếu có lỗi: Lập Bug Report ngắn gọn (chỉ trích xuất phần Traceback/Assertion lỗi), gửi lại cho Coder sửa. Không nhồi toàn bộ log thành công vào prompt.
   - Lặp lại chu trình sửa - kiểm thử tối đa 3 lần (`max_iterations = 3`).
-  - Khi tất cả các test cases đều PASS 100%: Hoàn thành nhiệm vụ và tóm tắt kết quả cho người dùng.
+- **Tầng 2: Full Regression Gate (Cổng kiểm tra tổng thể - Chỉ chạy 1 lần khi Tầng 1 đã PASS 100%):**
+  - Kiểm tra cú pháp JavaScript:
+    ```bash
+    node -c game.js
+    ```
+  - Chạy toàn bộ test hồi quy để đảm bảo không gãy tính năng cũ:
+    ```bash
+    python -m unittest discover tests -v
+    ```
+  - Khi tất cả đều đạt chuẩn, tiến hành kích hoạt script đồng bộ lên GitHub (`sync_github_vXX.py`) và tóm tắt kết quả cho người dùng.
 
 ---
 
@@ -56,39 +64,11 @@ Dự án được tích hợp bộ sưu tập **67 Awesome Design Skills** đặ
   - Ưu tiên **Bento Grid** (`skills/bento`) và **Card Box** phát sáng viền (`skills/glassmorphism` / `skills/clean`).
   - Phân cấp rõ ràng (Header, Badge, Content rows, Actions bar).
   - Loại bỏ các dòng trôi nổi thiếu bố cục hoặc thanh cuộn trắng mặc định của trình duyệt (`::-webkit-scrollbar` dark theme).
-- **Accessibility & Quality**: Tuân thủ chuẩn WCAG 2.2 AA (độ tương phản, tap target, phông chữ dễ đọc).
-
-### Các Design Skills Nổi Bật Được Hỗ Trợ:
-`agentic, ant, artistic, basic, bento, bold, brutalism, cafe, claude, claymorphism, clean, codex, colorful, contemporary, corporate, cosmic, creative, dithered, doodle, dramatic, editorial, enterprise, expressive, fantasy, fiction, flat, friendly, futuristic, geometric, glassmorphism, gradient, immersive, impeccable, levels, lingo...` (xem danh mục đầy đủ trong `DESIGN_SKILLS_INDEX.md`).
+- **Accessibility & Polish**: WCAG 2.2 AA contrast ratio, visual hierarchy rõ nét, hiệu ứng tương tác mượt mà (transitions/animations).
 
 ---
 
-## 3. Build, Lint & Test Commands
-Mọi thay đổi mã nguồn bắt buộc phải kiểm tra thông qua các lệnh terminal sau:
-
-- **Kiểm tra cú pháp JavaScript**:
-  ```bash
-  node -c game.js
-  ```
-- **Chạy toàn bộ Test Suite hồi quy**:
-  ```bash
-  python -m unittest discover tests -v
-  ```
-- **Chạy bộ test tính năng cụ thể**:
-  ```bash
-  python -m unittest tests.test_v53_features -v
-  ```
-
----
-
-## 4. Guardrails & Operational Boundaries
-- **ALWAYS**:
-  - Giữ gìn tính toàn vẹn của dữ liệu lưu (`localStorage` / `TUTIEN_V4_SAVE`).
-  - Bảo toàn toàn bộ các tính năng và logic của các phiên bản trước (Zero Regression).
-  - Sử dụng link markdown có thể nhấp được (`[filename](file:///...)`) khi nhắc đến tệp tin.
-- **ASK FIRST**:
-  - Thay đổi cấu trúc dữ liệu lưu game làm mất save cũ của người dùng.
-  - Xóa bỏ hoặc đổi tên các hàm API cốt lõi trong `game.js`.
-- **NEVER**:
-  - Đẩy code lên GitHub khi chưa chạy test hoặc có test bị fail.
-  - Sửa trực tiếp code vào production mà không qua 4 Phase của Pipeline Protocol.
+## 3. Quality & Safety Boundaries
+- **Always Verify**: Luôn chạy kiểm thử thực tế bằng lệnh shell trước khi báo hoàn thành nhiệm vụ.
+- **Preserve Comments**: Giữ gìn toàn bộ ghi chú và tài liệu hiện có trong mã nguồn.
+- **Defensive Coding**: Xử lý `null`, `undefined`, phân rã dữ liệu và xử lý ngoại lệ an toàn ở mọi tầng ứng dụng.
