@@ -88,7 +88,13 @@ const DAO_LIST = [
     { id: "doc", name: "Độc Đạo", desc: "Độc dược ăn mòn da thịt và kinh mạch không thể kháng cự.", killerMove: "Thiên Chu Hóa Cốt Hủ" },
     { id: "huyet", name: "Huyết Đạo", desc: "Hấp thu tinh huyết, năng lượng sinh mệnh và huyết sát cuồng bạo.", killerMove: "Huyết Hải Cuồng Triều Bạo" },
     { id: "vu", name: "Vũ Đạo", desc: "Kỹ năng cận chiến đỉnh cao, không gian sát phạt liên hoàn.", killerMove: "Bát Hoang Liệt Không Quyền" },
-    { id: "kim", name: "Kim Đạo", desc: "Độ cứng và sắc bén của kim loại, khoáng thạch vô địch.", killerMove: "Kim Cương Bất Bại Thân" }
+    { id: "kim", name: "Kim Đạo", desc: "Độ cứng và sắc bén của kim loại, khoáng thạch vô địch.", killerMove: "Kim Cương Bất Bại Thân" },
+    { id: "thuc", name: "Thực Đạo", desc: "Quy tắc nuốt và tiêu hóa vạn vật, nền tảng chế biến cổ tài và đồ đằng sát chiêu.", killerMove: "Thôn Thiên Thực Địa Sát Chiêu" },
+    { id: "van", name: "Vận Đạo", desc: "Thao túng biến số đối lập Túc Mệnh, chuyển hóa kiếp vận và hồng vận nghê thường.", killerMove: "Chúng Sinh Vận Hồng Sa" },
+    { id: "thau", name: "Thâu Đạo", desc: "Cướp đoạt cổ trùng, thọ nguyên và đạo ngân thiên địa về tay mình.", killerMove: "Đại Đạo Quỷ Thủ" },
+    { id: "mong", name: "Mộng Đạo", desc: "Thăm dò mộng cảnh hấp thụ chân ý, công kích vô phương phòng ngự.", killerMove: "Giải Mộng Thiên Hoa" },
+    { id: "thien", name: "Thiên Đạo", desc: "Quy tắc tối cao 'Tổn hữu dư nhi bổ bất túc', điều khiển tai kiếp và che mắt thiên cơ.", killerMove: "Thiên Võng Khôi Khôi" },
+    { id: "tin", name: "Tín Đạo", desc: "Khắc ấn đạo ngân minh ước ràng buộc sinh tử, truyền tin và khai sáng thiên cơ.", killerMove: "Thiên Cương Địa Thường" },
 ];
 
 const DAO_LEVELS = [
@@ -319,6 +325,14 @@ let player = {
         quang: { exp: 20, marks: 20, level: 0 }
     },
     devModeActive: false,
+    vitalGuId: null,
+    isDaoLord: false,
+    immortalEssence: {
+        thanhDe: 0,
+        hongTao: 0,
+        bachLe: 0,
+        hoangHanh: 0
+    },
 
     // Tiền tệ kép
     stoneHigh: 0,
@@ -461,6 +475,14 @@ function resetPlayerToFreshState(name = "Cổ Nguyệt Phong") {
             quang: { exp: 20, marks: 20, level: 0 }
         },
         devModeActive: false,
+    vitalGuId: null,
+    isDaoLord: false,
+    immortalEssence: {
+        thanhDe: 0,
+        hongTao: 0,
+        bachLe: 0,
+        hoangHanh: 0
+    },
 
         stoneHigh: 0,
         stoneMid: 0,
@@ -1757,6 +1779,18 @@ function renderRecipesPane() {
 }
 
 function refineGu(gu) {
+    // 0. Kiểm tra Luật Duy Nhất Tuyệt Đối của Tiên Cổ (Rank 6+)
+    if (gu.rank >= 6) {
+        const alreadyOwned = (player.inventory && player.inventory.some(i => i.id === `gu_${gu.id}` || i.id === gu.id || (i.guData && i.guData.id === gu.id))) ||
+                             (player.guInventory && player.guInventory.some(g => g.id === gu.id));
+        if (alreadyOwned) {
+            alert(`⚠️ QUY TẮC ĐẠI ĐẠO DUY NHẤT!
+
+Tiên Cổ khắp thiên địa chỉ có duy nhất một cá thể! Đạo hữu đã nắm giữ Tiên Cổ "${gu.name}" (${gu.rank} Chuyển), không thể luyện ra con thứ hai!`);
+            return;
+        }
+    }
+
     // 1. Xác định yêu cầu Linh Thạch
     let reqStone = 25;
     if (gu.recipe && gu.recipe.materials) {
@@ -1767,14 +1801,18 @@ function refineGu(gu) {
     }
 
     if (player.stoneLow < reqStone) {
-        alert(`⚠️ KHÔNG ĐỦ LINH THẠCH!\n\nHợp luyện ${gu.name} cần ít nhất ${reqStone} viên Linh Thạch Hạ Phẩm làm chất xúc tác ngưng tụ! Hiện có: ${player.stoneLow} viên.`);
+        alert(`⚠️ KHÔNG ĐỦ LINH THẠCH!
+
+Hợp luyện ${gu.name} cần ít nhất ${reqStone} viên Linh Thạch Hạ Phẩm làm chất xúc tác ngưng tụ! Hiện có: ${player.stoneLow} viên.`);
         return;
     }
 
     // 2. Kiểm tra Chân Nguyên
     const reqMp = gu.mpCost || 20;
     if (player.mp < reqMp) {
-        alert(`⚠️ KHÔNG ĐỦ CHÂN NGUYÊN!\n\nCần ${reqMp} điểm Chân Nguyên để thúc đẩy trận pháp luyện cổ. Hiện có: ${player.mp} điểm.`);
+        alert(`⚠️ KHÔNG ĐỦ CHÂN NGUYÊN!
+
+Cần ${reqMp} điểm Chân Nguyên để thúc đẩy trận pháp luyện cổ. Hiện có: ${player.mp} điểm.`);
         return;
     }
 
@@ -1795,27 +1833,39 @@ function refineGu(gu) {
     });
 
     if (matIndex === -1) {
-        alert(`⚠️ THIẾU NGUYÊN LIỆU HỢP LUYỆN!\n\nĐể hợp luyện "${gu.name}" (${gu.rank} Chuyển • ${gu.path}), đạo hữu bắt buộc phải có nguyên liệu ${gu.path} (hoặc dược thảo/khoáng thạch/yêu đan tương thích) trong Túi Trữ Vật!\n\n💡 Cách kiếm nguyên liệu:\n- Xuất ngoại đến Bách Thú Lĩnh: Săn bắt Yêu Thú hoặc Hái Lượm Linh Dược\n- Đến Phường Thị: Mua khoáng thạch, linh thảo tại Tiệm Thuốc.`);
+        alert(`⚠️ THIẾU NGUYÊN LIỆU HỢP LUYỆN!
+
+Để hợp luyện "${gu.name}" (${gu.rank} Chuyển • ${gu.path}), đạo hữu bắt buộc phải có nguyên liệu ${gu.path} (hoặc dược thảo/khoáng thạch/yêu đan tương thích) trong Túi Trữ Vật!
+
+💡 Cách kiếm nguyên liệu:
+- Xuất ngoại đến Bách Thú Lĩnh: Săn bắt Yêu Thú hoặc Hái Lượm Linh Dược
+- Đến Phường Thị: Mua khoáng thạch, linh thảo tại Tiệm Thuốc.`);
         return;
     }
 
     const matchedItem = player.inventory[matIndex];
 
-    // Tiêu hao tài nguyên
+    // Tiêu hao tài nguyên ban đầu
     player.stoneLow -= reqStone;
     player.mp -= reqMp;
-    matchedItem.count -= 1;
-    if (matchedItem.count <= 0) {
-        player.inventory.splice(matIndex, 1);
-    }
 
+    // Tính toán tỷ lệ thành công cộng hưởng từ Đạo Ngân Luyện Đạo
     const baseRate = gu.recipe && gu.recipe.successRate ? gu.recipe.successRate : 75;
     const bonusRate = Math.min(20, Math.floor(player.spiritPower / 2));
-    const finalRate = Math.min(95, baseRate + bonusRate);
+    const bonusRefineMarks = Math.min(15, Math.floor(((player.daoMarks && player.daoMarks.luyen) || 0) / 100));
+    const finalRate = Math.min(95, baseRate + bonusRate + bonusRefineMarks);
+
+    // Kiểm tra xem nguyên liệu sử dụng có phải là Bản Mệnh Cổ không
+    const isVitalGu = (player.vitalGuId && (matchedItem.id === player.vitalGuId || matchedItem.id === `gu_${player.vitalGuId}` || (matchedItem.guData && matchedItem.guData.id === player.vitalGuId)));
 
     const roll = Math.random() * 100;
     if (roll <= finalRate) {
-        // Hợp luyện thành công
+        // Hợp luyện thành công: Tiêu hao 1 nguyên liệu
+        matchedItem.count -= 1;
+        if (matchedItem.count <= 0) {
+            player.inventory.splice(matIndex, 1);
+        }
+
         const newGu = {
             id: gu.id,
             name: gu.name,
@@ -1831,12 +1881,36 @@ function refineGu(gu) {
         player.systemPoints += 15;
         safePlaySound("playSuccess");
         addLog(`🎉 Hợp luyện thành công! Ngươi tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch, luyện xuất: ${gu.name} (${gu.rank} Chuyển). Đã cất vào Túi Trữ Vật!`, "special");
-        alert(`🎉 Hợp luyện thành công!\n\nĐã tiêu hao 1 ${matchedItem.name} & ${reqStone} Linh Thạch.\nNhận được Cổ Trùng: ${gu.name} (${gu.rank} Chuyển • ${gu.path}) cất vào TÚI TRỮ VẬT!\n\n💡 Hãy mở Túi Trữ Vật để tiến hành Luyện Hóa đưa vào Không Khiếu.`);
+        alert(`🎉 Hợp luyện thành công!
+
+Đã tiêu hao 1 ${matchedItem.name} & ${reqStone} Linh Thạch.
+Nhận được Cổ Trùng: ${gu.name} (${gu.rank} Chuyển • ${gu.path}) cất vào TÚI TRỮ VẬT!
+
+💡 Hãy mở Túi Trữ Vật để tiến hành Luyện Hóa đưa vào Không Khiếu.`);
     } else {
-        // Thất bại
-        safePlaySound("playError");
-        addLog(`💥 Lò luyện nổ tung! Hợp luyện ${gu.name} thất bại, tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch!`, "danger");
-        alert(`💥 Hợp luyện thất bại!\n\nLò luyện chấn động nổ tung, tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch làm tro bụi.`);
+        // Hợp luyện thất bại
+        if (isVitalGu) {
+            // BẢO TOÀN BẢN MỆNH CỔ: Không xóa Cổ, chỉ suy yếu và phản phệ người chơi!
+            player.hp = Math.max(1, Math.floor(player.hp * 0.75));
+            player.mp = Math.max(0, Math.floor(player.mp * 0.5));
+            safePlaySound("playError");
+            addLog(`💥 Hợp luyện ${gu.name} thất bại! Nhờ có Bản Mệnh Cổ tương liên tâm huyết, cổ trùng được bảo toàn không chết, nhưng linh hồn đạo hữu bị chấn động mạnh!`, "danger");
+            alert(`💥 Hợp luyện thất bại!
+
+May nhờ có BẢN MỆNH CỔ tương liên tính mạng nên cổ trùng không bị tiêu tán, chỉ chuyển sang suy yếu!
+Khí huyết mất 25%, chân nguyên hao tổn 50% do phản phệ!`);
+        } else {
+            // Cổ thường / nguyên liệu thường: Tiêu hao / nổ cổ
+            matchedItem.count -= 1;
+            if (matchedItem.count <= 0) {
+                player.inventory.splice(matIndex, 1);
+            }
+            safePlaySound("playError");
+            addLog(`💥 Lò luyện nổ tung! Hợp luyện ${gu.name} thất bại, tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch!`, "danger");
+            alert(`💥 Hợp luyện thất bại!
+
+Lò luyện chấn động nổ tung, tiêu hao 1 ${matchedItem.name} và ${reqStone} Linh Thạch làm tro bụi.`);
+        }
     }
 
     updateSidebarUI();
@@ -1948,6 +2022,83 @@ function addDaoMarks(daoId, amount) {
     checkDaoLevelUp(daoId);
 }
 
+
+// ============================================================
+// HỆ THỐNG ĐẠO NGÂN V5.2: KHUẾCH ĐẠI TUYẾN TÍNH & BÀI XÍCH ĐẠO NGÂN
+// ============================================================
+
+function getDaoMultiplier(daoId) {
+    if (!daoId || !player.daoMarks) return 1.0;
+    const cleanId = (daoId || "").toLowerCase().replace(" đạo", "");
+    const marks = player.daoMarks[cleanId] || player.daoMarks[daoId] || 0;
+    // Chuẩn nguyên tác chương 1155: Cứ 1000 Đạo Ngân tăng +100% (tức gấp đôi uy lực gốc)
+    return 1 + (marks / 1000);
+}
+
+function getDaoConflictFactor(daoId) {
+    // 1. Ngoại lệ Chí Tôn Tiên Thai: Miễn nhiễm hoàn toàn bài xích
+    if (player.specialPhysique && (player.specialPhysique.id === "chi_ton_tien_thai" || (player.specialPhysique.name && player.specialPhysique.name.includes("Chí Tôn")))) {
+        return 1.0;
+    }
+
+    // 2. Nếu là lưu phái chủ đạo: 100% uy lực
+    const normalizedMain = (player.mainDao || "").toLowerCase().replace(" đạo", "");
+    const normalizedTarget = (daoId || "").toLowerCase().replace(" đạo", "");
+    if (normalizedMain === normalizedTarget) {
+        return 1.0;
+    }
+
+    // 3. Nếu là dị đạo: Giảm uy lực dựa trên tỷ trọng đạo ngân cơ thể (tối thiểu 0.15)
+    let totalMarks = 0;
+    if (player.daoMarks) {
+        Object.values(player.daoMarks).forEach(m => totalMarks += (m || 0));
+    }
+    if (totalMarks <= 0) return 1.0;
+
+    const targetMarks = player.daoMarks ? (player.daoMarks[normalizedTarget] || player.daoMarks[daoId] || 0) : 0;
+    const ratio = targetMarks / totalMarks;
+    return Math.max(0.15, Math.min(1.0, ratio));
+}
+
+function checkDaoLordStatus() {
+    const mainDaoId = (player.mainDao || "quang").toLowerCase().replace(" đạo", "");
+    const marks = player.daoMarks ? (player.daoMarks[mainDaoId] || 0) : 0;
+    const curLvl = (player.daoLevels && player.daoLevels[mainDaoId]) ? player.daoLevels[mainDaoId].level : 0;
+    const isRank9 = (player.rankIdx >= 8); // Cửu Chuyển Cổ Tôn
+
+    // 4 Điều kiện Thành Tôn & Đạo Chủ: (1) Cửu Chuyển, (2) >= 300k Đạo Ngân, (3) Vô Thượng Đại Tông Sư (lvl >= 7)
+    if (isRank9 && marks >= 300000 && curLvl >= 7) {
+        player.isDaoLord = true;
+        return true;
+    }
+    player.isDaoLord = false;
+    return false;
+}
+
+function setVitalGu(guId) {
+    if (!guId) return;
+    let foundGu = null;
+    if (player.guInventory) {
+        foundGu = player.guInventory.find(g => g.id === guId);
+    }
+    if (!foundGu && player.inventory) {
+        const it = player.inventory.find(i => i.id === guId || i.id === `gu_${guId}` || (i.guData && i.guData.id === guId));
+        if (it) foundGu = it.guData || it;
+    }
+    if (!foundGu) {
+        alert("Không tìm thấy Cổ Trùng này trong Không Khiếu hoặc Túi Trữ Vật!");
+        return;
+    }
+    const guName = foundGu.name || guId;
+    player.vitalGuId = guId;
+    safePlaySound("playSuccess");
+    addLog(`⭐ Đã khắc ấn tâm huyết linh hồn, lập [${guName}] làm BẢN MỆNH CỔ tương liên sinh mệnh!`, "special");
+    alert(`⭐ Khắc ấn Bản Mệnh Cổ thành công!\n\nTừ nay [${guName}] là Bản Mệnh Cổ của đạo hữu:\n- Tăng 20% uy lực khi sử dụng\n- Khi hợp luyện thất bại: Bản Mệnh Cổ ĐƯỢC BẢO TOÀN 100% KHÔNG BỊ HỦY DIỆT!`);
+    updateSidebarUI();
+    if (typeof renderGuModal === "function") renderGuModal();
+    if (typeof renderAperturePane === "function") renderAperturePane();
+}
+
 function checkDaoLevelUp(daoId) {
     if (!player.daoLevels || !player.daoLevels[daoId]) return;
     const curMarks = player.daoMarks ? (player.daoMarks[daoId] || 0) : (player.daoLevels[daoId].exp || 0);
@@ -2000,7 +2151,9 @@ function renderDaosPane() {
                 </div>
             </div>
             <div style="margin-top:8px; font-size:12px; color:#bbb;">
-                💡 <em>Hệ Thống Đạo Ngân:</em> Tích lũy Đạo Ngân thiên địa thông qua Đả Tọa Tu Luyện, Ôn Dưỡng Cổ Trùng, Săn Bắt Yêu Thú và Đọc Điển Tịch để thăng tiến cảnh giới lưu phái.
+                💡 <em>Hệ Thống Đạo Ngân:</em> Tích lũy Đạo Ngân thiên địa (khuếch đại tuyến tính +100% mỗi 1.000 Đạo Ngân).
+                ${checkDaoLordStatus() ? '<div style="margin-top:8px; padding:6px 12px; background:linear-gradient(90deg, #f59e0b, #d97706); color:#fff; font-weight:bold; border-radius:6px; text-align:center; box-shadow:0 0 12px rgba(245,158,11,0.5);">👑 DANH VỊ ĐẠO CHỦ (DAO LORD) • THAO TÚNG ĐẠO NGÂN THIÊN ĐỊA HOÀN MỸ</div>' : ''}
+                ${player.rankIdx >= 5 ? `<div style="margin-top:6px; font-size:11px; color:#67e8f9;">✨ Tiên Nguyên Khiếu Vận: Thanh Đề: ${(player.immortalEssence && player.immortalEssence.thanhDe) || 0} • Hồng Táo: ${(player.immortalEssence && player.immortalEssence.hongTao) || 0} • Bạch Lệ: ${(player.immortalEssence && player.immortalEssence.bachLe) || 0} • Hoàng Hạnh: ${(player.immortalEssence && player.immortalEssence.hoangHanh) || 0}</div>` : ''}
             </div>
         </div>
         <div style="font-size:13px; color:#ddd; margin-bottom:8px;">
@@ -2022,6 +2175,10 @@ function renderDaosPane() {
         const curLvl = (player.daoLevels && player.daoLevels[dao.id]) ? player.daoLevels[dao.id].level : 0;
         const lvlInfo = DAO_LEVELS[curLvl] || DAO_LEVELS[0];
         const nextLvlInfo = DAO_LEVELS[curLvl + 1];
+
+        const daoMult = getDaoMultiplier(dao.id);
+        const conflictFactor = getDaoConflictFactor(dao.id);
+        const isConflictFree = (player.specialPhysique && (player.specialPhysique.id === "chi_ton_tien_thai" || (player.specialPhysique.name && player.specialPhysique.name.includes("Chí Tôn"))));
 
         const card = document.createElement("div");
         card.className = `dao-card ${isMainDao ? 'main-active-dao' : (isActive ? 'active-dao' : '')}`;
@@ -2058,6 +2215,18 @@ function renderDaosPane() {
                 <span class="dao-level-badge">${lvlInfo.name}</span>
             </div>
             <p class="dao-desc">${dao.desc}</p>
+            <div class="dao-amplification-box" style="margin: 6px 0; font-size: 11px; background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:2px;">
+                    <span style="color:#38bdf8;">⚡ Khuếch Đại Uy Lực:</span>
+                    <strong style="color:#38bdf8;">+${((daoMult - 1) * 100).toFixed(1)}% (${daoMult.toFixed(2)}x)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                    <span style="color:${isConflictFree ? '#34d399' : (isMainDao ? '#fbbf24' : '#f87171')};">🌀 Quy Luật Bài Xích:</span>
+                    <strong style="color:${isConflictFree ? '#34d399' : (isMainDao ? '#fbbf24' : '#f87171')};">
+                        ${isConflictFree ? '0% (Chí Tôn Vô Khuyết)' : (isMainDao ? '0% (Lưu Phái Chủ Đạo)' : `Hiệu Quả ${(conflictFactor * 100).toFixed(0)}%`)}
+                    </strong>
+                </div>
+            </div>
             <div class="dao-progress-box">
                 <small>Đạo Ngân: <strong class="text-cyan">${curMarks.toLocaleString()}</strong> ${nextLvlInfo ? `/ ${nextLvlInfo.reqMarks.toLocaleString()} (${nextLvlInfo.name})` : '(Vô Thượng)'}</small>
                 <div class="bar-track-outer mini">
@@ -2419,6 +2588,10 @@ window.devGiveScrolls = devGiveScrolls;
 window.devGiveGu = devGiveGu;
 window.devAddDaoMarks = devAddDaoMarks;
 window.devAdvanceTime = devAdvanceTime;
+window.getDaoMultiplier = getDaoMultiplier;
+window.getDaoConflictFactor = getDaoConflictFactor;
+window.checkDaoLordStatus = checkDaoLordStatus;
+window.setVitalGu = setVitalGu;
 
 function setupDevModeControls() {
     const btnToggle = document.getElementById("btn-toggle-devmode") || document.getElementById("btn-toggle-dev-mode");
@@ -2537,7 +2710,7 @@ function renderGuModal() {
             card.className = "my-gu-item-card";
             card.innerHTML = `
                 <div class="my-gu-head">
-                    <strong>${g.name} ${idx === 0 ? '<span class="text-gold">(Bản Mệnh)</span>' : ''}</strong>
+                    <strong>${g.name} ${(player.vitalGuId === g.id || (!player.vitalGuId && idx === 0)) ? '<span class="text-gold" style="font-weight:bold;">⭐ [BẢN MỆNH CỔ]</span>' : ''}</strong>
                     <span class="gu-rank-tag">${g.rank} Chuyển • ${g.path} • ${g.type || 'Hỗ Trợ'}</span>
                 </div>
                 <div class="my-gu-body">
@@ -2545,6 +2718,7 @@ function renderGuModal() {
                     <span>🌀 Tiêu hao Chân Nguyên: <strong>${g.mpCost || 20}</strong></span>
                     <span>⚔️ Uy lực: <strong>+${g.power || 30}</strong></span>
                 </div>
+                ${(player.vitalGuId !== g.id && (player.vitalGuId || idx !== 0)) ? `<button class="btn-subtle btn-set-vital-gu" onclick="setVitalGu('${g.id}')" style="margin-right:6px; border-color:#fbbf24; color:#fbbf24;">⭐ Khắc Bản Mệnh</button>` : ''}
                 <button class="btn-subtle btn-feed-one-gu" data-gidx="${idx}">🌱 Rót Chân Nguyên Ôn Dưỡng</button>
             `;
             card.querySelector(".btn-feed-one-gu").addEventListener("click", () => {
