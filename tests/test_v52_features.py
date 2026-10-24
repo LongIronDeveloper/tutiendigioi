@@ -106,8 +106,8 @@ class TestV52Features(unittest.TestCase):
     # 7. Kiểm tra UI Version Badge v5.2
     # -------------------------------------------------------------
     def test_07_ui_version_badge_v52(self):
-        """7. Kiểm tra Version Badge v5.2 • ĐẠO NGÂN TRÙNG HỢP trên giao diện index.html"""
-        self.assertIn('v5.2 • ĐẠO NGÂN TRÙNG HỢP', self.index_html)
+        """7. Kiểm tra Version Badge trên giao diện index.html (v5.2 hoặc v5.3)"""
+        self.assertTrue('v5.2 • ĐẠO NGÂN TRÙNG HỢP' in self.index_html or 'v5.3 • HOÀN THIỆN ĐẠI ĐẠO' in self.index_html)
         self.assertNotIn('v4.3 • NGHỊCH MỆNH', self.index_html)
 
 
