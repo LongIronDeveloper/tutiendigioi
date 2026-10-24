@@ -722,7 +722,162 @@
     }
 
     // =========================================================
-    // 14. TEST HELPERS & PUBLIC API HOOKS
+    // 14. PHẢN HỒI XÚC GIÁC CLICK CHUỘT & MỰC LOANG THỦY MẶC (QOL v1.0)
+    // =========================================================
+    function createInkRipple(x, y) {
+        const ripple = document.createElement('div');
+        ripple.className = 'ink-splash-ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        document.body.appendChild(ripple);
+
+        ripple.addEventListener('animationend', () => {
+            if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+        });
+        setTimeout(() => {
+            if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+        }, 700);
+    }
+
+    function initUniversalClickFeedback() {
+        document.addEventListener('pointerdown', (e) => {
+            createInkRipple(e.clientX, e.clientY);
+
+            // Phát âm thanh gõ ngọc thanh tao khi click
+            if (window.soundEngine && typeof window.soundEngine.playClick === 'function') {
+                try {
+                    window.soundEngine.playClick();
+                } catch (err) {}
+            }
+        });
+
+        // Hook các nút đặc biệt với âm thanh chuyên biệt
+        const btnBreakthrough = document.getElementById('btn-breakthrough');
+        if (btnBreakthrough) {
+            btnBreakthrough.addEventListener('click', () => {
+                if (window.soundEngine && typeof window.soundEngine.playThunder === 'function') {
+                    try { window.soundEngine.playThunder(); } catch (err) {}
+                }
+            });
+        }
+
+        const btnSave = document.getElementById('btn-save-game');
+        if (btnSave) {
+            btnSave.addEventListener('click', () => {
+                if (window.soundEngine && typeof window.soundEngine.playSuccess === 'function') {
+                    try { window.soundEngine.playSuccess(); } catch (err) {}
+                }
+            });
+        }
+
+        const btnSound = document.getElementById('btn-toggle-sound');
+        if (btnSound) {
+            btnSound.addEventListener('click', () => {
+                if (window.soundEngine && typeof window.soundEngine.toggle === 'function') {
+                    const enabled = window.soundEngine.toggle();
+                    showToast(enabled ? '🔊 Đã bật âm thanh Tiên Hiệp' : '🔇 Đã tắt âm thanh Tiên Hiệp', 'info', 1800);
+                }
+            });
+        }
+    }
+
+    // =========================================================
+    // 15. NÂNG CẤP HẠT LINH KHÍ NGŨ SẮC TƯƠNG TÁC CHUỘT (CELESTIAL QI SWARM)
+    // =========================================================
+    function initCelestialQiCanvas() {
+        const canvas = document.getElementById('qi-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        let mouseX = -1000;
+        let mouseY = -1000;
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        window.addEventListener('mouseleave', () => {
+            mouseX = -1000;
+            mouseY = -1000;
+        });
+
+        const colors = [
+            'rgba(5, 150, 105, 0.5)',   // Phỉ Thúy
+            'rgba(217, 119, 6, 0.5)',   // Kim Quang
+            'rgba(2, 132, 199, 0.5)',   // Thủy Lam
+            'rgba(124, 58, 237, 0.5)'   // Tử Khí
+        ];
+
+        const pCount = 45;
+        const particles = [];
+        for (let i = 0; i < pCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 2.8 + 1.2,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                vx: (Math.random() - 0.5) * 0.45,
+                vy: -Math.random() * 0.5 - 0.2,
+                baseVy: -Math.random() * 0.5 - 0.2,
+                pulse: Math.random() * Math.PI
+            });
+        }
+
+        function animLoop() {
+            ctx.clearRect(0, 0, width, height);
+
+            particles.forEach(p => {
+                // Tương tác lực hút thần thức khi rê chuột
+                if (mouseX > 0 && mouseY > 0) {
+                    const dx = mouseX - p.x;
+                    const dy = mouseY - p.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 180 && dist > 10) {
+                        const force = (180 - dist) / 180 * 0.12;
+                        p.vx += (dx / dist) * force;
+                        p.vy += (dy / dist) * force;
+                    }
+                }
+
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // Giảm tốc ma sát
+                p.vx *= 0.98;
+                p.vy = p.vy * 0.98 + p.baseVy * 0.02;
+
+                p.pulse += 0.04;
+                const r = p.radius + Math.sin(p.pulse) * 0.6;
+
+                if (p.y < -10) {
+                    p.y = height + 10;
+                    p.x = Math.random() * width;
+                }
+                if (p.x < -10) p.x = width + 10;
+                if (p.x > width + 10) p.x = -10;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, Math.max(0.5, r), 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = p.color;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animLoop);
+        }
+
+        animLoop();
+    }
+
+    // =========================================================
+    // 16. TEST HELPERS & PUBLIC API HOOKS
     // =========================================================
     window.UI = {
         showToast: showToast,
@@ -732,7 +887,8 @@
         initXianxiaTooltips: initXianxiaTooltips,
         initCardTilt: initCardTilt,
         setTheme: setTheme,
-        toggleTheme: toggleTheme
+        toggleTheme: toggleTheme,
+        createInkRipple: createInkRipple
     };
 
     window.__TEST_HELPERS__ = {
@@ -742,6 +898,7 @@
         updateNotificationBadges: updateNotificationBadges,
         setTheme: setTheme,
         toggleTheme: toggleTheme,
+        createInkRipple: createInkRipple,
         isSidebarOpen: () => {
             const sb = document.querySelector('.sidebar-apocalyptic');
             return sb ? sb.classList.contains('sidebar-open') : false;
@@ -758,7 +915,7 @@
     };
 
     // =========================================================
-    // 15. TỰ ĐỘNG KHỞI TẠO KHI TẢI XONG DOM
+    // 17. TỰ ĐỘNG KHỞI TẠO KHI TẢI XONG DOM
     // =========================================================
     function onDOMLoaded() {
         initThemeController();
@@ -769,12 +926,14 @@
         initXianxiaTooltips();
         initCardTilt();
         initFloatingActionHooks();
+        initUniversalClickFeedback();
+        initCelestialQiCanvas();
         updateNotificationBadges();
 
         // Tự động cập nhật sóng nước và badge theo chu kỳ
         setInterval(updateNotificationBadges, 3000);
 
-        console.log('[UI.JS] Xianxia Celestial UI v5.5 Initialized Successfully.');
+        console.log('[UI.JS] Xianxia Celestial UI QOL v1.0 Initialized Successfully.');
     }
 
     if (document.readyState === 'loading') {
