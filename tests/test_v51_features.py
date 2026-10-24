@@ -100,8 +100,8 @@ class TestV51Features(unittest.TestCase):
         self.assertIn('addDaoMarks(mainDaoId, daoMarksGained)', self.game_js)
         # Tích hợp vào feedGuItem
         self.assertIn('addDaoMarks(targetDao, 15)', self.game_js)
-        # Tích hợp vào act_hunt_beast
-        self.assertIn('addDaoMarks(player.mainDao || "moc", 20)', self.game_js)
+        # v5.3: Đạo ngân từ săn thú phàm cấp đã bị xóa bỏ hoàn toàn theo yêu cầu nguyên tác
+        self.assertNotIn('addDaoMarks(player.mainDao || "moc", 20)', self.game_js)
         # Tích hợp vào act_study_library
         self.assertIn('addDaoMarks(player.mainDao || "moc", 10)', self.game_js)
 
