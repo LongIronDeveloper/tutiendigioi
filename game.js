@@ -77,15 +77,10 @@ const RANKS = [
 
 
 const APTITUDES = {
-
-    C: { rank: "C", name: "Đinh Đẳng (Hạng C)", rate: 0.75, seaPct: 0.25, color: "#94a3b8", desc: "Không khiếu u ám, chỉ chứa 2-3 phần chân nguyên, tu luyện chậm chạp." },
-
+    C: { rank: "C", name: "Đinh Đẳng (Hạng C)", rate: 0.70, seaPct: 0.25, color: "#94a3b8", desc: "Không khiếu u ám, chỉ chứa 2-3 phần chân nguyên, tu luyện chậm chạp." },
     B: { rank: "B", name: "Bính Đẳng (Hạng B)", rate: 1.00, seaPct: 0.45, color: "#60a5fa", desc: "Không khiếu sáng sủa, chứa 4-5 phần chân nguyên, tư chất trung bình gia tộc." },
-
-    A: { rank: "A", name: "Ất Đẳng (Hạng A)", rate: 1.25, seaPct: 0.65, color: "#f59e0b", desc: "Không khiếu ánh bạc, chứa 6-7 phần chân nguyên, thiên tài gia tộc trọng vọng." },
-
-    S: { rank: "S", name: "Giáp Đẳng (Hạng S)", rate: 1.50, seaPct: 0.85, color: "#10b981", desc: "Không khiếu kim quang chói lòa, chứa 8-9 phần chân nguyên, ngàn người có một!" }
-
+    A: { rank: "A", name: "Ất Đẳng (Hạng A)", rate: 1.40, seaPct: 0.65, color: "#f59e0b", desc: "Không khiếu ánh bạc, chứa 6-7 phần chân nguyên, thiên tài gia tộc trọng vọng." },
+    S: { rank: "S", name: "Giáp Đẳng (Hạng S)", rate: 1.70, seaPct: 0.85, color: "#10b981", desc: "Không khiếu kim quang chói lòa, chứa 8-9 phần chân nguyên, ngàn người có một!" }
 };
 
 
@@ -324,73 +319,7 @@ const SYSTEM_QUESTS = [
 
 
 
-const SPIRITUAL_ROOTS = [
-
-    // 1. Thiên Linh Căn (3%)
-
-    { id: "root_thien_kim", name: "Thiên Linh Căn [Kim]", tier: "Thiên Phẩm", elements: ["Kim"], bonusCultivate: 1.2, power: 40, desc: "Đơn nhất Kim hệ linh căn tinh thuần vô song, tu luyện công pháp Kim hệ thần tốc, không gặp bình cảnh kết đan.", weight: 0.6 },
-
-    { id: "root_thien_moc", name: "Thiên Linh Căn [Mộc]", tier: "Thiên Phẩm", elements: ["Mộc"], bonusCultivate: 1.2, power: 40, desc: "Đơn nhất Mộc hệ linh căn xanh biếc ngút trời, thọ nguyên kéo dài, phục hồi sinh mệnh cực mạnh.", weight: 0.6 },
-
-    { id: "root_thien_thuy", name: "Thiên Linh Căn [Thủy]", tier: "Thiên Phẩm", elements: ["Thủy"], bonusCultivate: 1.2, power: 40, desc: "Đơn nhất Thủy hệ linh căn nhu hòa triền miên, chân nguyên tinh khiết như sương mai.", weight: 0.6 },
-
-    { id: "root_thien_hoa", name: "Thiên Linh Căn [Hỏa]", tier: "Thiên Phẩm", elements: ["Hỏa"], bonusCultivate: 1.2, power: 40, desc: "Đơn nhất Hỏa hệ linh căn diễm diễm chấn động, hỏa diễm bạo liệt thiêu đốt càn khôn.", weight: 0.6 },
-
-    { id: "root_thien_tho", name: "Thiên Linh Căn [Thổ]", tier: "Thiên Phẩm", elements: ["Thổ"], bonusCultivate: 1.2, power: 40, desc: "Đơn nhất Thổ hệ linh căn vững như bàn thạch, phòng ngự tuyệt luân.", weight: 0.6 },
-
-
-
-    // 2. Dị Linh Căn (2%)
-
-    { id: "root_di_loi", name: "Dị Linh Căn [Lôi]", tier: "Dị Phẩm", elements: ["Lôi"], bonusCultivate: 1.0, power: 55, desc: "Lôi điện thiên kiếp biến dị, sát phạt cuồng bạo bậc nhất tu chân giới, khắc chế ma đạo.", weight: 0.5 },
-
-    { id: "root_di_phong", name: "Dị Linh Căn [Phong]", tier: "Dị Phẩm", elements: ["Phong"], bonusCultivate: 1.0, power: 45, desc: "Gió lốc biến dị, thân pháp phiêu dật vô tung vô ảnh, tốc độ xuất chiêu cực nhanh.", weight: 0.5 },
-
-    { id: "root_di_bang", name: "Dị Linh Căn [Băng]", tier: "Dị Phẩm", elements: ["Băng"], bonusCultivate: 1.0, power: 50, desc: "Cực hàn băng phách, đóng băng kinh mạch đối thủ, uy lực đông cứng vạn vật.", weight: 0.5 },
-
-    { id: "root_di_quang", name: "Dị Linh Căn [Quang]", tier: "Dị Phẩm", elements: ["Quang"], bonusCultivate: 1.0, power: 45, desc: "Ánh sáng tinh thuần, thần thánh chói lọi, phá giải tà thuật u ám.", weight: 0.5 },
-
-
-
-    // 3. Chân Linh Căn (20%)
-
-    { id: "root_chan_mochoa", name: "Chân Linh Căn [Mộc - Hỏa]", tier: "Chân Phẩm", elements: ["Mộc", "Hỏa"], bonusCultivate: 0.6, power: 30, desc: "Mộc sinh Hỏa, linh căn tương sinh tuyệt hảo cho luyện đan và hỏa công.", weight: 4.0 },
-
-    { id: "root_chan_thuymoc", name: "Chân Linh Căn [Thủy - Mộc]", tier: "Chân Phẩm", elements: ["Thủy", "Mộc"], bonusCultivate: 0.6, power: 28, desc: "Thủy dưỡng Mộc, chân nguyên sinh sôi không dứt, tu luyện ôn hòa ổn định.", weight: 4.0 },
-
-    { id: "root_chan_thokim", name: "Chân Linh Căn [Thổ - Kim]", tier: "Chân Phẩm", elements: ["Thổ", "Kim"], bonusCultivate: 0.6, power: 32, desc: "Thổ sinh Kim, cứng cáp sắc bén, đao thương khó hoại.", weight: 4.0 },
-
-    { id: "root_chan_kimthuy", name: "Chân Linh Căn [Kim - Thủy]", tier: "Chân Phẩm", elements: ["Kim", "Thủy"], bonusCultivate: 0.6, power: 30, desc: "Kim sinh Thủy, sắc bén mà nhu hòa, linh hoạt biến ảo.", weight: 4.0 },
-
-    { id: "root_chan_hoatho", name: "Chân Linh Căn [Hỏa - Thổ]", tier: "Chân Phẩm", elements: ["Hỏa", "Thổ"], bonusCultivate: 0.6, power: 30, desc: "Hỏa sinh Thổ, nung đúc kiên cố như dung nham.", weight: 4.0 },
-
-
-
-    // 4. Tam Linh Căn (35%)
-
-    { id: "root_tam_kimmocthuy", name: "Tam Linh Căn [Kim - Mộc - Thủy]", tier: "Tam Phẩm", elements: ["Kim", "Mộc", "Thủy"], bonusCultivate: 0.3, power: 18, desc: "Ba hệ tương hỗn, tư chất trung bình phổ biến trong các đại tông môn tu tiên.", weight: 8.75 },
-
-    { id: "root_tam_mochoatho", name: "Tam Linh Căn [Mộc - Hỏa - Thổ]", tier: "Tam Phẩm", elements: ["Mộc", "Hỏa", "Thổ"], bonusCultivate: 0.3, power: 18, desc: "Cân bằng ba hệ mộc hỏa thổ, công thủ vẹn toàn.", weight: 8.75 },
-
-    { id: "root_tam_thuyhoakim", name: "Tam Linh Căn [Thủy - Hỏa - Kim]", tier: "Tam Phẩm", elements: ["Thủy", "Hỏa", "Kim"], bonusCultivate: 0.3, power: 18, desc: "Xung khắc đan xen, đòi hỏi tâm tính vững vàng khi đả tọa.", weight: 8.75 },
-
-    { id: "root_tam_thokimthuy", name: "Tam Linh Căn [Thổ - Kim - Thủy]", tier: "Tam Phẩm", elements: ["Thổ", "Kim", "Thủy"], bonusCultivate: 0.3, power: 18, desc: "Lưu chuyển vững chãi, cơ sở tu luyện tương đối khá.", weight: 8.75 },
-
-
-
-    // 5. Ngụy Linh Căn / Tạp Linh Căn (38%)
-
-    { id: "root_nguy_tuhe", name: "Ngụy Linh Căn [Tứ Linh Căn]", tier: "Ngụy Phẩm", elements: ["Kim", "Mộc", "Thủy", "Hỏa"], bonusCultivate: 0.15, power: 10, desc: "Bốn hệ hỗn tạp khó khăn, giống hệt Hàn Lập thời niên thiếu, cần nhiều đan dược bồi bổ.", weight: 20.0 },
-
-    { id: "root_tap_nguhanh", name: "Tạp Linh Căn [Ngũ Hành Hỗn Loạn]", tier: "Ngụy Phẩm", elements: ["Kim", "Mộc", "Thủy", "Hỏa", "Thổ"], bonusCultivate: 0.10, power: 8, desc: "Cả năm thuộc tính tạp loạn, linh khí hấp thu phân tán, tu luyện gian nan trắc trở.", weight: 18.0 },
-
-
-
-    // 6. Vô Linh Căn (2%)
-
-    { id: "root_vo_linhcan", name: "Vô Linh Căn [Phàm Thể]", tier: "Phàm Nhân", elements: [], bonusCultivate: 0.0, power: 0, desc: "Thân thể không có linh căn tiên đạo, không thể tu luyện công pháp, chỉ có thể thuần tu Cổ Sư.", weight: 2.0 }
-
-];
+const SPIRITUAL_ROOTS = [];
 
 
 
@@ -419,8 +348,7 @@ const SYSTEM_SHOP_ITEMS = [
 
     { id: "shop_dinh_nhan", name: "Định Nhan Thần Đan", pts: 50, desc: "Gia tăng thêm 50 năm tuổi thọ và dung mạo bất lão.", type: "age", ageAdd: 50 },
 
-    { id: "shop_tay_linh_dan", name: "Tẩy Linh Đan", pts: 80, desc: "Tẩy rửa linh căn, cho phép quay lại Đo Linh Bàn để trắc định lại linh căn mới!", type: "reroll_linhcan" },
-
+    
     { id: "shop_tuu_trung", name: "Tửu Trùng (Nhất Chuyển)", pts: 50, desc: "Tinh luyện chân nguyên, nâng cao thực lực nửa giai.", type: "gu", guId: "t_u_tr_ng" },
 
     { id: "shop_thiet_bi", name: "Thiết Bì Cổ (Nhị Chuyển)", pts: 80, desc: "Cổ trùng phòng ngự, da thịt đúc bằng sắt thép.", type: "gu", guId: "thi_t_b_c" },
@@ -641,9 +569,9 @@ let player = {
 
     specialPhysique: SPECIAL_PHYSIQUES[0],
 
-    linhCan: null,             // Linh căn Phàm Nhân Tu Tiên
+    // Hệ thống thuần túy Cổ Chân Nhân (Không có Linh Căn)
 
-    cultivateMode: "dual",     // "dual": Kiêm tu, "gu": Thuần tu Cổ, "technique": Thuần tu Pháp
+    cultivateMode: "gu",     // "dual": Kiêm tu, "gu": Thuần tu Cổ, "technique": Thuần tu Pháp
 
 
 
@@ -745,6 +673,27 @@ let player = {
     currentLocation: "home",
 
 
+
+    // Sát Chiêu Cổ Trùng & Cổ Bản Mệnh (Chuẩn Cổ Chân Nhân)
+    vitalGuId: "gu_liquor_worm_1",
+    mainPath: "Thực Đạo",
+    killerMovesLearned: [
+        {
+            id: "km_nguyet_nhan_lien_xa",
+            name: "Nguyệt Nhận Liên Xạ",
+            path: "Quang Đạo",
+            masteryExp: 30,
+            masteryStage: "Nhập Môn"
+        },
+        {
+            id: "km_bach_thi_the_phach",
+            name: "Bạch Thỉ Thể Phách",
+            path: "Lực Đạo",
+            masteryExp: 50,
+            masteryStage: "Nhập Môn"
+        }
+    ],
+    activeKillerMoves: ["km_nguyet_nhan_lien_xa", "km_bach_thi_the_phach"],
 
     // Công pháp đã học (Bắt đầu với 1 tâm pháp thổ nạp sơ cấp)
 
@@ -948,9 +897,9 @@ function resetPlayerToFreshState(name = "Cổ Nguyệt Phong") {
 
         specialPhysique: SPECIAL_PHYSIQUES[0],
 
-        linhCan: null,
+        
 
-        cultivateMode: "dual",
+        cultivateMode: "gu",
 
 
 
@@ -1563,26 +1512,32 @@ function updateSidebarUI() {
 
 
 
-    // Cập nhật Linh Căn trên Sidebar
-
-    const elLinhCan = document.getElementById("sb-linhcan-text");
-
-    if (elLinhCan) {
-
-        if (player.linhCan) {
-
-            elLinhCan.textContent = `${player.linhCan.name} (${player.linhCan.tier})`;
-
-            elLinhCan.style.color = player.linhCan.color || "#10b981";
-
-        } else {
-
-            elLinhCan.textContent = "Chưa Trắc Định";
-
-            elLinhCan.style.color = "#94a3b8";
-
+    // Cập nhật Tư Chất & Bản Mệnh Cổ trên Sidebar (Chuẩn Cổ Chân Nhân)
+    const elApt = document.getElementById("sb-aptitude-text");
+    if (elApt) {
+        if (player.hasSpecialPhysique) {
+            elApt.textContent = "Thập Tuyệt Thể (100%)";
+            elApt.style.color = "#fbbf24";
+        } else if (player.aptitude) {
+            const aptPct = player.aptitudePercentage || Math.round(player.aptitude.seaPct * 100);
+            elApt.textContent = `${player.aptitude.name.split(' ')[0]} (${aptPct}%)`;
+            elApt.style.color = player.aptitude.color || "#60a5fa";
         }
-
+    }
+    const elVitalGu = document.getElementById("sb-vitalgu-text");
+    if (elVitalGu) {
+        let vName = "Chưa Ký Túc";
+        if (player.guInventory && Array.isArray(player.guInventory)) {
+            const vg = player.guInventory.find(g => g.isVital);
+            if (vg) vName = vg.name;
+        }
+        if (vName === "Chưa Ký Túc" && player.vitalGuId) {
+            if (window.GU_DATABASE) {
+                const found = window.GU_DATABASE.find(g => g.id === player.vitalGuId || g.id === player.vitalGuId.replace('gu_', ''));
+                if (found) vName = found.name;
+            }
+        }
+        elVitalGu.textContent = vName;
     }
 
 
@@ -2201,15 +2156,16 @@ function executeAction(actionKey, actConfig = null) {
 
             // Cân chỉnh tốc độ tu luyện chân thực: 2 giờ đả tọa cho 6-10 tu vi
 
-            const baseGain = 7 + (player.comprehension * 0.2);
-
-            const aptRate = player.aptitude.rate;
-
-            const physRate = 1.0 + (player.specialPhysique.rateBoost || 0);
-
-            const canCotRate = player.canCot / 100;
-
-            const expGained = Math.max(1, Math.round(baseGain * aptRate * physRate * canCotRate * locDensity));
+            // Cân chỉnh tốc độ tu luyện chuẩn Cổ Chân Nhân (Đinh: 0.7, Bính: 1.0, Ất: 1.4, Giáp: 1.7, Thập Tuyệt: 2.0)
+            const baseGain = 7 + ((player.comprehension || 10) * 0.2);
+            let aptRate = 1.0;
+            if (player.hasSpecialPhysique) {
+                aptRate = 2.0; // Thập Tuyệt Thể
+            } else if (player.aptitude && player.aptitude.rate) {
+                aptRate = player.aptitude.rate;
+            }
+            const canCotRate = (player.canCot || 100) / 100;
+            const expGained = Math.max(1, Math.round(baseGain * aptRate * canCotRate * locDensity));
 
 
 
@@ -3103,7 +3059,10 @@ function switchToSystemTab(targetPaneId) {
 
     if (targetPaneId === "systab-recipes") renderRecipesPane();
 
-    if (targetPaneId === "systab-techniques") renderTechniquesSystemPane();
+    if (targetPaneId === "systab-killer-moves" || targetPaneId === "systab-techniques") {
+        renderKillerMovesPane();
+        renderTechniquesSystemPane();
+    }
 
     if (targetPaneId === "systab-daos") renderDaosPane();
 
@@ -3330,8 +3289,8 @@ function renderAperturePane() {
                     <strong style="color:#fbbf24;">${apt.name} (${apt.rank} Đẳng)</strong>
                 </div>
                 <div class="aperture-stat-row">
-                    <span style="color:#94a3b8;">Linh Căn Tiên Đạo:</span>
-                    <strong style="color:#38bdf8;">${player.linhCan ? player.linhCan.name : 'Chưa Trắc Định (Phàm Căn)'}</strong>
+                    <span style="color:#94a3b8;">Cổ Bản Mệnh:</span>
+                                <strong style="color:#fbbf24;">${(player.guInventory && player.guInventory.find(g => g.isVital)) ? player.guInventory.find(g => g.isVital).name : (player.vitalGuId || 'Tửu Trùng (Nhất Chuyển)')}</strong>
                 </div>
                 <div class="aperture-stat-row">
                     <span style="color:#94a3b8;">Thể Chất Đạo Thể:</span>
@@ -6814,41 +6773,23 @@ let currentPickedStarterGu = null;
 // Hàm chuyển bước trên Trang Mở Đầu Toàn Cảnh
 
 function switchIntroStep(stepNum) {
-
-    for (let i = 1; i <= 5; i++) {
-
+    for (let i = 1; i <= 4; i++) {
         const pill = document.getElementById(`step-pill-${i}`);
-
         const pane = document.getElementById(`intro-step-${i}`);
-
         if (pill) {
-
             if (i === stepNum) {
-
                 pill.className = "step-pill active";
-
             } else if (i < stepNum) {
-
                 pill.className = "step-pill completed";
-
             } else {
-
                 pill.className = "step-pill";
-
             }
-
         }
-
         if (pane) {
-
             if (i === stepNum) pane.classList.add("active");
-
             else pane.classList.remove("active");
-
         }
-
     }
-
 }
 
 
@@ -8182,16 +8123,13 @@ function setupEventListeners() {
 
 
     // Các nút mở Modal nhanh trên Sidebar Dock
-
-    safeAddListener("btn-open-techniques", "click", () => {
-
+    safeAddListener("btn-open-killer-moves", "click", () => {
         openModal("modal-system");
-
-        switchToSystemTab("systab-techniques");
-
+        switchToSystemTab("systab-killer-moves");
     });
+    safeAddListener("btn-close-killer-moves", "click", () => closeModal("modal-killer-moves"));
 
-    safeAddListener("btn-close-techniques", "click", () => closeModal("modal-techniques"));
+    // btn-open-techniques & btn-close-techniques removed (chuyển sang Sát Chiêu)
 
 
 
@@ -8499,9 +8437,9 @@ function setupEventListeners() {
 
     // Bước 4: Đo Linh Bàn (10 lượt) & Chế độ tu luyện
 
-    safeAddListener("btn-roll-linhcan", "click", rollLinhCanRandom);
+    // btn-roll-linhcan removed
 
-    safeAddListener("btn-lock-linhcan", "click", lockCurrentLinhCan);
+    // btn-lock-linhcan removed
 
 
 
@@ -8585,9 +8523,9 @@ function setupEventListeners() {
 
     // Modal Xác Nhận Lĩnh Ngộ Công Pháp
 
-    safeAddListener("btn-cancel-learn-tech", "click", () => closeModal("modal-confirm-learn-tech"));
+    // modal-confirm-learn-tech removed
 
-    safeAddListener("btn-do-learn-tech", "click", doConfirmLearnTech);
+    // doConfirmLearnTech removed
 
 
 
@@ -8793,3 +8731,170 @@ window.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+
+// ========================================================
+// HỆ THỐNG SÁT CHIÊU CỔ TRÙNG & BẢN MỆNH CỔ (MASTER CANONICAL)
+// ========================================================
+
+function getDaoKeyFromPath(pathName) {
+    if (!pathName) return "moc";
+    const p = pathName.toLowerCase();
+    if (p.includes("lực")) return "luc";
+    if (p.includes("quang")) return "quang";
+    if (p.includes("thổ")) return "tho";
+    if (p.includes("thủy")) return "thuy";
+    if (p.includes("hỏa") || p.includes("viêm")) return "hoa";
+    if (p.includes("phong")) return "phong";
+    if (p.includes("lôi")) return "loi";
+    if (p.includes("kim")) return "kim";
+    if (p.includes("hồn")) return "hon";
+    if (p.includes("huyết")) return "huyet";
+    if (p.includes("kiếm")) return "kiem";
+    if (p.includes("đao")) return "dao";
+    if (p.includes("tinh")) return "tinh";
+    if (p.includes("trí")) return "tri";
+    if (p.includes("thực")) return "thuc";
+    if (p.includes("vũ")) return "vu";
+    if (p.includes("trụ")) return "tru";
+    if (p.includes("mộng")) return "mong";
+    if (p.includes("nhân")) return "nhan";
+    if (p.includes("thiên")) return "thien";
+    return "moc";
+}
+
+function setVitalGu(guId) {
+    const gu = (window.GU_DATABASE || []).find(g => g.id === guId);
+    if (!gu) return;
+    player.vitalGuId = gu.id;
+    player.mainPath = gu.path || "Lực Đạo";
+    player.mainDao = player.mainPath;
+    addLog(`Đã kết nối Bản Mệnh Cổ: [${gu.name}] (Lưu Phái Bản Mệnh: ${player.mainPath})!`);
+}
+
+function equipKillerMove(moveId) {
+    if (!Array.isArray(player.activeKillerMoves)) {
+        player.activeKillerMoves = [];
+    }
+    const idx = player.activeKillerMoves.indexOf(moveId);
+    if (idx >= 0) {
+        player.activeKillerMoves.splice(idx, 1);
+        addLog(`Đã gỡ bỏ sát chiêu khỏi thanh xuất chiêu.`);
+    } else {
+        if (player.activeKillerMoves.length >= 4) {
+            player.activeKillerMoves.shift();
+        }
+        player.activeKillerMoves.push(moveId);
+        const km = (window.KILLER_MOVES_DATABASE || []).find(k => k.id === moveId);
+        addLog(`Đã trang bị Sát Chiêu: [${km ? km.name : moveId}] vào thanh xuất chiến!`);
+    }
+}
+
+function renderKillerMovesPane() {
+    const grid = document.getElementById("sys-killer-moves-grid") || document.getElementById("sys-tech-list-grid");
+    if (!grid) return;
+    
+    const db = window.KILLER_MOVES_DATABASE || [];
+    grid.innerHTML = "";
+    
+    db.forEach(km => {
+        const learned = (player.killerMovesLearned || []).find(k => k.id === km.id);
+        const isEquipped = (player.activeKillerMoves || []).includes(km.id);
+        
+        const playerGuIds = new Set((player.guInventory || []).map(g => g.id));
+        const coreGuStatus = (km.coreGu || []).map(id => {
+            const guObj = (window.GU_DATABASE || []).find(g => g.id === id);
+            const hasGu = playerGuIds.has(id);
+            return { id, name: guObj ? guObj.name : id, has: hasGu };
+        });
+        const hasAllCore = coreGuStatus.every(c => c.has);
+        
+        const pathDaoKey = getDaoKeyFromPath(km.path);
+        const playerMarks = (player.daoMarks && player.daoMarks[pathDaoKey]) || 0;
+        const daoMultiplier = 1 + (playerMarks / 1000);
+        const actualPower = Math.round((km.power || 0) * daoMultiplier);
+        
+        const card = document.createElement("div");
+        card.className = `km-card-item ${learned ? 'learned' : ''} ${isEquipped ? 'active-equipped' : ''}`;
+        
+        let coreGuHtml = coreGuStatus.map(c => 
+            `<span class="km-gu-tag core" style="${c.has ? 'border-color:#10b981; color:#a7f3d0;' : 'opacity:0.6;'}">
+                ${c.has ? '✓' : '✗'} [Hạch Tâm] ${c.name}
+            </span>`
+        ).join("");
+
+        let supportGuHtml = (km.supportGu || []).map(id => {
+            const guObj = (window.GU_DATABASE || []).find(g => g.id === id);
+            const hasGu = playerGuIds.has(id);
+            return `<span class="km-gu-tag support" style="${hasGu ? 'border-color:#38bdf8;' : 'opacity:0.6;'}">
+                ${hasGu ? '✓' : '○'} [Phụ] ${guObj ? guObj.name : id}
+            </span>`;
+        }).join("");
+
+        card.innerHTML = `
+            <div class="km-card-header">
+                <div>
+                    <h4 class="km-title">${km.name} ${isEquipped ? '<span style="background:#fbbf24; color:#111; font-size:10px; padding:2px 6px; border-radius:4px; margin-left:6px; font-weight:bold;">⚔️ ĐANG TRANG BỊ</span>' : ''}</h4>
+                    <span class="km-rank-badge">${km.rank} Chuyển • ${km.path}</span>
+                    <span class="km-type-tag" style="margin-left:6px;">${km.type}</span>
+                </div>
+                <span class="tech-status-tag" style="color:${learned ? '#10b981' : '#94a3b8'};">
+                    ${learned ? `Đạt: ${learned.masteryStage || 'Thành Thạo'}` : 'Chưa Lĩnh Ngộ'}
+                </span>
+            </div>
+            
+            <p class="km-desc">${km.desc}</p>
+
+            <div class="km-formula-box">
+                <div class="km-formula-label">🧬 Tổ Hợp Cổ Trùng Yêu Cầu:</div>
+                <div style="display:flex; flex-wrap:wrap;">${coreGuHtml} ${supportGuHtml}</div>
+            </div>
+
+            <div class="km-stats-row">
+                <span>Uy Lực Gốc: <strong style="color:#fbbf24;">${km.power}</strong> ${playerMarks > 0 ? `<small style="color:#38bdf8;">(Đạo ngân +${Math.round((daoMultiplier-1)*100)}% ➔ ${actualPower})</small>` : ''}</span>
+                <span>Tiêu Hao: <strong>${km.essenceCost ? km.essenceCost.amount + ' ' + km.essenceCost.type : '0'}</strong></span>
+            </div>
+
+            <div style="font-size:11px; color:#cbd5e1; margin-top:6px;">
+                <span>Yêu Cầu Cảnh Giới: <strong style="color:#fcd34d;">${km.attainmentReq}</strong></span>
+                <div style="color:#94a3b8; margin-top:2px;">Kỹ Pháp: <em>${km.comboMechanic || 'Thường quy'}</em></div>
+            </div>
+
+            <div class="km-actions-footer">
+                ${learned ? `
+                    <button class="btn-primary btn-equip-km" data-kmid="${km.id}" style="flex:1;">
+                        ${isEquipped ? '✕ Tháo Khỏi Thanh Xuất Chiêu' : '⚔️ Trang Bị Sát Chiêu'}
+                    </button>
+                    <button class="btn-subtle btn-set-main-tech" data-techid="${km.id}" style="border:1px solid #d4af37; color:#fbbf24; background:rgba(212,175,55,0.15); padding:6px 12px; font-size:12px;">
+                        ⚡ Vận Hành Làm Công Pháp Chính
+                    </button>
+                ` : `
+                    <div class="tech-obtain-guide" style="width:100%; background:rgba(15, 23, 42, 0.6); border:1px dashed rgba(56, 189, 248, 0.4); border-radius:6px; padding:8px 12px; font-size:12px;">
+                        <span style="color:#38bdf8; font-weight:600;">📥 Nguồn Gốc Thu Thập Sát Chiêu:</span>
+                        <div style="color:#cbd5e1; margin-top:4px;">
+                            ${hasAllCore ? '✨ Bạn ĐÃ ĐỦ Cổ Hạch Tâm trong Không Khiếu! Hãy vào Diễn Võ Đường để khai sáng hoặc mở Quyển Trục để Lĩnh Ngộ.' : '⚠️ Cần thu thập đủ Cổ Hạch Tâm trước khi có thể thi triển thực chiến.'}
+                        </div>
+                    </div>
+                `}
+            </div>
+        `;
+        
+        if (learned) {
+            const btnEquip = card.querySelector(".btn-equip-km");
+            if (btnEquip) {
+                btnEquip.addEventListener("click", () => {
+                    equipKillerMove(km.id);
+                    renderKillerMovesPane();
+                });
+            }
+            const btnSetMain = card.querySelector(".btn-set-main-tech");
+            if (btnSetMain) {
+                btnSetMain.addEventListener("click", () => {
+                    setMainTechnique(km.id);
+                });
+            }
+        }
+        
+        grid.appendChild(card);
+    });
+}
