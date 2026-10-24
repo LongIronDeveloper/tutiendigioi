@@ -676,7 +676,53 @@
     }
 
     // =========================================================
-    // 13. TEST HELPERS & PUBLIC API HOOKS
+    // 13. QUẢN LÝ CHẾ ĐỘ SONG THỂ TIÊN CẢNH (DUAL XIANXIA THEMES)
+    // =========================================================
+    function setTheme(theme) {
+        const isNight = theme === 'night';
+        if (isNight) {
+            document.body.classList.remove('celestial-theme');
+            document.body.classList.add('night-ink-theme');
+            try { localStorage.setItem('tu_tien_theme', 'night'); } catch (e) {}
+        } else {
+            document.body.classList.remove('night-ink-theme');
+            document.body.classList.add('celestial-theme');
+            try { localStorage.setItem('tu_tien_theme', 'celestial'); } catch (e) {}
+        }
+
+        const toggleBtn = document.getElementById('btn-theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.textContent = isNight ? '🌙' : '🌤️';
+            toggleBtn.title = isNight ? 'Đang bật: Huyền Dạ Thư Các (Nhấp để sang Bạch Ngọc Tiên Cảnh)' : 'Đang bật: Bạch Ngọc Tiên Cảnh (Nhấp để sang Huyền Dạ Thư Các)';
+        }
+    }
+
+    function toggleTheme() {
+        const currentIsNight = document.body.classList.contains('night-ink-theme');
+        const next = currentIsNight ? 'celestial' : 'night';
+        setTheme(next);
+        showToast(next === 'celestial' ? '🌤️ Đã chuyển sang Bạch Ngọc Tiên Cảnh' : '🌙 Đã chuyển sang Huyền Dạ Thư Các', 'info', 2000);
+        return next;
+    }
+
+    function initThemeController() {
+        let saved = 'celestial';
+        try {
+            saved = localStorage.getItem('tu_tien_theme') || 'celestial';
+        } catch (e) {}
+        setTheme(saved);
+
+        const toggleBtn = document.getElementById('btn-theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+        }
+    }
+
+    // =========================================================
+    // 14. TEST HELPERS & PUBLIC API HOOKS
     // =========================================================
     window.UI = {
         showToast: showToast,
@@ -684,7 +730,9 @@
         renderPrimevalSeaWave: renderPrimevalSeaWave,
         updateNotificationBadges: updateNotificationBadges,
         initXianxiaTooltips: initXianxiaTooltips,
-        initCardTilt: initCardTilt
+        initCardTilt: initCardTilt,
+        setTheme: setTheme,
+        toggleTheme: toggleTheme
     };
 
     window.__TEST_HELPERS__ = {
@@ -692,6 +740,8 @@
         showFloatingIndicator: showFloatingIndicator,
         renderPrimevalSeaWave: renderPrimevalSeaWave,
         updateNotificationBadges: updateNotificationBadges,
+        setTheme: setTheme,
+        toggleTheme: toggleTheme,
         isSidebarOpen: () => {
             const sb = document.querySelector('.sidebar-apocalyptic');
             return sb ? sb.classList.contains('sidebar-open') : false;
@@ -708,9 +758,10 @@
     };
 
     // =========================================================
-    // 14. TỰ ĐỘNG KHỞI TẠO KHI TẢI XONG DOM
+    // 15. TỰ ĐỘNG KHỞI TẠO KHI TẢI XONG DOM
     // =========================================================
     function onDOMLoaded() {
+        initThemeController();
         initSidebarDrawer();
         initSidebarTabs();
         initKeyboardShortcuts();
@@ -723,7 +774,7 @@
         // Tự động cập nhật sóng nước và badge theo chu kỳ
         setInterval(updateNotificationBadges, 3000);
 
-        console.log('[UI.JS] Xianxia Modern UI & HUD Layer v5.4 Initialized Successfully.');
+        console.log('[UI.JS] Xianxia Celestial UI v5.5 Initialized Successfully.');
     }
 
     if (document.readyState === 'loading') {
