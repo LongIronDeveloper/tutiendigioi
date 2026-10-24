@@ -3265,3 +3265,384 @@ body.apocalyptic-theme {
         transform: none !important;
     }
 }
+
+
+/* ==========================================================================
+   BẠCH NGỌC VÂN SƠN & TUYÊN CHỈ BÍ QUYỂN (CELESTIAL XIANXIA THEME v5.5)
+   ========================================================================== */
+
+:root, body.celestial-theme {
+    --c-bg-canvas: #fbf8f3;
+    --c-bg-surface: #ffffff;
+    --c-bg-surface-alt: #f7f2ea;
+    --c-bg-card: rgba(255, 255, 255, 0.94);
+    --c-bg-overlay: rgba(28, 25, 23, 0.55);
+
+    --c-text-primary: #1c1917;
+    --c-text-secondary: #44403c;
+    --c-text-muted: #78716c;
+
+    --c-jade-primary: #059669;
+    --c-jade-light: #10b981;
+    --c-jade-subtle: #d1fae5;
+
+    --c-gold-primary: #b45309;
+    --c-gold-bright: #d97706;
+    --c-gold-subtle: #fef3c7;
+
+    --c-cinnabar: #b91c1c;
+    --c-cinnabar-light: #dc2626;
+    --c-cinnabar-subtle: #fee2e2;
+
+    --c-celestial-blue: #0284c7;
+    --c-celestial-light: #38bdf8;
+    --c-celestial-subtle: #e0f2fe;
+
+    --c-border-subtle: rgba(180, 83, 9, 0.14);
+    --c-border-medium: rgba(180, 83, 9, 0.24);
+    --c-border-gold: rgba(217, 119, 6, 0.45);
+
+    --c-shadow-sm: 0 2px 8px rgba(44, 33, 20, 0.05);
+    --c-shadow-md: 0 6px 20px rgba(44, 33, 20, 0.08);
+    --c-shadow-lg: 0 14px 36px rgba(44, 33, 20, 0.14);
+}
+
+body.night-ink-theme {
+    --c-bg-canvas: #0f1319;
+    --c-bg-surface: #181d26;
+    --c-bg-surface-alt: #1f2532;
+    --c-bg-card: rgba(24, 29, 38, 0.95);
+    --c-bg-overlay: rgba(0, 0, 0, 0.75);
+
+    --c-text-primary: #f5f0e8;
+    --c-text-secondary: #d6cebf;
+    --c-text-muted: #9c9384;
+
+    --c-jade-primary: #10b981;
+    --c-jade-light: #34d399;
+    --c-jade-subtle: rgba(16, 185, 129, 0.18);
+
+    --c-gold-primary: #f59e0b;
+    --c-gold-bright: #fbbf24;
+    --c-gold-subtle: rgba(245, 158, 11, 0.18);
+
+    --c-cinnabar: #ef4444;
+    --c-cinnabar-light: #f87171;
+    --c-cinnabar-subtle: rgba(239, 68, 68, 0.18);
+
+    --c-celestial-blue: #38bdf8;
+    --c-celestial-light: #7dd3fc;
+    --c-celestial-subtle: rgba(56, 189, 248, 0.18);
+
+    --c-border-subtle: rgba(245, 158, 11, 0.16);
+    --c-border-medium: rgba(245, 158, 11, 0.3);
+    --c-border-gold: rgba(251, 191, 36, 0.5);
+
+    --c-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --c-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.6);
+    --c-shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.75);
+}
+
+/* Nền Tảng Giấy Tuyên Chỉ Cổ */
+body.celestial-theme {
+    background-color: var(--c-bg-canvas);
+    background-image: radial-gradient(circle at 50% 0%, rgba(247, 242, 234, 0.8) 0%, rgba(244, 237, 226, 0.5) 100%), linear-gradient(to bottom, #fcf9f2, #f5efe4);
+    color: var(--c-text-primary);
+}
+
+/* Sidebar Bạch Ngọc Thư Viện */
+body.celestial-theme .sidebar-apocalyptic {
+    background: var(--c-bg-surface-alt);
+    border-right: 2px solid var(--c-border-subtle);
+    box-shadow: 4px 0 20px rgba(44, 33, 20, 0.08);
+}
+
+body.celestial-theme .sidebar-header {
+    border-bottom: 1px solid var(--c-border-subtle);
+}
+
+body.celestial-theme .game-logo-title {
+    color: var(--c-text-primary);
+    text-shadow: 0 1px 3px rgba(180, 83, 9, 0.18);
+}
+
+body.celestial-theme .game-version-badge {
+    color: var(--c-gold-primary);
+}
+
+body.celestial-theme .nav-arrow {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .nav-arrow:hover {
+    background: var(--c-gold-subtle);
+    color: var(--c-gold-primary);
+    border-color: var(--c-gold-primary);
+}
+
+.nav-theme-toggle {
+    background: rgba(180, 83, 9, 0.1) !important;
+    border-color: rgba(180, 83, 9, 0.25) !important;
+    color: #b45309 !important;
+}
+
+/* Thẻ Thông Tin & Chỉ Số Giấy Cổ */
+body.celestial-theme .hazard-card,
+body.celestial-theme .stats-panel-box,
+body.celestial-theme .currency-card {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    box-shadow: var(--c-shadow-sm);
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .time-meta-rows,
+body.celestial-theme .time-row-item {
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .can-cot-strip {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-secondary);
+}
+
+/* Chu Sa Seal ㊞ */
+.chu-sa-seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid #b91c1c;
+    color: #b91c1c;
+    font-size: 0.85rem;
+    font-weight: 900;
+    background: rgba(185, 28, 28, 0.08);
+    margin-left: 6px;
+    box-shadow: 0 0 6px rgba(185, 28, 28, 0.2);
+    user-select: none;
+}
+
+/* Thanh Lưu Ly Trữ Khí (Status Bars) */
+body.celestial-theme .status-bars-group .bar-track-outer {
+    background: #ede6d8;
+    border: 1px solid rgba(180, 83, 9, 0.2);
+    box-shadow: inset 0 2px 4px rgba(44, 33, 20, 0.06);
+}
+
+body.celestial-theme .bar-num-text {
+    color: #1c1917;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+    font-weight: 700;
+}
+
+body.celestial-theme .hp-fill {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+body.celestial-theme .mp-fill {
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+}
+
+body.celestial-theme .stamina-fill {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+body.celestial-theme .exp-fill {
+    background: linear-gradient(90deg, #d97706, #fbbf24);
+}
+
+/* Nút Thiên Mệnh Hệ Thống */
+body.celestial-theme .btn-sidebar-system-card {
+    background: linear-gradient(135deg, #fef3c7, #fef9c3);
+    border: 1.5px solid #b45309;
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.12);
+}
+
+body.celestial-theme .sys-btn-title {
+    color: #92400e;
+}
+
+body.celestial-theme .sys-btn-sub {
+    color: #78350f;
+}
+
+/* Top Location Bar: Ngọc Giản Cửu Châu */
+body.celestial-theme .location-top-bar {
+    background: var(--c-bg-surface-alt);
+    border-bottom: 2px solid var(--c-border-subtle);
+    box-shadow: var(--c-shadow-sm);
+}
+
+body.celestial-theme .loc-tab-btn {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .loc-tab-btn.active {
+    background: #fef3c7;
+    border-color: #b45309;
+    color: #92400e;
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.14);
+}
+
+body.celestial-theme .tab-system-highlight {
+    background: #d1fae5 !important;
+    border-color: #059669 !important;
+    color: #065f46 !important;
+}
+
+/* Sân Khấu Chính & Action Cards */
+body.celestial-theme .action-card-16-9 {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    box-shadow: var(--c-shadow-md);
+}
+
+body.celestial-theme .action-card-16-9:hover {
+    box-shadow: 0 12px 28px rgba(44, 33, 20, 0.15), 0 0 16px rgba(180, 83, 9, 0.18);
+}
+
+body.celestial-theme .stage-header h2 {
+    color: var(--c-text-primary);
+}
+
+body.celestial-theme .stage-density-badge {
+    background: #fef3c7;
+    border: 1px solid var(--c-border-gold);
+    color: #92400e;
+}
+
+body.celestial-theme .btn-quick-bar {
+    background: #ffffff;
+    border: 1px solid var(--c-border-medium);
+    color: var(--c-text-primary);
+    box-shadow: var(--c-shadow-sm);
+}
+
+body.celestial-theme .btn-quick-bar:hover:not(:disabled) {
+    background: #fef3c7;
+    border-color: var(--c-gold-primary);
+    color: #92400e;
+}
+
+/* Modals & Bí Điển */
+body.celestial-theme .modal-overlay {
+    background: var(--c-bg-overlay);
+    backdrop-filter: blur(8px);
+}
+
+body.celestial-theme .modal-box {
+    background: #fcfaf5 !important;
+    border: 2px solid var(--c-gold-primary) !important;
+    color: var(--c-text-primary) !important;
+    box-shadow: var(--c-shadow-lg), 0 0 28px rgba(180, 83, 9, 0.16) !important;
+}
+
+body.celestial-theme .modal-header {
+    border-bottom: 1px solid var(--c-border-subtle);
+}
+
+body.celestial-theme .modal-header h2,
+body.celestial-theme .modal-header h3 {
+    color: var(--c-gold-primary) !important;
+}
+
+body.celestial-theme .btn-icon-close {
+    background: var(--c-bg-surface-alt);
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-primary);
+}
+
+body.celestial-theme .sys-tab-btn {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .sys-tab-btn.active {
+    background: var(--c-gold-subtle);
+    border-color: var(--c-gold-primary);
+    color: var(--c-gold-primary);
+}
+
+body.celestial-theme .btn-primary {
+    background: linear-gradient(135deg, #059669, #047857);
+    border-color: #047857;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+body.celestial-theme .btn-secondary {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-primary);
+}
+
+body.celestial-theme .btn-subtle {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-secondary);
+}
+
+/* Túi Trữ Vật & Slots */
+body.celestial-theme .rpg-slot-item {
+    background: linear-gradient(135deg, #ffffff, #f7f3eb);
+    border-color: #d1c7b7;
+}
+
+body.celestial-theme .xianxia-floating-tooltip {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: var(--c-gold-primary);
+    color: var(--c-text-primary);
+    box-shadow: 0 12px 32px rgba(44, 33, 20, 0.18);
+}
+
+body.celestial-theme .tooltip-title {
+    color: var(--c-text-primary);
+}
+
+body.celestial-theme .tooltip-desc {
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .sidebar-icon-dock {
+    background: var(--c-bg-surface-alt);
+    border-top: 1px solid var(--c-border-subtle);
+}
+
+body.celestial-theme .dock-btn {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-primary);
+}
+
+body.celestial-theme .mobile-bottom-nav {
+    background: var(--c-bg-surface-alt);
+    border-top: 2px solid var(--c-border-subtle);
+}
+
+body.celestial-theme .mb-nav-btn {
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .sidebar-tab-nav {
+    background: var(--c-bg-surface-alt);
+}
+
+body.celestial-theme .sb-tab-btn {
+    background: #ffffff;
+    border: 1px solid var(--c-border-subtle);
+    color: var(--c-text-secondary);
+}
+
+body.celestial-theme .sb-tab-btn.active {
+    background: var(--c-gold-subtle);
+    border-color: var(--c-gold-primary);
+    color: var(--c-gold-primary);
+}
