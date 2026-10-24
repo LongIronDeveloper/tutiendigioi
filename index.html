@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 </head>
-<body class="apocalyptic-theme">
+<body class="apocalyptic-theme celestial-theme">
     <!-- Particle Canvas Hiệu Ứng Bụi Linh Khí -->
     <div id="particle-canvas-container">
         <canvas id="qi-canvas"></canvas>
@@ -26,7 +26,8 @@
             <div class="sidebar-header">
                 <div class="sidebar-nav-arrows">
                     <button class="nav-arrow" id="btn-history-back" title="Lịch sử hành động trước">←</button>
-                    <button class="nav-arrow" id="btn-history-forward" title="Lịch sử hành động sau">→</button>
+                    <button class="nav-arrow" id="btn-history-forward" title="Lịch sử hành động sau">→</button>
+                    <button class="nav-arrow nav-theme-toggle" id="btn-theme-toggle" title="Đổi Phong Cảnh: Tiên Cảnh / Dạ Tu" aria-label="Đổi Phong Cảnh: Tiên Cảnh / Dạ Tu">🌤️</button>
                     <button class="nav-arrow nav-collapse" id="btn-toggle-sidebar" title="Thu gọn / Mở rộng Sidebar">❮</button>
                 </div>
                 <h1 class="game-logo-title">CỔ GIỚI TU TIÊN</h1>
@@ -107,7 +108,8 @@
                 <!-- Bản Mệnh Cổ Trấn Giữ Không Khiếu -->
                 <div class="can-cot-strip starter-gu-strip" id="sb-starter-gu-row" title="Bản Mệnh Cổ trấn giữ Không Khiếu (Nhấp để chọn hoặc quản lý)">
                     <span>🐛 Bản Mệnh:</span>
-                    <strong id="sb-starter-gu-name" class="text-cyan">Chưa Có (Nhấp Chọn)</strong>
+                    <strong id="sb-starter-gu-name" class="text-cyan">Chưa Có (Nhấp Chọn)</strong>
+                    <span class="chu-sa-seal" id="sb-gu-seal" title="Đã ký thác hồn phách Bản Mệnh">㊞</span>
                 </div>
 
                 <!-- Tư Chất Cổ Sư -->
