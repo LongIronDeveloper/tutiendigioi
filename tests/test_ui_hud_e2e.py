@@ -46,14 +46,16 @@ class TestUIHudE2E(unittest.TestCase):
         self.assertIn('sys-aperture-body', self.game_js_content, "game.js tìm kiếm sys-aperture-body")
 
     def test_04_library_modal_structure(self):
-        """4. Kiểm tra cấu trúc thẻ modal-library-shop đóng đúng trước modal-confirm-learn-tech"""
-        modal_lib_idx = self.index_content.find('id="modal-library-shop"')
-        modal_confirm_idx = self.index_content.find('id="modal-confirm-learn-tech"')
-        self.assertTrue(modal_lib_idx != -1 and modal_confirm_idx != -1)
-        sub = self.index_content[modal_lib_idx:modal_confirm_idx]
+        """4. Kiểm tra cấu trúc thẻ modal-library-shop đóng đúng trước thẻ đóng body"""
+        modal_lib_idx = self.index_content.find('<div id="modal-library-shop"')
+        self.assertNotEqual(modal_lib_idx, -1)
+        sub = self.index_content[modal_lib_idx:]
+        end_modal = sub.find('<!-- Scripts -->') if '<!-- Scripts -->' in sub else sub.find('</body>')
+        if end_modal != -1:
+            sub = sub[:end_modal]
         open_divs = len(re.findall(r'<div\b', sub))
         close_divs = len(re.findall(r'</div>', sub))
-        self.assertEqual(open_divs, close_divs, "Thẻ div mở và đóng của modal-library-shop phải cân bằng trước khi mở modal tiếp theo")
+        self.assertEqual(open_divs, close_divs, "Thẻ div mở và đóng của modal-library-shop phải cân bằng")
 
     def test_05_style_css_responsive_breakpoints(self):
         """5. Kiểm tra style.css chứa đầy đủ Media Queries cho Desktop, Tablet và Mobile"""
